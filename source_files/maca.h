@@ -39,8 +39,8 @@
 #include "global.h"
 #include "MC1322x.h"
 #include "digitals.h"
-#include "WirelessHART/phy_layer.h"
-#include "WirelessHART/datalink_layer.h"
+#include "WirelessH/phy_layer.h"
+#include "WirelessH/datalink_layer.h"
 
 //#define MASK_MACA_IRQ       ( 0x0000FC1F )	
 //#define MASK_IRQ_ALL        ( 0x0000FE1F )	

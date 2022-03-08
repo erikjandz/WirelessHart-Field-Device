@@ -44,7 +44,7 @@
 #undef VREG_1P5V_EN
 #undef VREG_1P8V_EN
 
-#include "mc1322x.h"
+#include "MC1322x.h"
 
 // *********************  WATCH DOG TIMER **************************************
 // ATENTION ! BE CAREFULLY AT WATCHDOG WHEN IMPLEMENT SLEEP MODE ( if MCU_RET = 0 or 1 ! )
@@ -107,7 +107,7 @@ enum
 
 #define  _SLEEP_TEST_
 
-#define BEGIN_MAIN (void *)0x00400080         /* appl´s start-up code address */
+#define BEGIN_MAIN (void *)0x00400080         /* applï¿½s start-up code address */
 
 #define JSR(x) (*((void(*)(void))x))()
 #define JSR_MAIN() JSR(BEGIN_MAIN)

@@ -41,7 +41,7 @@
 
 #include "MC1322x.h"
 #include "system.h"
-#include "WirelessHART/uap.h"
+#include "WirelessH/uap.h"
 
 /////////////////////////////////
 

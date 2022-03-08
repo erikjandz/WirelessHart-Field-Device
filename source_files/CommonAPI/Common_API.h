@@ -164,7 +164,7 @@ void API_OnRcvMsg( ApiMessageFrame * p_pMessageFrame );
     #endif
 
 #elif       (DEVICE_TYPE == DEV_TYPE_MSP430F2618) // raptor modem
-      #include "../spi1.h"
+      #include "../spi.h"
 
       #define API_PHY_Write(p_pBuff,p_unBuffLen) SPI1_WriteBuff(p_pBuff,p_unBuffLen)
       #define API_PHY_Read(p_pBuff,p_unBuffSize) SPI1_ReadBuff(p_pBuff,p_unBuffSize)
