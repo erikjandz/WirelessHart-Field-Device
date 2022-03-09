@@ -97,7 +97,7 @@
   #define ASM_END_EXCLUSIVE_ZONE()   {ITC_ENABLE_INTERRUPT(MACA_INT); ITC_ENABLE_INTERRUPT(TMR_INT);}
 #endif
 
-__arm uint32 rotate4Bytes(uint32 p_ulData )
+/* __arm */ uint32 rotate4Bytes(uint32 p_ulData )
 {
     uint32 v = p_ulData;
     uint32 t = v ^ ((v << 16) | (v >> 16));
@@ -106,12 +106,12 @@ __arm uint32 rotate4Bytes(uint32 p_ulData )
     return v ^ (t >> 8);
 }
 
-__arm uint32 rotUnaligned4Bytes2(const uint8 * p_pData )
+/* __arm */ uint32 rotUnaligned4Bytes2(const uint8 * p_pData )
 {
    return ( (uint32)p_pData[0] << 24 ) | ( (uint32)p_pData[1] << 16 ) | ( (uint32)p_pData[2] << 8 ) | p_pData[3];
 }
 
-__arm uint32 rotUnaligned4Bytes3(const uint8 * p_pData, int32 p_nDataLen )
+/* __arm */ uint32 rotUnaligned4Bytes3(const uint8 * p_pData, int32 p_nDataLen )
 {
     if( p_nDataLen >= 4 )
     {
@@ -129,7 +129,7 @@ __arm uint32 rotUnaligned4Bytes3(const uint8 * p_pData, int32 p_nDataLen )
     return  0;
 }
 
-__arm uint32 getZeroFilled4Bytes(uint32  p_ulData, int32 p_nDataBytesLen )
+/* __arm */ uint32 getZeroFilled4Bytes(uint32  p_ulData, int32 p_nDataBytesLen )
 {
     if( p_nDataBytesLen >= 4 )
         return p_ulData;
@@ -146,7 +146,7 @@ __arm uint32 getZeroFilled4Bytes(uint32  p_ulData, int32 p_nDataBytesLen )
 }
 
 
-__arm void loadDataReg(const uint8 * p_pData, int32 p_nDataLen )
+/* __arm */ void loadDataReg(const uint8 * p_pData, int32 p_nDataLen )
 {
     ASM_DATA0 = rotUnaligned4Bytes3( p_pData, p_nDataLen );
     ASM_DATA1 = rotUnaligned4Bytes3( p_pData+4, p_nDataLen-4 );
@@ -154,7 +154,7 @@ __arm void loadDataReg(const uint8 * p_pData, int32 p_nDataLen )
     ASM_DATA3 = rotUnaligned4Bytes3( p_pData+12, p_nDataLen-12 );
 }
 
-__arm void startAesAndAuthOnly
+/* __arm */ void startAesAndAuthOnly
                         ( const uint8 * p_pucKey,
                           const uint8 * p_pucNonce,
                           const uint8 * p_pucToAuthOnly,
@@ -243,7 +243,7 @@ __arm void startAesAndAuthOnly
        ;
 }
 
-__arm void putbackReg(uint8 * p_pData, uint32 volatile * p_pRegister )
+/* __arm */ void putbackReg(uint8 * p_pData, uint32 volatile * p_pRegister )
 {
   uint8 i = 3;
   do
@@ -305,9 +305,9 @@ void ASM_Init(void)
 //      Access level: Interrupt level for p_ucInterruptFlag = 1 and user level for p_ucInterruptFlag = 0
 // NOTE :         Built for Auth
 //          B0 = AuthFlags || Nonce N || l(m).         // l(m) = p_unToEncryptLen
-//          Ai = EncrFlags || Nonce N || Counter i, for i = 0, 1, 2, …
+//          Ai = EncrFlags || Nonce N || Counter i, for i = 0, 1, 2, ï¿½
 ///////////////////////////////////////////////////////////////////////////////////
-__arm uint8 AES_Crypt
+/* __arm */ uint8 AES_Crypt
                         ( const uint8 * p_pucKey,
                           const uint8 * p_pucNonce,
                           const uint8 * p_pucToAuthOnly,
@@ -425,7 +425,7 @@ int32 lLen;
 // Obs:
 //      Access level: Interrupt level only
 ///////////////////////////////////////////////////////////////////////////////////
-__arm uint8 AES_Decrypt
+/* __arm */ uint8 AES_Decrypt
                         ( const uint8 * p_pucKey,
                           const uint8 * p_pucNonce,
                           const uint8 * p_pucToAuthOnly,

@@ -34,7 +34,7 @@
 
 #include "typedef.h"
 #include <string.h>
-#include "MC1322x.h"
+/#include "MC1322x.h"
 #include "CommonAPI/RadioApi.h"
 
 #if ( UART2_MODE != NONE )

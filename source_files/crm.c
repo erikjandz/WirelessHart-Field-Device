@@ -71,7 +71,7 @@ uint32 g_ul250msEndTmr;   // this variable is used to memorise the moment of the
 uint16 g_unRtc250msDuration = RTC_32KHZ_250MS_TICS;
 
 
-__arm void RtcClock_Interrupt(void)
+/* __arm */ void RtcClock_Interrupt(void)
 {    
   ITC.IntDisNum = gCrmInt_c;             // disable CRM interrupt until timer interrupt
 #if ( SPI1_MODE != NONE ) && defined( WAKEUP_ON_EXT_PIN ) // wake up for SPI interface

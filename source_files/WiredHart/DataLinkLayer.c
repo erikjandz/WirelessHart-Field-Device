@@ -26,7 +26,7 @@
 
 #include <string.h>
 #include "..\typedef.h"
-#include "..\MC1322x.h"
+//#include "..\MC1322x.h"
 #include "..\uart_hart.h"
 #include "..\spi.h"
 #include "..\WirelessHart\tmr_util.h"

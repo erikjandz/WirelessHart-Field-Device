@@ -77,7 +77,7 @@ inline void RtcTmr_Set250msCorrection(int16 p_nCorrection)
     }
 }
 
-__arm inline void RtcTmr_SetCounter(uint16 p_unCntr)
+/* __arm */ inline void RtcTmr_SetCounter(uint16 p_unCntr)
 {
   if( p_unCntr < (RTC_32KHZ_250MS_TICS + 1) )
   {
@@ -87,7 +87,7 @@ __arm inline void RtcTmr_SetCounter(uint16 p_unCntr)
   }
 }  
 
-__arm inline uint32 RtcTmr_Get250msOffset(void) 
+/* __arm */ inline uint32 RtcTmr_Get250msOffset(void) 
 {
     return (RTC_COUNT - g_ul250msStartTmr);
 }

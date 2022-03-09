@@ -95,7 +95,7 @@ volatile uint32 i = 0;
 ///      Access level: Interrupt level
 ///      Context: 
 ///////////////////////////////////////////////////////////////////////////////////
-__arm void PHY_setMacaCtrl( uint32 p_ulMacaCtrlValue )
+/* __arm */ void PHY_setMacaCtrl( uint32 p_ulMacaCtrlValue )
 {
     volatile uint8 i = 24;
     MACA_CONTROL = p_ulMacaCtrlValue;
@@ -478,7 +478,7 @@ unsigned char PHY_MNG_Request ( unsigned char p_ucService, void * p_pData)
 //      Access level: Interrupt level
 //      Context:
 ///////////////////////////////////////////////////////////////////////////////////
-__arm uint32 PHY_GetLastRXuSecAge(void)
+/* __arm */ uint32 PHY_GetLastRXuSecAge(void)
 {
 // values are volatile but we are OK with any order
 #pragma diag_suppress=Pa082
@@ -500,7 +500,7 @@ __arm uint32 PHY_GetLastRXuSecAge(void)
 //      Access level: Interrupt level
 //      Context:
 ///////////////////////////////////////////////////////////////////////////////////
-__arm uint32 PHY_GetLastTXuSecAge(void)
+/* __arm */ uint32 PHY_GetLastTXuSecAge(void)
 {
 // values are volatile but we are OK with any order
 #pragma diag_suppress=Pa082

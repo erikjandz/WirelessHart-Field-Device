@@ -30,7 +30,7 @@
 ****************************************************************************************************/
 
 #include <string.h>
-#include "../MC1322x.h"
+//#include "../MC1322x.h"
 #include "tmr_util.h"
 #include "app_layer.h"
 #include "app_cmdreq.h"

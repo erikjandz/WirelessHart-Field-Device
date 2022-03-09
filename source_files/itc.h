@@ -68,7 +68,7 @@ extern unsigned int IntDisableAll(void);  // 0 - all enabled, 1 - FIQ disabled/ 
 //
 // My observation :
 // we are in Thumb mode
-// so we will use the __arm directive to tell compiler
+// so we will use the /* __arm */ directive to tell compiler
 // to compile Exceptions Handlers in Arm Mode
 //
 ///////////////////////////////////////////////////////////////////////////
@@ -108,7 +108,7 @@ enum
 
 
 // these function
-__arm void ItcInit(void);
+/* __arm */ void ItcInit(void);
 
 
 #define ITC_ENABLE_INTERRUPT(Irq)   { ITC_INTENNUM = (Irq);   }

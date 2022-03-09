@@ -269,7 +269,7 @@ typedef union
 
 /* -------------- General Purpose I/O Module (GPIO) ------------------------- */
 /*    Base Adrress = MBAR_GPIO = 0x80000000                                   */
-__no_init extern volatile GPIO_PORT0_T _GPIO_PAD_DIR0 @(MBAR_GPIO + 0x00);      /* GPIO Pad Direction for GPIO 00-31 R/W 32 */
+/*__no_init */ extern volatile GPIO_PORT0_T _GPIO_PAD_DIR0 ; //@(MBAR_GPIO + 0x00);      /* GPIO Pad Direction for GPIO 00-31 R/W 32 */
 #define GPIO_PAD_DIR0        _GPIO_PAD_DIR0.Reg
 #define GPIO_PAD_DIR0_P00    _GPIO_PAD_DIR0.Bits.GPIO_00                        /* BIT0 */
 #define GPIO_PAD_DIR0_P01    _GPIO_PAD_DIR0.Bits.GPIO_01                        /* BIT1 */
@@ -305,7 +305,7 @@ __no_init extern volatile GPIO_PORT0_T _GPIO_PAD_DIR0 @(MBAR_GPIO + 0x00);      
 #define GPIO_PAD_DIR0_P31    _GPIO_PAD_DIR0.Bits.GPIO_31                        /* BIT31 */
 
 
-__no_init extern volatile GPIO_PORT1_T _GPIO_PAD_DIR1 @(MBAR_GPIO + 0x04);      /* GPIO Pad Direction for GPIO 32-63 R/W 32 */
+/*__no_init */ extern volatile GPIO_PORT1_T _GPIO_PAD_DIR1 ; //@(MBAR_GPIO + 0x04);      /* GPIO Pad Direction for GPIO 32-63 R/W 32 */
 #define GPIO_PAD_DIR1        _GPIO_PAD_DIR1.Reg
 #define GPIO_PAD_DIR1_P32    _GPIO_PAD_DIR1.Bits.GPIO_32                        /* BIT0 */
 #define GPIO_PAD_DIR1_P33    _GPIO_PAD_DIR1.Bits.GPIO_33                        /* BIT1 */
@@ -341,7 +341,7 @@ __no_init extern volatile GPIO_PORT1_T _GPIO_PAD_DIR1 @(MBAR_GPIO + 0x04);      
 #define GPIO_PAD_DIR1_P63    _GPIO_PAD_DIR1.Bits.GPIO_63                        /* BIT31 */
 
 
-__no_init extern volatile GPIO_PORT0_T _GPIO_DATA0 @(MBAR_GPIO + 0x08);         /* GPIO Data for GPIO 00-31 R/W 32 */
+/*__no_init */ extern volatile GPIO_PORT0_T _GPIO_DATA0 ; //@(MBAR_GPIO + 0x08);         /* GPIO Data for GPIO 00-31 R/W 32 */
 #define GPIO_DATA0        _GPIO_DATA0.Reg
 #define GPIO_DATA0_P00    _GPIO_DATA0.Bits.GPIO_00                              /* BIT0 */
 #define GPIO_DATA0_P01    _GPIO_DATA0.Bits.GPIO_01                              /* BIT1 */
@@ -377,7 +377,7 @@ __no_init extern volatile GPIO_PORT0_T _GPIO_DATA0 @(MBAR_GPIO + 0x08);         
 #define GPIO_DATA0_P31    _GPIO_DATA0.Bits.GPIO_31                              /* BIT31 */
 
 
-__no_init extern volatile GPIO_PORT1_T _GPIO_DATA1 @(MBAR_GPIO + 0x0C);         /* GPIO Data for GPIO 32-63 R/W 32 */
+/*__no_init */ extern volatile GPIO_PORT1_T _GPIO_DATA1 ; //@(MBAR_GPIO + 0x0C);         /* GPIO Data for GPIO 32-63 R/W 32 */
 #define GPIO_DATA1        _GPIO_DATA1.Reg
 #define GPIO_DATA1_P32    _GPIO_DATA1.Bits.GPIO_32                              /* BIT0 */
 #define GPIO_DATA1_P33    _GPIO_DATA1.Bits.GPIO_33                              /* BIT1 */
@@ -413,7 +413,7 @@ __no_init extern volatile GPIO_PORT1_T _GPIO_DATA1 @(MBAR_GPIO + 0x0C);         
 #define GPIO_DATA1_P63    _GPIO_DATA1.Bits.GPIO_63                              /* BIT31 */
 
 
-__no_init extern volatile GPIO_PORT0_T _GPIO_PAD_PU_EN0 @(MBAR_GPIO + 0x10);    /* GPIO Pad Pullup Enable for GPIO 00-31 R/W 32 */
+/*__no_init */ extern volatile GPIO_PORT0_T _GPIO_PAD_PU_EN0 ; //@(MBAR_GPIO + 0x10);    /* GPIO Pad Pullup Enable for GPIO 00-31 R/W 32 */
 #define GPIO_PAD_PU_EN0        _GPIO_PAD_PU_EN0.Reg
 #define GPIO_PAD_PU_EN0_P00    _GPIO_PAD_PU_EN0.Bits.GPIO_00                    /* BIT0 */
 #define GPIO_PAD_PU_EN0_P01    _GPIO_PAD_PU_EN0.Bits.GPIO_01                    /* BIT1 */
@@ -449,7 +449,7 @@ __no_init extern volatile GPIO_PORT0_T _GPIO_PAD_PU_EN0 @(MBAR_GPIO + 0x10);    
 #define GPIO_PAD_PU_EN0_P31    _GPIO_PAD_PU_EN0.Bits.GPIO_31                    /* BIT31 */
 
 
-__no_init extern volatile GPIO_PORT1_T _GPIO_PAD_PU_EN1 @(MBAR_GPIO + 0x14);    /* GPIO Pad Pullup Enable for GPIO 00-31 R/W 32 */
+/*__no_init */ extern volatile GPIO_PORT1_T _GPIO_PAD_PU_EN1 ; //@(MBAR_GPIO + 0x14);    /* GPIO Pad Pullup Enable for GPIO 00-31 R/W 32 */
 #define GPIO_PAD_PU_EN1        _GPIO_PAD_PU_EN1.Reg
 #define GPIO_PAD_PU_EN1_P32    _GPIO_PAD_PU_EN1.Bits.GPIO_32                    /* BIT0 */
 #define GPIO_PAD_PU_EN1_P33    _GPIO_PAD_PU_EN1.Bits.GPIO_33                    /* BIT1 */
@@ -508,7 +508,7 @@ typedef union
   } Bits;
   uint32 Reg;
 } GPIO_FUNC_SEL0_T;
-__no_init extern volatile GPIO_FUNC_SEL0_T _GPIO_FUNC_SEL0 @(MBAR_GPIO + 0x18); /* GPIO Function Select for GPIO 00-15 R/W 32 */
+/*__no_init */ extern volatile GPIO_FUNC_SEL0_T _GPIO_FUNC_SEL0 ; //@(MBAR_GPIO + 0x18); /* GPIO Function Select for GPIO 00-15 R/W 32 */
 #define GPIO_FUNC_SEL0          _GPIO_FUNC_SEL0.Reg
 #define GPIO_FUNC_SEL0_P00      _GPIO_FUNC_SEL0.Bits.GPIO_00                    /* BIT0 | BIT1 */
 #define GPIO_FUNC_SEL0_P01      _GPIO_FUNC_SEL0.Bits.GPIO_01                    /* BIT2 | BIT3 */
@@ -551,7 +551,7 @@ typedef union
   } Bits;
   uint32 Reg;
 } GPIO_FUNC_SEL1_T;
-__no_init extern volatile GPIO_FUNC_SEL1_T _GPIO_FUNC_SEL1 @(MBAR_GPIO + 0x1C); /* GPIO Function Select for GPIO 16-31 R/W 32 */
+/*__no_init */ extern volatile GPIO_FUNC_SEL1_T _GPIO_FUNC_SEL1 ; //@(MBAR_GPIO + 0x1C); /* GPIO Function Select for GPIO 16-31 R/W 32 */
 #define GPIO_FUNC_SEL1          _GPIO_FUNC_SEL1.Reg
 #define GPIO_FUNC_SEL1_P16      _GPIO_FUNC_SEL1.Bits.GPIO_16                    /* BIT0 | BIT1 */
 #define GPIO_FUNC_SEL1_P17      _GPIO_FUNC_SEL1.Bits.GPIO_17                    /* BIT2 | BIT3 */
@@ -594,7 +594,7 @@ typedef union
   } Bits;
   uint32 Reg;
 } GPIO_FUNC_SEL2_T;
-__no_init extern volatile GPIO_FUNC_SEL2_T _GPIO_FUNC_SEL2 @(MBAR_GPIO + 0x20); /* GPIO Function Select for GPIO 32-47 R/W 32 */
+/*__no_init */ extern volatile GPIO_FUNC_SEL2_T _GPIO_FUNC_SEL2 ; //@(MBAR_GPIO + 0x20); /* GPIO Function Select for GPIO 32-47 R/W 32 */
 #define GPIO_FUNC_SEL2          _GPIO_FUNC_SEL2.Reg
 #define GPIO_FUNC_SEL2_P32      _GPIO_FUNC_SEL2.Bits.GPIO_32                    /* BIT0 | BIT1 */
 #define GPIO_FUNC_SEL2_P33      _GPIO_FUNC_SEL2.Bits.GPIO_33                    /* BIT2 | BIT3 */
@@ -638,7 +638,7 @@ typedef union
   } Bits;
   uint32 Reg;
 } GPIO_FUNC_SEL3_T;
-__no_init extern volatile GPIO_FUNC_SEL3_T _GPIO_FUNC_SEL3 @(MBAR_GPIO + 0x24); /* GPIO Function Select for GPIO 48-63 R/W 32 */
+/*__no_init */ extern volatile GPIO_FUNC_SEL3_T _GPIO_FUNC_SEL3 ; //@(MBAR_GPIO + 0x24); /* GPIO Function Select for GPIO 48-63 R/W 32 */
 #define GPIO_FUNC_SEL3          _GPIO_FUNC_SEL3.Reg
 #define GPIO_FUNC_SEL3_P48      _GPIO_FUNC_SEL3.Bits.GPIO_48                    /* BIT0 | BIT1 */
 #define GPIO_FUNC_SEL3_P49      _GPIO_FUNC_SEL3.Bits.GPIO_49                    /* BIT2 | BIT3 */
@@ -658,7 +658,7 @@ __no_init extern volatile GPIO_FUNC_SEL3_T _GPIO_FUNC_SEL3 @(MBAR_GPIO + 0x24); 
 #define GPIO_FUNC_SEL3_P63      _GPIO_FUNC_SEL3.Bits.GPIO_63                    /* BIT30 | BIT31 */
 
 
-__no_init extern volatile GPIO_PORT0_T _GPIO_DATA_SEL0 @(MBAR_GPIO + 0x28);     /* GPIO Data Select for GPIO 00-31 R/W 32 */
+/*__no_init */ extern volatile GPIO_PORT0_T _GPIO_DATA_SEL0 ; //@(MBAR_GPIO + 0x28);     /* GPIO Data Select for GPIO 00-31 R/W 32 */
 #define GPIO_DATA_SEL0        _GPIO_DATA_SEL0.Reg
 #define GPIO_DATA_SEL0_P00    _GPIO_DATA_SEL0.Bits.GPIO_00                      /* BIT0 */
 #define GPIO_DATA_SEL0_P01    _GPIO_DATA_SEL0.Bits.GPIO_01                      /* BIT1 */
@@ -694,7 +694,7 @@ __no_init extern volatile GPIO_PORT0_T _GPIO_DATA_SEL0 @(MBAR_GPIO + 0x28);     
 #define GPIO_DATA_SEL0_P31    _GPIO_DATA_SEL0.Bits.GPIO_31                      /* BIT31 */
 
 
-__no_init extern volatile GPIO_PORT1_T _GPIO_DATA_SEL1 @(MBAR_GPIO + 0x2C);     /* GPIO Data Select for GPIO 32-63 R/W 32 */
+/*__no_init */ extern volatile GPIO_PORT1_T _GPIO_DATA_SEL1 ; //@(MBAR_GPIO + 0x2C);     /* GPIO Data Select for GPIO 32-63 R/W 32 */
 #define GPIO_DATA_SEL1        _GPIO_DATA_SEL1.Reg
 #define GPIO_DATA_SEL1_P32    _GPIO_DATA_SEL1.Bits.GPIO_32                      /* BIT0 */
 #define GPIO_DATA_SEL1_P33    _GPIO_DATA_SEL1.Bits.GPIO_33                      /* BIT1 */
@@ -730,7 +730,7 @@ __no_init extern volatile GPIO_PORT1_T _GPIO_DATA_SEL1 @(MBAR_GPIO + 0x2C);     
 #define GPIO_DATA_SEL1_P63    _GPIO_DATA_SEL1.Bits.GPIO_63                      /* BIT31 */
 
 
-__no_init extern volatile GPIO_PORT0_T _GPIO_PAD_PU_SEL0 @(MBAR_GPIO + 0x30);   /* GPIO Pad Pullup Select for GPIO 00-31 R/W 32 */
+/*__no_init */ extern volatile GPIO_PORT0_T _GPIO_PAD_PU_SEL0 ; //@(MBAR_GPIO + 0x30);   /* GPIO Pad Pullup Select for GPIO 00-31 R/W 32 */
 #define GPIO_PAD_PU_SEL0        _GPIO_PAD_PU_SEL0.Reg
 #define GPIO_PAD_PU_SEL0_P00    _GPIO_PAD_PU_SEL0.Bits.GPIO_00                  /* BIT0 */
 #define GPIO_PAD_PU_SEL0_P01    _GPIO_PAD_PU_SEL0.Bits.GPIO_01                  /* BIT1 */
@@ -766,7 +766,7 @@ __no_init extern volatile GPIO_PORT0_T _GPIO_PAD_PU_SEL0 @(MBAR_GPIO + 0x30);   
 #define GPIO_PAD_PU_SEL0_P31    _GPIO_PAD_PU_SEL0.Bits.GPIO_31                  /* BIT31 */
 
 
-__no_init extern volatile GPIO_PORT1_T _GPIO_PAD_PU_SEL1 @(MBAR_GPIO + 0x34);   /* GPIO Pad Pullup Select for GPIO 32-63 R/W 32 */
+/*__no_init */ extern volatile GPIO_PORT1_T _GPIO_PAD_PU_SEL1 ; //@(MBAR_GPIO + 0x34);   /* GPIO Pad Pullup Select for GPIO 32-63 R/W 32 */
 #define GPIO_PAD_PU_SEL1        _GPIO_PAD_PU_SEL1.Reg
 #define GPIO_PAD_PU_SEL1_P32    _GPIO_PAD_PU_SEL1.Bits.GPIO_32                  /* BIT0 */
 #define GPIO_PAD_PU_SEL1_P33    _GPIO_PAD_PU_SEL1.Bits.GPIO_33                  /* BIT1 */
@@ -802,7 +802,7 @@ __no_init extern volatile GPIO_PORT1_T _GPIO_PAD_PU_SEL1 @(MBAR_GPIO + 0x34);   
 #define GPIO_PAD_PU_SEL1_P63    _GPIO_PAD_PU_SEL1.Bits.GPIO_63                  /* BIT31 */
 
 
-__no_init extern volatile GPIO_PORT0_T _GPIO_PAD_HYST_EN0 @(MBAR_GPIO + 0x38);  /* GPIO Pad Hysteresis Enable for GPIO 00-31 R/W 32 */
+/*__no_init */ extern volatile GPIO_PORT0_T _GPIO_PAD_HYST_EN0 ; //@(MBAR_GPIO + 0x38);  /* GPIO Pad Hysteresis Enable for GPIO 00-31 R/W 32 */
 #define GPIO_PAD_HYST_EN0        _GPIO_PAD_HYST_EN0.Reg
 #define GPIO_PAD_HYST_EN0_P00    _GPIO_PAD_HYST_EN0.Bits.GPIO_00                /* BIT0 */
 #define GPIO_PAD_HYST_EN0_P01    _GPIO_PAD_HYST_EN0.Bits.GPIO_01                /* BIT1 */
@@ -838,7 +838,7 @@ __no_init extern volatile GPIO_PORT0_T _GPIO_PAD_HYST_EN0 @(MBAR_GPIO + 0x38);  
 #define GPIO_PAD_HYST_EN0_P31    _GPIO_PAD_HYST_EN0.Bits.GPIO_31                /* BIT31 */
 
 
-__no_init extern volatile GPIO_PORT1_T _GPIO_PAD_HYST_EN1 @(MBAR_GPIO + 0x3C);  /* GPIO Pad Hysteresis Enable for GPIO 32-63 R/W 32 */
+/*__no_init */ extern volatile GPIO_PORT1_T _GPIO_PAD_HYST_EN1 ; //@(MBAR_GPIO + 0x3C);  /* GPIO Pad Hysteresis Enable for GPIO 32-63 R/W 32 */
 #define GPIO_PAD_HYST_EN1        _GPIO_PAD_HYST_EN1.Reg
 #define GPIO_PAD_HYST_EN1_P32    _GPIO_PAD_HYST_EN1.Bits.GPIO_32                /* BIT0 */
 #define GPIO_PAD_HYST_EN1_P33    _GPIO_PAD_HYST_EN1.Bits.GPIO_33                /* BIT1 */
@@ -874,7 +874,7 @@ __no_init extern volatile GPIO_PORT1_T _GPIO_PAD_HYST_EN1 @(MBAR_GPIO + 0x3C);  
 #define GPIO_PAD_HYST_EN1_P63    _GPIO_PAD_HYST_EN1.Bits.GPIO_63                /* BIT31 */
 
 
-__no_init extern volatile GPIO_PORT0_T _GPIO_PAD_KEEP0 @(MBAR_GPIO + 0x40);     /* GPIO Pad Keeper Enable for GPIO 00-31 R/W 32 */
+/*__no_init */ extern volatile GPIO_PORT0_T _GPIO_PAD_KEEP0 ; //@(MBAR_GPIO + 0x40);     /* GPIO Pad Keeper Enable for GPIO 00-31 R/W 32 */
 #define GPIO_PAD_KEEP0        _GPIO_PAD_KEEP0.Reg
 #define GPIO_PAD_KEEP0_P00    _GPIO_PAD_KEEP0.Bits.GPIO_00                      /* BIT0 */
 #define GPIO_PAD_KEEP0_P01    _GPIO_PAD_KEEP0.Bits.GPIO_01                      /* BIT1 */
@@ -910,7 +910,7 @@ __no_init extern volatile GPIO_PORT0_T _GPIO_PAD_KEEP0 @(MBAR_GPIO + 0x40);     
 #define GPIO_PAD_KEEP0_P31    _GPIO_PAD_KEEP0.Bits.GPIO_31                      /* BIT31 */
 
 
-__no_init extern volatile GPIO_PORT1_T _GPIO_PAD_KEEP1 @(MBAR_GPIO + 0x44);     /* GPIO Pad Keeper Enable for GPIO 32-63 R/W 32 */
+/*__no_init */ extern volatile GPIO_PORT1_T _GPIO_PAD_KEEP1 ; //@(MBAR_GPIO + 0x44);     /* GPIO Pad Keeper Enable for GPIO 32-63 R/W 32 */
 #define GPIO_PAD_KEEP1        _GPIO_PAD_KEEP1.Reg
 #define GPIO_PAD_KEEP1_P32    _GPIO_PAD_KEEP1.Bits.GPIO_32                      /* BIT0 */
 #define GPIO_PAD_KEEP1_P33    _GPIO_PAD_KEEP1.Bits.GPIO_33                      /* BIT1 */
@@ -946,7 +946,7 @@ __no_init extern volatile GPIO_PORT1_T _GPIO_PAD_KEEP1 @(MBAR_GPIO + 0x44);     
 #define GPIO_PAD_KEEP1_P63    _GPIO_PAD_KEEP1.Bits.GPIO_63                      /* BIT31 */
 
 
-__no_init extern volatile GPIO_PORT0_T _GPIO_DATA_SET0 @(MBAR_GPIO + 0x48);     /* GPIO Data Set for GPIO 00-31 W 32 */
+/*__no_init */ extern volatile GPIO_PORT0_T _GPIO_DATA_SET0 ; //@(MBAR_GPIO + 0x48);     /* GPIO Data Set for GPIO 00-31 W 32 */
 #define GPIO_DATA_SET0        _GPIO_DATA_SET0.Reg
 #define GPIO_DATA_SET0_P00    _GPIO_DATA_SET0.Bits.GPIO_00                      /* BIT0 */
 #define GPIO_DATA_SET0_P01    _GPIO_DATA_SET0.Bits.GPIO_01                      /* BIT1 */
@@ -982,7 +982,7 @@ __no_init extern volatile GPIO_PORT0_T _GPIO_DATA_SET0 @(MBAR_GPIO + 0x48);     
 #define GPIO_DATA_SET0_P31    _GPIO_DATA_SET0.Bits.GPIO_31                      /* BIT31 */
 
 
-__no_init extern volatile GPIO_PORT1_T _GPIO_DATA_SET1 @(MBAR_GPIO + 0x4C);     /* GPIO Data Set for GPIO 32-63 W 32 */
+/*__no_init */ extern volatile GPIO_PORT1_T _GPIO_DATA_SET1 ; //@(MBAR_GPIO + 0x4C);     /* GPIO Data Set for GPIO 32-63 W 32 */
 #define GPIO_DATA_SET1        _GPIO_DATA_SET1.Reg
 #define GPIO_DATA_SET1_P32    _GPIO_DATA_SET1.Bits.GPIO_32                      /* BIT0 */
 #define GPIO_DATA_SET1_P33    _GPIO_DATA_SET1.Bits.GPIO_33                      /* BIT1 */
@@ -1018,7 +1018,7 @@ __no_init extern volatile GPIO_PORT1_T _GPIO_DATA_SET1 @(MBAR_GPIO + 0x4C);     
 #define GPIO_DATA_SET1_P63    _GPIO_DATA_SET1.Bits.GPIO_63                      /* BIT31 */
 
 
-__no_init extern volatile GPIO_PORT0_T _GPIO_DATA_RESET0 @(MBAR_GPIO + 0x50);   /* GPIO Data Reset for GPIO 00-31 W 32 */
+/*__no_init */ extern volatile GPIO_PORT0_T _GPIO_DATA_RESET0 ; //@(MBAR_GPIO + 0x50);   /* GPIO Data Reset for GPIO 00-31 W 32 */
 #define GPIO_DATA_RESET0        _GPIO_DATA_RESET0.Reg
 #define GPIO_DATA_RESET0_P00    _GPIO_DATA_RESET0.Bits.GPIO_00                  /* BIT0 */
 #define GPIO_DATA_RESET0_P01    _GPIO_DATA_RESET0.Bits.GPIO_01                  /* BIT1 */
@@ -1054,7 +1054,7 @@ __no_init extern volatile GPIO_PORT0_T _GPIO_DATA_RESET0 @(MBAR_GPIO + 0x50);   
 #define GPIO_DATA_RESET0_P31    _GPIO_DATA_RESET0.Bits.GPIO_31                  /* BIT31 */
 
 
-__no_init extern volatile GPIO_PORT1_T _GPIO_DATA_RESET1 @(MBAR_GPIO + 0x54);   /* GPIO Data Reset for GPIO 32-63 W 32 */
+/*__no_init */ extern volatile GPIO_PORT1_T _GPIO_DATA_RESET1 ; //@(MBAR_GPIO + 0x54);   /* GPIO Data Reset for GPIO 32-63 W 32 */
 #define GPIO_DATA_RESET1        _GPIO_DATA_RESET1.Reg
 #define GPIO_DATA_RESET1_P32    _GPIO_DATA_RESET1.Bits.GPIO_32                  /* BIT0 */
 #define GPIO_DATA_RESET1_P33    _GPIO_DATA_RESET1.Bits.GPIO_33                  /* BIT1 */
@@ -1090,7 +1090,7 @@ __no_init extern volatile GPIO_PORT1_T _GPIO_DATA_RESET1 @(MBAR_GPIO + 0x54);   
 #define GPIO_DATA_RESET1_P63    _GPIO_DATA_RESET1.Bits.GPIO_63                  /* BIT31 */
 
 
-__no_init extern volatile GPIO_PORT0_T _GPIO_PAD_DIR_SET0 @(MBAR_GPIO + 0x58);  /* GPIO Pad Direction Set for GPIO 00-31 W 32 */
+/*__no_init */ extern volatile GPIO_PORT0_T _GPIO_PAD_DIR_SET0 ; //@(MBAR_GPIO + 0x58);  /* GPIO Pad Direction Set for GPIO 00-31 W 32 */
 #define GPIO_PAD_DIR_SET0        _GPIO_PAD_DIR_SET0.Reg
 #define GPIO_PAD_DIR_SET0_P00    _GPIO_PAD_DIR_SET0.Bits.GPIO_00                /* BIT0 */
 #define GPIO_PAD_DIR_SET0_P01    _GPIO_PAD_DIR_SET0.Bits.GPIO_01                /* BIT1 */
@@ -1126,7 +1126,7 @@ __no_init extern volatile GPIO_PORT0_T _GPIO_PAD_DIR_SET0 @(MBAR_GPIO + 0x58);  
 #define GPIO_PAD_DIR_SET0_P31    _GPIO_PAD_DIR_SET0.Bits.GPIO_31                /* BIT31 */
 
 
-__no_init extern volatile GPIO_PORT1_T _GPIO_PAD_DIR_SET1 @(MBAR_GPIO + 0x5C);  /* GPIO Pad Direction Set for GPIO 32-63 W 32 */
+/*__no_init */ extern volatile GPIO_PORT1_T _GPIO_PAD_DIR_SET1 ; //@(MBAR_GPIO + 0x5C);  /* GPIO Pad Direction Set for GPIO 32-63 W 32 */
 #define GPIO_PAD_DIR_SET1        _GPIO_PAD_DIR_SET1.Reg
 #define GPIO_PAD_DIR_SET1_P32    _GPIO_PAD_DIR_SET1.Bits.GPIO_32                /* BIT0 */
 #define GPIO_PAD_DIR_SET1_P33    _GPIO_PAD_DIR_SET1.Bits.GPIO_33                /* BIT1 */
@@ -1162,7 +1162,7 @@ __no_init extern volatile GPIO_PORT1_T _GPIO_PAD_DIR_SET1 @(MBAR_GPIO + 0x5C);  
 #define GPIO_PAD_DIR_SET1_P63    _GPIO_PAD_DIR_SET1.Bits.GPIO_63                /* BIT31 */
 
 
-__no_init extern volatile GPIO_PORT0_T _GPIO_PAD_DIR_RESET0 @(MBAR_GPIO + 0x60);/* GPIO Pad Direction Reset for GPIO 00-31 W 32 */
+/*__no_init */ extern volatile GPIO_PORT0_T _GPIO_PAD_DIR_RESET0 ; //@(MBAR_GPIO + 0x60);/* GPIO Pad Direction Reset for GPIO 00-31 W 32 */
 #define GPIO_PAD_DIR_RESET0        _GPIO_PAD_DIR_RESET0.Reg
 #define GPIO_PAD_DIR_RESET0_P00    _GPIO_PAD_DIR_RESET0.Bits.GPIO_00            /* BIT0 */
 #define GPIO_PAD_DIR_RESET0_P01    _GPIO_PAD_DIR_RESET0.Bits.GPIO_01            /* BIT1 */
@@ -1198,7 +1198,7 @@ __no_init extern volatile GPIO_PORT0_T _GPIO_PAD_DIR_RESET0 @(MBAR_GPIO + 0x60);
 #define GPIO_PAD_DIR_RESET0_P31    _GPIO_PAD_DIR_RESET0.Bits.GPIO_31            /* BIT31 */
 
 
-__no_init extern volatile GPIO_PORT1_T _GPIO_PAD_DIR_RESET1 @(MBAR_GPIO + 0x64);/* GPIO Pad Direction Reset for GPIO 32-63 W 32 */
+/*__no_init */ extern volatile GPIO_PORT1_T _GPIO_PAD_DIR_RESET1 ; //@(MBAR_GPIO + 0x64);/* GPIO Pad Direction Reset for GPIO 32-63 W 32 */
 #define GPIO_PAD_DIR_RESET1        _GPIO_PAD_DIR_RESET1.Reg
 #define GPIO_PAD_DIR_RESET1_P32    _GPIO_PAD_DIR_RESET1.Bits.GPIO_32            /* BIT0 */
 #define GPIO_PAD_DIR_RESET1_P33    _GPIO_PAD_DIR_RESET1.Bits.GPIO_33            /* BIT1 */
@@ -1288,7 +1288,7 @@ typedef union
   } Bits;
   uint32 Reg;
 } CRM_SYS_CNTL_T;
-__no_init extern volatile CRM_SYS_CNTL_T _SYS_CNTL @(MBAR_CRM + 0x00);          /* CRM System Control R/W 32 */
+/*__no_init */ extern volatile CRM_SYS_CNTL_T _SYS_CNTL ; //@(MBAR_CRM + 0x00);          /* CRM System Control R/W 32 */
 #define SYS_CNTL                  _SYS_CNTL.Reg
 #define CRM_SYS_PWR_SOURCE        _SYS_CNTL.Bits.PWR_SOURCE                     /* BIT0 | BIT1 */
 #define CRM_SYS_PADS_1P8V_SEL     _SYS_CNTL.Bits.PADS_1P8V_SEL                  /* BIT2 */
@@ -1318,7 +1318,7 @@ typedef union
   } Bits;
   uint32 Reg;
 } CRM_WU_CNTL_T;
-__no_init extern volatile CRM_WU_CNTL_T _WU_CNTL @(MBAR_CRM + 0x04);            /* CRM Wakeup Control R/W 32 */
+/*__no_init */ extern volatile CRM_WU_CNTL_T _WU_CNTL ; //@(MBAR_CRM + 0x04);            /* CRM Wakeup Control R/W 32 */
 #define WU_CNTL                     _WU_CNTL.Reg
 #define CRM_WU_CNTL_TIMER_WU_EN     _WU_CNTL.Bits.TIMER_WU_EN                   /* BIT0 */
 #define CRM_WU_CNTL_RTC_WU_EN       _WU_CNTL.Bits.RTC_WU_EN                     /* BIT1 */
@@ -1347,7 +1347,7 @@ typedef union
   } Bits;
   uint32 Reg;
 }CRM_SLEEP_CNTL_T;
-__no_init extern volatile CRM_SLEEP_CNTL_T _SLEEP_CNTL @(MBAR_CRM + 0x08);      /* CRM Sleep Control R/W 32 */
+/*__no_init */ extern volatile CRM_SLEEP_CNTL_T _SLEEP_CNTL ; //@(MBAR_CRM + 0x08);      /* CRM Sleep Control R/W 32 */
 #define SLEEP_CNTL                  _SLEEP_CNTL.Reg
 #define CRM_SLEEP_CNTL_HIB          _SLEEP_CNTL.Bits.HIB                        /* BIT0 */
 #define CRM_SLEEP_CNTL_DOZE         _SLEEP_CNTL.Bits.DOZE                       /* BIT1 */
@@ -1370,7 +1370,7 @@ typedef union
   } Bits;
   uint32 Reg;
 }CRM_BS_CNTL_T;
-__no_init extern volatile CRM_BS_CNTL_T _BS_CNTL @(MBAR_CRM + 0x0C);            /* CRM Bus Stealing Control R/W 32 */
+/*__no_init */ extern volatile CRM_BS_CNTL_T _BS_CNTL ; //@(MBAR_CRM + 0x0C);            /* CRM Bus Stealing Control R/W 32 */
 #define BS_CNTL                   _BS_CNTL.Reg
 #define CRM_BS_CNTL_BS_EN         _BS_CNTL.Bits.BS_EN                           /* BIT0 */
 #define CRM_BS_CNTL_WAIT4IRQ      _BS_CNTL.Bits.WAIT4IRQ                        /* BIT1 */
@@ -1394,7 +1394,7 @@ typedef union
   } Bits;
   uint32 Reg;
 }CRM_COP_CNTL_T;
-__no_init extern volatile CRM_COP_CNTL_T _COP_CNTL @(MBAR_CRM + 0x10);          /* CRM COP Control R/W 32 */
+/*__no_init */ extern volatile CRM_COP_CNTL_T _COP_CNTL ; //@(MBAR_CRM + 0x10);          /* CRM COP Control R/W 32 */
 #define COP_CNTL                    _COP_CNTL.Reg
 #define CRM_COP_CNTL_COP_EN         _COP_CNTL.Bits.COP_EN                       /* BIT0 */
 #define CRM_COP_CNTL_COP_OUT        _COP_CNTL.Bits.COP_OUT                      /* BIT1 */
@@ -1404,7 +1404,7 @@ __no_init extern volatile CRM_COP_CNTL_T _COP_CNTL @(MBAR_CRM + 0x10);          
 
 
 typedef uint32 CRM_COP_SERVICE_T;
-__no_init extern volatile CRM_COP_SERVICE_T _COP_SERVICE @(MBAR_CRM + 0x14);    /* CRM COP Service R/W 32 */
+/*__no_init */ extern volatile CRM_COP_SERVICE_T _COP_SERVICE ; //@(MBAR_CRM + 0x14);    /* CRM COP Service R/W 32 */
 #define COP_SERVICE                 _COP_SERVICE
 
 
@@ -1428,7 +1428,7 @@ typedef union
   } Bits;
   uint32 Reg;
 }CRM_STATUS_T;
-__no_init extern volatile CRM_STATUS_T _CRM_STATUS @(MBAR_CRM + 0x18);          /* CRM Event Status R/W 32 */
+/*__no_init */ extern volatile CRM_STATUS_T _CRM_STATUS ; //@(MBAR_CRM + 0x18);          /* CRM Event Status R/W 32 */
 //#define CRM_STATUS                _CRM_STATUS.Reg
 #define CRM_STATUS_SLEEP_SYNC     _CRM_STATUS.Bits.SLEEP_SYNC                   /* BIT0 */
 #define CRM_STATUS_HIB_WU_EVT     _CRM_STATUS.Bits.HIB_WU_EVT                   /* BIT1 */
@@ -1468,27 +1468,27 @@ typedef union
   } Bits;
   uint32 Reg;
 }CRM_MOD_STATUS_T;
-__no_init extern volatile CRM_MOD_STATUS_T _MOD_STATUS @(MBAR_CRM + 0x1C);      /* CRM Module Enable Status R 32 */
+/*__no_init */ extern volatile CRM_MOD_STATUS_T _MOD_STATUS ; //@(MBAR_CRM + 0x1C);      /* CRM Module Enable Status R 32 */
 #define MOD_STATUS                _MOD_STATUS.Reg
 
 
 typedef uint32 CRM_WU_COUNT_T;
-__no_init extern volatile CRM_WU_COUNT_T _WU_COUNT @(MBAR_CRM + 0x20);          /* CRM Wakeup Count R 32 */
+/*__no_init */ extern volatile CRM_WU_COUNT_T _WU_COUNT ; //@(MBAR_CRM + 0x20);          /* CRM Wakeup Count R 32 */
 #define WU_COUNT                  _WU_COUNT
 
 
 typedef uint32 CRM_WU_TIMEOUT_T;
-__no_init extern volatile CRM_WU_TIMEOUT_T _WU_TIMEOUT @(MBAR_CRM + 0x24);      /* CRM Wakeup Timeout R/W 32 */
+/*__no_init */ extern volatile CRM_WU_TIMEOUT_T _WU_TIMEOUT ; //@(MBAR_CRM + 0x24);      /* CRM Wakeup Timeout R/W 32 */
 #define WU_TIMEOUT                _WU_TIMEOUT
 
 
 typedef uint32 CRM_RTC_COUNT_T;
-__no_init extern volatile CRM_RTC_COUNT_T _RTC_COUNT @(MBAR_CRM + 0x28);        /* CRM Real Time Count R/W 32 */
+/*__no_init */ extern volatile CRM_RTC_COUNT_T _RTC_COUNT ; //@(MBAR_CRM + 0x28);        /* CRM Real Time Count R/W 32 */
 #define RTC_COUNT                 _RTC_COUNT
 
 
 typedef uint32 CRM_RTC_TIMEOUT_T;
-__no_init extern volatile CRM_RTC_TIMEOUT_T _RTC_TIMEOUT @(MBAR_CRM + 0x2C);    /* CRM RTC Periodic Wakeup Timeout R/W 32 */
+/*__no_init */ extern volatile CRM_RTC_TIMEOUT_T _RTC_TIMEOUT ; //@(MBAR_CRM + 0x2C);    /* CRM RTC Periodic Wakeup Timeout R/W 32 */
 #define RTC_TIMEOUT               _RTC_TIMEOUT
 
 
@@ -1503,12 +1503,12 @@ typedef union
   } Bits;
   uint32 Reg;
 }CRM_CAL_CNTL_T;
-__no_init extern volatile CRM_CAL_CNTL_T _CAL_CNTL @(MBAR_CRM + 0x34);          /* CRM Calibration Control R/W 32 */
+/*__no_init */ extern volatile CRM_CAL_CNTL_T _CAL_CNTL ; //@(MBAR_CRM + 0x34);          /* CRM Calibration Control R/W 32 */
 #define CAL_CNTL                  _CAL_CNTL.Reg
 
 
 typedef uint32 CRM_CAL_COUNT_T;
-__no_init extern volatile CRM_CAL_COUNT_T _CAL_COUNT @(MBAR_CRM + 0x38);        /* CRM Calibration XTAL Count R 32 */
+/*__no_init */ extern volatile CRM_CAL_COUNT_T _CAL_COUNT ; //@(MBAR_CRM + 0x38);        /* CRM Calibration XTAL Count R 32 */
 #define CAL_COUNT                 _CAL_COUNT
 
 
@@ -1524,7 +1524,7 @@ typedef union
   } Bits;
   uint32 Reg;
 } CRM_RINGOSC_CNTL_T;
-__no_init extern volatile CRM_RINGOSC_CNTL_T _RINGOSC_CNTL @(MBAR_CRM + 0x3C);  /* CRM 2kHz Ring Oscillator Control R/W 32 */
+/*__no_init */ extern volatile CRM_RINGOSC_CNTL_T _RINGOSC_CNTL ; //@(MBAR_CRM + 0x3C);  /* CRM 2kHz Ring Oscillator Control R/W 32 */
 #define RINGOSC_CNTL                 _RINGOSC_CNTL.Reg
 
 
@@ -1546,7 +1546,7 @@ typedef union
   } Bits;
   uint32 Reg;
 } CRM_XTAL_CNTL_T;
-__no_init extern volatile CRM_XTAL_CNTL_T _XTAL_CNTL @(MBAR_CRM + 0x40);        /* CRM Reference XTAL Control R/W 32 */
+/*__no_init */ extern volatile CRM_XTAL_CNTL_T _XTAL_CNTL ; //@(MBAR_CRM + 0x40);        /* CRM Reference XTAL Control R/W 32 */
 #define XTAL_CNTL                    _XTAL_CNTL.Reg
 
 
@@ -1559,7 +1559,7 @@ typedef union
   } Bits;
   uint32 Reg;
 } CRM_XTAL32_CNTL_T;
-__no_init extern volatile CRM_XTAL32_CNTL_T _XTAL32_CNTL @(MBAR_CRM + 0x44);    /* CRM 32kHz XTAL Control R/W 32 */
+/*__no_init */ extern volatile CRM_XTAL32_CNTL_T _XTAL32_CNTL ; //@(MBAR_CRM + 0x44);    /* CRM 32kHz XTAL Control R/W 32 */
 #define XTAL32_CNTL                 _XTAL32_CNTL.Reg
 
 
@@ -1579,7 +1579,7 @@ typedef union
   } Bits;
   uint32 Reg;
 } CRM_VREG_CNTL_T;
-__no_init extern volatile CRM_VREG_CNTL_T _VREG_CNTL @(MBAR_CRM + 0x48);        /* CRM Voltage Regulator Control R/W 32 */
+/*__no_init */ extern volatile CRM_VREG_CNTL_T _VREG_CNTL ; //@(MBAR_CRM + 0x48);        /* CRM Voltage Regulator Control R/W 32 */
 #define VREG_CNTL                   _VREG_CNTL.Reg
 
 
@@ -1597,12 +1597,12 @@ typedef union
   } Bits;
   uint32 Reg;
 } CRM_VREG_TRIM_T;
-__no_init extern volatile CRM_VREG_TRIM_T _VREG_TRIM @(MBAR_CRM + 0x4C);        /* CRM Voltage Regulator Trim R/W 32 */
+/*__no_init */ extern volatile CRM_VREG_TRIM_T _VREG_TRIM ; //@(MBAR_CRM + 0x4C);        /* CRM Voltage Regulator Trim R/W 32 */
 #define VREG_TRIM                   _VREG_TRIM.Reg
 
 
 typedef uint32 CRM_SW_RST_T;
-__no_init extern volatile CRM_SW_RST_T _SW_RST @(MBAR_CRM + 0x50);              /* CRM Software Reset R/W 32 */
+/*__no_init */ extern volatile CRM_SW_RST_T _SW_RST ; //@(MBAR_CRM + 0x50);              /* CRM Software Reset R/W 32 */
 #define SW_RST                 _SW_RST
 
 
@@ -1620,7 +1620,7 @@ typedef union
   } Bits;
   uint32 Reg;
 } MACA_VERSION_T;
-__no_init extern volatile MACA_VERSION_T _MACA_VERSION @(MBAR_MACA + 0x00);     /* MACA Version Number R 32 */
+/*__no_init */ extern volatile MACA_VERSION_T _MACA_VERSION ; //@(MBAR_MACA + 0x00);     /* MACA Version Number R 32 */
 #define MACA_VERSION                   _MACA_VERSION.Reg
 #define MACA_VERSION_MINOR             _MACA_VERSION.Bits.MINOR
 #define MACA_VERSION_MAJOR             _MACA_VERSION.Bits.MAJOR
@@ -1636,14 +1636,14 @@ typedef union
   } Bits;
   uint32 Reg;
 } MACA_RESET_T;
-__no_init extern volatile MACA_RESET_T _MACA_RESET @(MBAR_MACA + 0x04);         /* MACA Reset R/W 32 */
+/*__no_init */ extern volatile MACA_RESET_T _MACA_RESET ; //@(MBAR_MACA + 0x04);         /* MACA Reset R/W 32 */
 #define MACA_RESET                    _MACA_RESET.Reg
 #define MACA_RESET_RST                _MACA_RESET.Bits.RST
 #define MACA_RESET_CLK_ON             _MACA_RESET.Bits.CLK_ON
 
 
 typedef uint32 MACA_RANDOM_T;
-__no_init extern volatile MACA_RANDOM_T _MACA_RANDOM @(MBAR_MACA + 0x08);       /* MACA Random Number R/W 32 */
+/*__no_init */ extern volatile MACA_RANDOM_T _MACA_RANDOM ; //@(MBAR_MACA + 0x08);       /* MACA Random Number R/W 32 */
 #define MACA_RANDOM                   _MACA_RANDOM
 
 
@@ -1670,7 +1670,7 @@ typedef union
   } Bits;
   uint32 Reg;
 } MACA_CONTROL_T;
-__no_init extern volatile MACA_CONTROL_T _MACA_CONTROL @(MBAR_MACA + 0x0C);     /* MACA Control W 32 */
+/*__no_init */ extern volatile MACA_CONTROL_T _MACA_CONTROL ; //@(MBAR_MACA + 0x0C);     /* MACA Control W 32 */
 #define MACA_CONTROL		          _MACA_CONTROL.Reg
 #define MACA_CONTROL_SEQUENCE	          _MACA_CONTROL.Bits.SEQUENCE
 #define MACA_CONTROL_MODE	          _MACA_CONTROL.Bits.MODE
@@ -1704,7 +1704,7 @@ typedef union
   } Bits;
   uint32 Reg;
 } MACA_STATUS_T;
-__no_init extern volatile MACA_STATUS_T _MACA_STATUS @(MBAR_MACA + 0x10);       /* MACA Status R 32 */
+/*__no_init */ extern volatile MACA_STATUS_T _MACA_STATUS ; //@(MBAR_MACA + 0x10);       /* MACA Status R 32 */
 #define MACA_STATUS		          _MACA_STATUS.Reg
 #define MACA_STATUS_COMPLETE_CODE	  _MACA_STATUS.Bits.COMPLETE_CODE
 #define MACA_STATUS_ZIGBEE	          _MACA_STATUS.Bits.ZIGBEE
@@ -1723,7 +1723,7 @@ typedef union
   } Bits;
   uint32 Reg;
 } MACA_FRMPND_T;
-__no_init extern volatile MACA_FRMPND_T _MACA_FRMPND @(MBAR_MACA + 0x14);       /* MACA Frame Pending R/W 32 */
+/*__no_init */ extern volatile MACA_FRMPND_T _MACA_FRMPND ; //@(MBAR_MACA + 0x14);       /* MACA Frame Pending R/W 32 */
 #define MACA_FRMPND                 _MACA_FRMPND.Reg
 #define MACA_FRMPND_PND	            _MACA_FRMPND.Bits.PND
 
@@ -1737,18 +1737,18 @@ typedef union
   } Bits;
   uint32 Reg;
 } MACA_FREQ_T;
-__no_init extern volatile MACA_FREQ_T _MACA_FREQ @(MBAR_MACA + 0x18);           // MACA Frequency Channel R/W 32 
+__no_init  extern volatile MACA_FREQ_T _MACA_FREQ ; //@(MBAR_MACA + 0x18);           // MACA Frequency Channel R/W 32 
 #define MACA_FREQ                 _MACA_FREQ.Reg
 #define MACA_FREQ_CHANNEL         _MACA_FREQ.Bits.CHANNEL
 */
 
 typedef uint32 MACA_MC1322x_ID_T;
-__no_init extern volatile MACA_MC1322x_ID_T _MACA_MC1322x_ID @(MBAR_MACA + 0x18);           // MACA MC1322x ID 
+/*__no_init */ extern volatile MACA_MC1322x_ID_T _MACA_MC1322x_ID ; //@(MBAR_MACA + 0x18);           // MACA MC1322x ID 
 #define MACA_MC1322x_ID               _MACA_MC1322x_ID
 
 
 typedef uint32 MACA_EDVALUE_T;
-__no_init extern volatile MACA_EDVALUE_T _MACA_EDVALUE @(MBAR_MACA + 0x1C);     /* MACA Energy Detect Result R 32 */
+/*__no_init */ extern volatile MACA_EDVALUE_T _MACA_EDVALUE ; //@(MBAR_MACA + 0x1C);     /* MACA Energy Detect Result R 32 */
 #define MACA_EDVALUE                   _MACA_EDVALUE
 
 
@@ -1763,7 +1763,7 @@ typedef union
   } Bits;
   uint32 Reg;
 } MACA_TMREN_T;
-__no_init extern volatile MACA_TMREN_T _MACA_TMREN @(MBAR_MACA + 0x40);         /* MACA Enable Timers R/W 32 */
+/*__no_init */ extern volatile MACA_TMREN_T _MACA_TMREN ; //@(MBAR_MACA + 0x40);         /* MACA Enable Timers R/W 32 */
 #define MACA_TMREN		        _MACA_TMREN.Reg
 #define MACA_TMREN_STRT	                _MACA_TMREN.Bits.STRT
 #define MACA_TMREN_CPL	                _MACA_TMREN.Bits.CPL
@@ -1784,7 +1784,7 @@ typedef union
   } Bits;
   uint32 Reg;
 } MACA_TMRDIS_T;
-__no_init extern volatile MACA_TMRDIS_T _MACA_TMRDIS @(MBAR_MACA + 0x44);       /* MACA Disable Timers R/W 32 */
+/*__no_init */ extern volatile MACA_TMRDIS_T _MACA_TMRDIS ; //@(MBAR_MACA + 0x44);       /* MACA Disable Timers R/W 32 */
 #define MACA_TMRDIS		      _MACA_TMRDIS.Reg
 #define MACA_TMRDIS_STRT	      _MACA_TMRDIS.Bits.STRT
 #define MACA_TMRDIS_CPL	              _MACA_TMRDIS.Bits.CPL
@@ -1795,37 +1795,37 @@ __no_init extern volatile MACA_TMRDIS_T _MACA_TMRDIS @(MBAR_MACA + 0x44);       
 
 
 typedef uint32 MACA_CLK_T;
-__no_init extern volatile MACA_CLK_T _MACA_CLK @(MBAR_MACA + 0x48);             /* MACA Clock R/W 32 */
+/*__no_init */ extern volatile MACA_CLK_T _MACA_CLK ; //@(MBAR_MACA + 0x48);             /* MACA Clock R/W 32 */
 #define MACA_CLK                   _MACA_CLK
 
 
 typedef uint32 MACA_STARTCLK_T;
-__no_init extern volatile MACA_STARTCLK_T _MACA_STARTCLK @(MBAR_MACA + 0x4C);   /* MACA Start Clock R/W 32 */
+/*__no_init */ extern volatile MACA_STARTCLK_T _MACA_STARTCLK ; //@(MBAR_MACA + 0x4C);   /* MACA Start Clock R/W 32 */
 #define MACA_STARTCLK                   _MACA_STARTCLK
 
 
 typedef uint32 MACA_CPLCLK_T;
-__no_init extern volatile MACA_CPLCLK_T _MACA_CPLCLK @(MBAR_MACA + 0x50);       /* MACA Complete Clock R/W 32 */
+/*__no_init */ extern volatile MACA_CPLCLK_T _MACA_CPLCLK ; //@(MBAR_MACA + 0x50);       /* MACA Complete Clock R/W 32 */
 #define MACA_CPLCLK                   _MACA_CPLCLK
 
 
 typedef uint32 MACA_SFTCLK_T;
-__no_init extern volatile MACA_SFTCLK_T _MACA_SFTCLK @(MBAR_MACA + 0x54);       /* MACA Soft Timeout Clock R/W 32 */
+/*__no_init */ extern volatile MACA_SFTCLK_T _MACA_SFTCLK ; //@(MBAR_MACA + 0x54);       /* MACA Soft Timeout Clock R/W 32 */
 #define MACA_SFTCLK                   _MACA_SFTCLK
 
 
 typedef uint32 MACA_CLKOFFSET_T;
-__no_init extern volatile MACA_CLKOFFSET_T _MACA_CLKOFFSET @(MBAR_MACA + 0x58); /* MACA Clock offset R/W 32 */
+/*__no_init */ extern volatile MACA_CLKOFFSET_T _MACA_CLKOFFSET ; //@(MBAR_MACA + 0x58); /* MACA Clock offset R/W 32 */
 #define MACA_CLKOFFSET                   _MACA_CLKOFFSET
 
 
 typedef uint32 MACA_RELCLK_T;
-__no_init extern volatile MACA_RELCLK_T _MACA_RELCLK @(MBAR_MACA + 0x5C);       /* MACA Relative clock R/W 32 */
+/*__no_init */ extern volatile MACA_RELCLK_T _MACA_RELCLK ; //@(MBAR_MACA + 0x5C);       /* MACA Relative clock R/W 32 */
 #define MACA_RELCLK                   _MACA_RELCLK
 
 
 typedef uint32 MACA_CPLTIM_T;
-__no_init extern volatile MACA_CPLTIM_T _MACA_CPLTIM @(MBAR_MACA + 0x60);       /* MACA Action Complete Timestamp R 32 */
+/*__no_init */ extern volatile MACA_CPLTIM_T _MACA_CPLTIM ; //@(MBAR_MACA + 0x60);       /* MACA Action Complete Timestamp R 32 */
 #define MACA_CPLTIM                   _MACA_CPLTIM
 
 
@@ -1840,29 +1840,29 @@ typedef union
   } Bits;
   uint32 Reg;
 } MACA_SLOTOFFSET_T;
-__no_init extern volatile MACA_SLOTOFFSET_T _MACA_SLOTOFFSET @(MBAR_MACA + 0x64); /* MACA Tx Slot Offset Adjustment R/W 32 */
+/*__no_init */ extern volatile MACA_SLOTOFFSET_T _MACA_SLOTOFFSET ; //@(MBAR_MACA + 0x64); /* MACA Tx Slot Offset Adjustment R/W 32 */
 #define MACA_SLOTOFFSET                     _MACA_SLOTOFFSET.Reg
 #define MACA_SLOTOFFSET_TX_SLOT_OFFSET      _MACA_SLOTOFFSET.Bits.TX_SLOT_OFFSET
 #define MACA_SLOTOFFSET_RX_SLOT_OFFSET      _MACA_SLOTOFFSET.Bits.RX_SLOT_OFFSET
 
 
 typedef uint32 MACA_TIMESTAMP_T;
-__no_init extern volatile MACA_TIMESTAMP_T _MACA_TIMESTAMP @(MBAR_MACA + 0x68); /* MACA Receive Time Stamp R 32 */
+/*__no_init */ extern volatile MACA_TIMESTAMP_T _MACA_TIMESTAMP ; //@(MBAR_MACA + 0x68); /* MACA Receive Time Stamp R 32 */
 #define MACA_TIMESTAMP                   _MACA_TIMESTAMP
 
 
 typedef uint32 MACA_DMARX_T;
-__no_init extern volatile MACA_DMARX_T _MACA_DMARX @(MBAR_MACA + 0x80);         /* MACA DMA Rx Data Pointer R/W 32 */
+/*__no_init */ extern volatile MACA_DMARX_T _MACA_DMARX ; //@(MBAR_MACA + 0x80);         /* MACA DMA Rx Data Pointer R/W 32 */
 #define MACA_DMARX                   _MACA_DMARX
 
 
 typedef uint32 MACA_DMATX_T;
-__no_init extern volatile MACA_DMATX_T _MACA_DMATX @(MBAR_MACA + 0x84);         /* MACA DMA Tx Data Pointer R/W 32 */
+/*__no_init */ extern volatile MACA_DMATX_T _MACA_DMATX ; //@(MBAR_MACA + 0x84);         /* MACA DMA Tx Data Pointer R/W 32 */
 #define MACA_DMATX                   _MACA_DMATX
 
 
 typedef uint32 MACA_DMAPOLL_T;
-__no_init extern volatile MACA_DMAPOLL_T _MACA_DMAPOLL @(MBAR_MACA + 0x88);     /* MACA DMA Tx Poll Response Pointer R/W 32 */
+/*__no_init */ extern volatile MACA_DMAPOLL_T _MACA_DMAPOLL ; //@(MBAR_MACA + 0x88);     /* MACA DMA Tx Poll Response Pointer R/W 32 */
 #define MACA_DMAPOLL                   _MACA_DMAPOLL
 
 
@@ -1877,7 +1877,7 @@ typedef union
   } Bits;
   uint32 Reg;
 } MACA_TXLEN_T;
-__no_init extern volatile MACA_TXLEN_T _MACA_TXLEN @(MBAR_MACA + 0x8C);         /* MACA Tx Length R/W 32 */
+/*__no_init */ extern volatile MACA_TXLEN_T _MACA_TXLEN ; //@(MBAR_MACA + 0x8C);         /* MACA Tx Length R/W 32 */
 #define MACA_TXLEN              _MACA_TXLEN.Reg
 #define MACA_TXLEN_TX_LEN       _MACA_TXLEN.Bits.TX_LEN
 #define MACA_TXLEN_RX_LEN       _MACA_TXLEN.Bits.RX_LEN
@@ -1892,7 +1892,7 @@ typedef union
   } Bits;
   uint32 Reg;
 } MACA_TXSEQNR_T;
-__no_init extern volatile MACA_TXSEQNR_T _MACA_TXSEQNR @(MBAR_MACA + 0x90);     /* MACA Tx Sequence Number R/W 32 */
+/*__no_init */ extern volatile MACA_TXSEQNR_T _MACA_TXSEQNR ; //@(MBAR_MACA + 0x90);     /* MACA Tx Sequence Number R/W 32 */
 #define MACA_TXSEQNR              _MACA_TXSEQNR.Reg
 #define MACA_TXSEQNR_TXSEQN       _MACA_TXSEQNR.Bits.TXSEQN
 
@@ -1906,7 +1906,7 @@ typedef union
   } Bits;
   uint32 Reg;
 } MACA_SETRXLVL_T;
-__no_init extern volatile MACA_SETRXLVL_T _MACA_SETRXLVL @(MBAR_MACA + 0x94);   /* MACA Set Rx Level Interrupt R/W 32 */
+/*__no_init */ extern volatile MACA_SETRXLVL_T _MACA_SETRXLVL ; //@(MBAR_MACA + 0x94);   /* MACA Set Rx Level Interrupt R/W 32 */
 #define MACA_SETRXLVL               _MACA_SETRXLVL.Reg
 #define MACA_SETRXLVL_FIFO_LVL      _MACA_SETRXLVL.Bits.FIFO_LVL
 
@@ -1920,12 +1920,12 @@ typedef union
   } Bits;
   uint32 Reg;
 } MACA_GETRXLVL_T;
-__no_init extern volatile MACA_GETRXLVL_T _MACA_GETRXLVL @(MBAR_MACA + 0x98);   /* MACA Read Number of Received Bytes R 32 */
+/*__no_init */ extern volatile MACA_GETRXLVL_T _MACA_GETRXLVL ; //@(MBAR_MACA + 0x98);   /* MACA Read Number of Received Bytes R 32 */
 #define MACA_GETRXLVL               _MACA_GETRXLVL.Reg
 #define MACA_GETRXLVL_RECVBYTES     _MACA_GETRXLVL.Bits.RECVBYTES
 
 
-__no_init extern volatile MACA_IRQ_T _MACA_IRQ @(MBAR_MACA + 0xC0);             /* MACA Interrupt R 32 */
+/*__no_init */ extern volatile MACA_IRQ_T _MACA_IRQ ; //@(MBAR_MACA + 0xC0);             /* MACA Interrupt R 32 */
 #define MACA_IRQ		  _MACA_IRQ.Reg
 #define MACA_IRQ_ACPL	          _MACA_IRQ.Bits.ACPL
 #define MACA_IRQ_POLL	          _MACA_IRQ.Bits.POLL
@@ -1941,7 +1941,7 @@ __no_init extern volatile MACA_IRQ_T _MACA_IRQ @(MBAR_MACA + 0xC0);             
 #define MACA_IRQ_STRT	          _MACA_IRQ.Bits.STRT
 
 
-__no_init extern volatile MACA_IRQ_T _MACA_CLRIRQ @(MBAR_MACA + 0xC4);          /* MACA Interrupt Clear W 32 */
+/*__no_init */ extern volatile MACA_IRQ_T _MACA_CLRIRQ ; //@(MBAR_MACA + 0xC4);          /* MACA Interrupt Clear W 32 */
 #define MACA_CLRIRQ		  _MACA_CLRIRQ.Reg
 #define MACA_CLRIRQ_ACPL          _MACA_CLRIRQ.Bits.ACPL
 #define MACA_CLRIRQ_POLL          _MACA_CLRIRQ.Bits.POLL
@@ -1957,7 +1957,7 @@ __no_init extern volatile MACA_IRQ_T _MACA_CLRIRQ @(MBAR_MACA + 0xC4);          
 #define MACA_CLRIRQ_STRT          _MACA_CLRIRQ.Bits.STRT
 
 
-__no_init extern volatile MACA_IRQ_T _MACA_SETIRQ @(MBAR_MACA + 0xC8);          /* MACA Interrupt Set W 32 */
+/*__no_init */ extern volatile MACA_IRQ_T _MACA_SETIRQ ; //@(MBAR_MACA + 0xC8);          /* MACA Interrupt Set W 32 */
 #define MACA_SETIRQ		  _MACA_SETIRQ.Reg
 #define MACA_SETIRQ_ACPL          _MACA_SETIRQ.Bits.ACPL
 #define MACA_SETIRQ_POLL          _MACA_SETIRQ.Bits.POLL
@@ -1973,7 +1973,7 @@ __no_init extern volatile MACA_IRQ_T _MACA_SETIRQ @(MBAR_MACA + 0xC8);          
 #define MACA_SETIRQ_STRT          _MACA_SETIRQ.Bits.STRT
 
 
-__no_init extern volatile MACA_IRQ_T _MACA_MASKIRQ @(MBAR_MACA + 0xCC);         /* MACA Interrupt Mask W 32 */
+/*__no_init */ extern volatile MACA_IRQ_T _MACA_MASKIRQ ; //@(MBAR_MACA + 0xCC);         /* MACA Interrupt Mask W 32 */
 #define MACA_MASKIRQ		  _MACA_MASKIRQ.Reg
 #define MACA_MASKIRQ_ACPL         _MACA_MASKIRQ.Bits.ACPL
 #define MACA_MASKIRQ_POLL         _MACA_MASKIRQ.Bits.POLL
@@ -1998,7 +1998,7 @@ typedef union
   } Bits;
   uint32 Reg;
 } MACA_MACPANID_T;
-__no_init extern volatile MACA_MACPANID_T _MACA_MACPANID @(MBAR_MACA + 0x100);  /* MACA PAN ID R/W 32 */
+/*__no_init */ extern volatile MACA_MACPANID_T _MACA_MACPANID ; //@(MBAR_MACA + 0x100);  /* MACA PAN ID R/W 32 */
 #define MACA_MACPANID                 _MACA_MACPANID.Reg
 #define MACA_MACPANID_PANID           _MACA_MACPANID.Bits.PANID
 
@@ -2012,18 +2012,18 @@ typedef union
   } Bits;
   uint32 Reg;
 } MACA_MAC16ADDR_T;
-__no_init extern volatile MACA_MAC16ADDR_T _MACA_MAC16ADDR @(MBAR_MACA + 0x104);/* MACA Short Address R/W 32 */
+/*__no_init */ extern volatile MACA_MAC16ADDR_T _MACA_MAC16ADDR ; //@(MBAR_MACA + 0x104);/* MACA Short Address R/W 32 */
 #define MACA_MAC16ADDR                  _MACA_MAC16ADDR.Reg
 #define MACA_MAC16ADDR_ADDR             _MACA_MAC16ADDR.Bits.ADDR
 
 
 typedef uint32 MACA_MAC64HI_T;
-__no_init extern volatile MACA_MAC64HI_T _MACA_MAC64HI @(MBAR_MACA + 0x108);    /* MACA High Extended Address R/W 32 */
+/*__no_init */ extern volatile MACA_MAC64HI_T _MACA_MAC64HI ; //@(MBAR_MACA + 0x108);    /* MACA High Extended Address R/W 32 */
 #define MACA_MAC64HI                   _MACA_MAC64HI
 
 
 typedef uint32 MACA_MAC64LO_T;
-__no_init extern volatile MACA_MAC64LO_T _MACA_MAC64LO @(MBAR_MACA + 0x10C);    /* MACA Low Extended Address R/W 32 */
+/*__no_init */ extern volatile MACA_MAC64LO_T _MACA_MAC64LO ; //@(MBAR_MACA + 0x10C);    /* MACA Low Extended Address R/W 32 */
 #define MACA_MAC64LO                   _MACA_MAC64LO
 
 
@@ -2042,7 +2042,7 @@ typedef union
   } Bits;
   uint32 Reg;
 } MACA_FLTREJ_T;
-__no_init extern volatile MACA_FLTREJ_T _MACA_FLTREJ @(MBAR_MACA + 0x110);      /* MACA Filter Rejection Mask R/W 32 */
+/*__no_init */ extern volatile MACA_FLTREJ_T _MACA_FLTREJ ; //@(MBAR_MACA + 0x110);      /* MACA Filter Rejection Mask R/W 32 */
 #define MACA_FLTREJ		    _MACA_FLTREJ.Reg
 #define MACA_FLTREJ_BCN	            _MACA_FLTREJ.Bits.BCN
 #define MACA_FLTREJ_DATA	    _MACA_FLTREJ.Bits.DATA
@@ -2061,7 +2061,7 @@ typedef union
   } Bits;
   uint32 Reg;
 } MACA_CLKDIV_T;
-__no_init extern volatile MACA_CLKDIV_T _MACA_CLKDIV @(MBAR_MACA + 0x114);      /* MACA Clock Divider R/W 32 */
+/*__no_init */ extern volatile MACA_CLKDIV_T _MACA_CLKDIV ; //@(MBAR_MACA + 0x114);      /* MACA Clock Divider R/W 32 */
 #define MACA_CLKDIV                   _MACA_CLKDIV.Reg
 #define MACA_CLKDIV_DIVIDER           _MACA_CLKDIV.Bits.DIVIDER
 
@@ -2077,14 +2077,14 @@ typedef union
   } Bits;
   uint32 Reg;
 } MACA_WARMUP_T;
-__no_init extern volatile MACA_WARMUP_T _MACA_WARMUP @(MBAR_MACA + 0x118);      /* MACA Warmup R/W 32 */
+/*__no_init */ extern volatile MACA_WARMUP_T _MACA_WARMUP ; //@(MBAR_MACA + 0x118);      /* MACA Warmup R/W 32 */
 #define MACA_WARMUP                 _MACA_WARMUP.Reg
 #define MACA_WARMUP_RX_WARMUP       _MACA_WARMUP.Bits.RX_WARMUP
 #define MACA_WARMUP_TX_WARMUP       _MACA_WARMUP.Bits.TX_WARMUP
 
 
 typedef uint32 MACA_PREAMBLE_T;
-__no_init extern volatile MACA_PREAMBLE_T _MACA_PREAMBLE @(MBAR_MACA + 0x11C);  /* MACA Preamble R/W 32 */
+/*__no_init */ extern volatile MACA_PREAMBLE_T _MACA_PREAMBLE ; //@(MBAR_MACA + 0x11C);  /* MACA Preamble R/W 32 */
 #define MACA_PREAMBLE               _MACA_PREAMBLE
 
 
@@ -2099,19 +2099,19 @@ typedef union
   } Bits;
   uint32 Reg;
 } MACA_WHITESEED_T;
-__no_init extern volatile MACA_WHITESEED_T _MACA_WHITESEED @(MBAR_MACA + 0x120);/* MACA LFSR Whitening Seed R/W 32 */
+/*__no_init */ extern volatile MACA_WHITESEED_T _MACA_WHITESEED ; //@(MBAR_MACA + 0x120);/* MACA LFSR Whitening Seed R/W 32 */
 #define MACA_WHITESEED             _MACA_WHITESEED.Reg
 #define MACA_WHITESEED_SEED1       _MACA_WHITESEED.Bits.SEED1
 #define MACA_WHITESEED_SEED2       _MACA_WHITESEED.Bits.SEED2
 
 
 typedef uint32 MACA_FRAMESYNC0_T;
-__no_init extern volatile MACA_FRAMESYNC0_T _MACA_FRAMESYNC0 @(MBAR_MACA + 0x124);  /* MACA Frame Sync Word 0 R/W 32 */
+/*__no_init */ extern volatile MACA_FRAMESYNC0_T _MACA_FRAMESYNC0 ; //@(MBAR_MACA + 0x124);  /* MACA Frame Sync Word 0 R/W 32 */
 #define MACA_FRAMESYNC0               _MACA_FRAMESYNC0
 
 
 typedef uint32 MACA_FRAMESYNC1_T;
-__no_init extern volatile MACA_FRAMESYNC1_T _MACA_FRAMESYNC1 @(MBAR_MACA + 0x128);  /* MACA Frame Sync Word 1 R/W 32 */
+/*__no_init */ extern volatile MACA_FRAMESYNC1_T _MACA_FRAMESYNC1 ; //@(MBAR_MACA + 0x128);  /* MACA Frame Sync Word 1 R/W 32 */
 #define MACA_FRAMESYNC1               _MACA_FRAMESYNC1
 
 
@@ -2126,7 +2126,7 @@ typedef union
   } Bits;
   uint32 Reg;
 } MACA_TXACKDELAY_T;
-__no_init extern volatile MACA_TXACKDELAY_T _MACA_TXACKDELAY @(MBAR_MACA + 0x140);  /* MACA Tx Acknowledgement Delay R/W 32 */
+/*__no_init */ extern volatile MACA_TXACKDELAY_T _MACA_TXACKDELAY ; //@(MBAR_MACA + 0x140);  /* MACA Tx Acknowledgement Delay R/W 32 */
 #define MACA_TXACKDELAY                   _MACA_TXACKDELAY.Reg
 #define MACA_TXACKDELAY_TXACKDELAY        _MACA_TXACKDELAY.Bits.TXACKDELAY
 #define MACA_TXACKDELAY_TXPOLLDELAY       _MACA_TXACKDELAY.Bits.TXPOLLDELAY
@@ -2143,7 +2143,7 @@ typedef union
   } Bits;
   uint32 Reg;
 } MACA_RXACKDELAY_T;
-__no_init extern volatile MACA_RXACKDELAY_T _MACA_RXACKDELAY @(MBAR_MACA + 0x144);  /* MACA Rx Acknowledgement Delay R/W 32 */
+/*__no_init */ extern volatile MACA_RXACKDELAY_T _MACA_RXACKDELAY ; //@(MBAR_MACA + 0x144);  /* MACA Rx Acknowledgement Delay R/W 32 */
 #define MACA_RXACKDELAY                   _MACA_RXACKDELAY.Reg
 #define MACA_RXACKDELAY_RXACKDELAY        _MACA_RXACKDELAY.Bits.RXACKDELAY
 #define MACA_RXACKDELAY_RXAUTODELAY       _MACA_RXACKDELAY.Bits.RXAUTODELAY
@@ -2158,7 +2158,7 @@ typedef union
   } Bits;
   uint32 Reg;
 } MACA_EOFDELAY_T;
-__no_init extern volatile MACA_EOFDELAY_T _MACA_EOFDELAY @(MBAR_MACA + 0x148);  /* MACA End of Frame Delay R/W 32 */
+/*__no_init */ extern volatile MACA_EOFDELAY_T _MACA_EOFDELAY ; //@(MBAR_MACA + 0x148);  /* MACA End of Frame Delay R/W 32 */
 #define MACA_EOFDELAY                   _MACA_EOFDELAY.Reg
 #define MACA_EOFDELAY_EOF_DELAY         _MACA_EOFDELAY.Bits.EOF_DELAY
 
@@ -2174,7 +2174,7 @@ typedef union
   } Bits;
   uint32 Reg;
 } MACA_CCADELAY_T;
-__no_init extern volatile MACA_CCADELAY_T _MACA_CCADELAY @(MBAR_MACA + 0x14C);  /* MACA CCA Delay R/W 32 */
+/*__no_init */ extern volatile MACA_CCADELAY_T _MACA_CCADELAY ; //@(MBAR_MACA + 0x14C);  /* MACA CCA Delay R/W 32 */
 #define MACA_CCADELAY                   _MACA_CCADELAY.Reg
 #define MACA_CCADELAY_CCADELAY          _MACA_CCADELAY.Bits.CCADELAY
 #define MACA_CCADELAY_CCALENGTH         _MACA_CCADELAY.Bits.CCALENGTH
@@ -2191,7 +2191,7 @@ typedef union
   } Bits;
   uint32 Reg;
 } MACA_RXEND_T;
-__no_init extern volatile MACA_RXEND_T _MACA_RXEND @(MBAR_MACA + 0x150);        /* MACA Rx End R/W 32 */
+/*__no_init */ extern volatile MACA_RXEND_T _MACA_RXEND ; //@(MBAR_MACA + 0x150);        /* MACA Rx End R/W 32 */
 #define MACA_RXEND                    _MACA_RXEND.Reg
 #define MACA_RXEND_RXACK_END          _MACA_RXEND.Bits.RXACK_END
 #define MACA_RXEND_RXSLOTTED_END      _MACA_RXEND.Bits.RXSLOTTED_END
@@ -2206,22 +2206,22 @@ typedef union
   } Bits;
   uint32 Reg;
 } MACA_TXCCADELAY_T;
-__no_init extern volatile MACA_TXCCADELAY_T _MACA_TXCCADELAY @(MBAR_MACA + 0x154);  /* MACA Tx CCA Delay R/W 32 */
+/*__no_init */ extern volatile MACA_TXCCADELAY_T _MACA_TXCCADELAY ; //@(MBAR_MACA + 0x154);  /* MACA Tx CCA Delay R/W 32 */
 #define MACA_TXCCADELAY                     _MACA_TXCCADELAY.Reg
 #define MACA_TXCCADELAY_TXCCADELAY          _MACA_TXCCADELAY.Bits.TXCCADELAY
 
 
 typedef uint32 MACA_KEY_T;
-__no_init extern volatile MACA_KEY_T _MACA_KEY3 @(MBAR_MACA + 0x158);           /* MACA Key3 R 32 */
+/*__no_init */ extern volatile MACA_KEY_T _MACA_KEY3 ; //@(MBAR_MACA + 0x158);           /* MACA Key3 R 32 */
 #define MACA_KEY3               _MACA_KEY3
 
-__no_init extern volatile MACA_KEY_T _MACA_KEY2 @(MBAR_MACA + 0x15C);           /* MACA Key2 R 32 */
+/*__no_init */ extern volatile MACA_KEY_T _MACA_KEY2 ; //@(MBAR_MACA + 0x15C);           /* MACA Key2 R 32 */
 #define MACA_KEY2               _MACA_KEY2
 
-__no_init extern volatile MACA_KEY_T _MACA_KEY1 @(MBAR_MACA + 0x160);           /* MACA Key1 R 32 */
+/*__no_init */ extern volatile MACA_KEY_T _MACA_KEY1 ; //@(MBAR_MACA + 0x160);           /* MACA Key1 R 32 */
 #define MACA_KEY1               _MACA_KEY1
 
-__no_init extern volatile MACA_KEY_T _MACA_KEY0 @(MBAR_MACA + 0x164);           /* MACA Key0 R 32 */
+/*__no_init */ extern volatile MACA_KEY_T _MACA_KEY0 ; //@(MBAR_MACA + 0x164);           /* MACA Key0 R 32 */
 #define MACA_KEY0               _MACA_KEY0
 
 
@@ -2237,7 +2237,7 @@ typedef union
   } Bits;
   uint32 Reg;
 } MACA_OPTIONS_T;
-__no_init extern volatile MACA_OPTIONS_T _MACA_OPTIONS @(MBAR_MACA + 0x180);    /* MACA Options W 32 */
+/*__no_init */ extern volatile MACA_OPTIONS_T _MACA_OPTIONS ; //@(MBAR_MACA + 0x180);    /* MACA Options W 32 */
 #define MACA_OPTIONS		          _MACA_OPTIONS.Reg
 #define MACA_OPTIONS_POLL                 _MACA_OPTIONS.Bits.POLL
 #define MACA_OPTIONS_PLL_TX	          _MACA_OPTIONS.Bits.PLL_TX
@@ -2273,7 +2273,7 @@ typedef union
   } Bits;
   uint32 Reg;
 } UARTx_UCON_T;
-__no_init extern volatile UARTx_UCON_T _UART1_UCON @(MBAR_UART1 + 0x00);        /* UART Control R/W 8 */
+/*__no_init */ extern volatile UARTx_UCON_T _UART1_UCON ; //@(MBAR_UART1 + 0x00);        /* UART Control R/W 8 */
 #define UART1_UCON		          _UART1_UCON.Reg
 #define UART1_UCON_TXE		          _UART1_UCON.Bits.TXE
 #define UART1_UCON_RXE		          _UART1_UCON.Bits.RXE
@@ -2308,7 +2308,7 @@ typedef union
   } Bits;
   uint32 Reg;
 } UARTx_USTAT_T;
-__no_init extern volatile UARTx_USTAT_T _UART1_USTAT @(MBAR_UART1 + 0x04);      /* UART Status R 8 */
+/*__no_init */ extern volatile UARTx_USTAT_T _UART1_USTAT ; //@(MBAR_UART1 + 0x04);      /* UART Status R 8 */
 #define UART1_USTAT		          _UART1_USTAT.Reg
 #define UART1_USTAT_SE		          _UART1_USTAT.Bits.SE
 #define UART1_USTAT_PE		          _UART1_USTAT.Bits.PE
@@ -2321,22 +2321,22 @@ __no_init extern volatile UARTx_USTAT_T _UART1_USTAT @(MBAR_UART1 + 0x04);      
 
 
 typedef uint32 UARTx_UDATA_T;
-__no_init extern volatile UARTx_UDATA_T _UART1_UDATA @(MBAR_UART1 + 0x08);      /* UART Data R/W 8 */
+/*__no_init */ extern volatile UARTx_UDATA_T _UART1_UDATA ; //@(MBAR_UART1 + 0x08);      /* UART Data R/W 8 */
 #define UART1_UDATA                     _UART1_UDATA
 
 
 typedef uint32 UARTx_URXCON_T;
-__no_init extern volatile UARTx_URXCON_T _UART1_URXCON @(MBAR_UART1 + 0x0C);    /* UART RxBuffer Control R/W 8 */
+/*__no_init */ extern volatile UARTx_URXCON_T _UART1_URXCON ; //@(MBAR_UART1 + 0x0C);    /* UART RxBuffer Control R/W 8 */
 #define UART1_URXCON                   _UART1_URXCON
 
 
 typedef uint32 UARTx_UTXCON_T;
-__no_init extern volatile UARTx_UTXCON_T _UART1_UTXCON @(MBAR_UART1 + 0x10);    /* UART TxBuffer Control R/W 8 */
+/*__no_init */ extern volatile UARTx_UTXCON_T _UART1_UTXCON ; //@(MBAR_UART1 + 0x10);    /* UART TxBuffer Control R/W 8 */
 #define UART1_UTXCON                   _UART1_UTXCON
 
 
 typedef uint32 UARTx_UCTS_T;
-__no_init extern volatile UARTx_UCTS_T _UART1_UCTS @(MBAR_UART1 + 0x14);        /* UART CTS Level Control R/W 8 */
+/*__no_init */ extern volatile UARTx_UCTS_T _UART1_UCTS ; //@(MBAR_UART1 + 0x14);        /* UART CTS Level Control R/W 8 */
 #define UART1_UCTS                     _UART1_UCTS
 
 
@@ -2349,7 +2349,7 @@ typedef union
   } Bits;
   uint32 Reg;
 } UARTx_UBRCNT_T;
-__no_init extern volatile UARTx_UBRCNT_T _UART1_UBRCNT @(MBAR_UART1 + 0x18);    /* UBRINC — Fractional Divider/UBRMOD — Fractional Divider R/W 8 */
+/*__no_init */ extern volatile UARTx_UBRCNT_T _UART1_UBRCNT ; //@(MBAR_UART1 + 0x18);    /* UBRINC ï¿½ Fractional Divider/UBRMOD ï¿½ Fractional Divider R/W 8 */
 #define UART1_UBRCNT		         _UART1_UBRCNT.Reg
 #define UART1_UBRCNT_UBRMOD		 _UART1_UBRCNT.Bits.UBRMOD
 #define UART1_UBRCNT_UBRINC 	         _UART1_UBRCNT.Bits.UBRINC
@@ -2370,42 +2370,42 @@ __no_init extern volatile UARTx_UBRCNT_T _UART1_UBRCNT @(MBAR_UART1 + 0x18);    
 /* --------------------------- Timer Module (TMR) --------------------------- */
 /*    Base Adrress = MBAR_TMR0 = 0x80007000                                   */
 typedef uint16 TMR0_COMP1_T;
-__no_init extern volatile TMR0_COMP1_T _TMR0_COMP1 @(MBAR_TMR0 + 0x00);         /* TMR Channel 0 Compare Register #1 R/W 16 */
+/*__no_init */ extern volatile TMR0_COMP1_T _TMR0_COMP1 ; //@(MBAR_TMR0 + 0x00);         /* TMR Channel 0 Compare Register #1 R/W 16 */
 #define TMR0_COMP1                    _TMR0_COMP1
 #define TMR0_COMP1_COMPARISON_VALUE   _TMR0_COMP1
 
 
 typedef uint16 TMR0_COMP2_T;
-__no_init extern volatile TMR0_COMP2_T _TMR0_COMP2 @(MBAR_TMR0 + 0x02);         /* TMR Channel 0 Compare Register #2 R/W 16 */
+/*__no_init */ extern volatile TMR0_COMP2_T _TMR0_COMP2 ; //@(MBAR_TMR0 + 0x02);         /* TMR Channel 0 Compare Register #2 R/W 16 */
 #define TMR0_COMP2                    _TMR0_COMP2
 #define TMR0_COMP2_COMPARISON_VALUE   _TMR0_COMP2
 
 
 typedef uint16 TMR0_CAPT_T;
-__no_init extern volatile TMR0_CAPT_T _TMR0_CAPT @(MBAR_TMR0 + 0x04);           /* TMR Channel 0 Capture Register R/W 16 */
+/*__no_init */ extern volatile TMR0_CAPT_T _TMR0_CAPT ; //@(MBAR_TMR0 + 0x04);           /* TMR Channel 0 Capture Register R/W 16 */
 #define TMR0_CAPT                     _TMR0_CAPT
 #define TMR0_CAPT_CAPTURE_VALUE       _TMR0_CAPT
 
 
 typedef uint16 TMR0_LOAD_T;
-__no_init extern volatile TMR0_LOAD_T _TMR0_LOAD @(MBAR_TMR0 + 0x06);           /* TMR Channel 0 Load Register R/W 16 */
+/*__no_init */ extern volatile TMR0_LOAD_T _TMR0_LOAD ; //@(MBAR_TMR0 + 0x06);           /* TMR Channel 0 Load Register R/W 16 */
 #define TMR0_LOAD                     _TMR0_LOAD
 #define TMR0_LOAD_LOAD_VALUE          _TMR0_LOAD
 
 
 typedef uint16 TMR0_HOLD_T;
-__no_init extern volatile TMR0_HOLD_T _TMR0_HOLD @(MBAR_TMR0 + 0x08);           /* TMR Channel 0 Hold Register R/W 16 */
+/*__no_init */ extern volatile TMR0_HOLD_T _TMR0_HOLD ; //@(MBAR_TMR0 + 0x08);           /* TMR Channel 0 Hold Register R/W 16 */
 #define TMR0_HOLD                     _TMR0_HOLD
 #define TMR0_HOLD_HOLD_VALUE          _TMR0_HOLD
 
 
 typedef uint16 TMR0_CNTR_T;
-__no_init extern volatile TMR0_CNTR_T _TMR0_CNTR @(MBAR_TMR0 + 0x0A);           /* TMR Channel 0 Counter Register R/W 16 */
+/*__no_init */ extern volatile TMR0_CNTR_T _TMR0_CNTR ; //@(MBAR_TMR0 + 0x0A);           /* TMR Channel 0 Counter Register R/W 16 */
 #define TMR0_CNTR                     _TMR0_CNTR
 #define TMR0_CNTR_COUNTER_VALUE       _TMR0_CNTR
 
 
-__no_init extern volatile TMR_CTRL_T _TMR0_CTRL @(MBAR_TMR0 + 0x0C);           /* TMR Channel 0 Control Register R/W 16 */
+/*__no_init */ extern volatile TMR_CTRL_T _TMR0_CTRL ; //@(MBAR_TMR0 + 0x0C);           /* TMR Channel 0 Control Register R/W 16 */
 #define TMR0_CTRL                       _TMR0_CTRL.Reg
 #define TMR0_CTRL_OUTPUT_MODE           _TMR0_CTRL.Bits.OUTPUT_MODE             /* BIT0  | BIT1  | BIT2 */
 #define TMR0_CTRL_CO_INIT               _TMR0_CTRL.Bits.CO_INIT                 /* BIT3  */
@@ -2417,7 +2417,7 @@ __no_init extern volatile TMR_CTRL_T _TMR0_CTRL @(MBAR_TMR0 + 0x0C);           /
 #define TMR0_CTRL_COUNT_MODE            _TMR0_CTRL.Bits.COUNT_MODE              /* BIT13 | BIT14 | BIT15 */
 
 
-__no_init extern volatile TMR_SCTRL_T _TMR0_SCTRL @(MBAR_TMR0 + 0x0E);          /* TMR Channel 0 Status and Control Register R/W 16 */
+/*__no_init */ extern volatile TMR_SCTRL_T _TMR0_SCTRL ; //@(MBAR_TMR0 + 0x0E);          /* TMR Channel 0 Status and Control Register R/W 16 */
 #define TMR0_SCTRL                      _TMR0_SCTRL.Reg
 #define TMR0_SCTRL_OEN                  _TMR0_SCTRL.Bits.OEN                    /* BIT0 */
 #define TMR0_SCTRL_OPS                  _TMR0_SCTRL.Bits.OPS                    /* BIT1 */
@@ -2437,18 +2437,18 @@ __no_init extern volatile TMR_SCTRL_T _TMR0_SCTRL @(MBAR_TMR0 + 0x0E);          
 
 
 typedef uint16 TMR0_CMPLD1_T;
-__no_init extern volatile TMR0_CMPLD1_T _TMR0_CMPLD1 @(MBAR_TMR0 + 0x10);       /* TMR Channel 0 Comparator Load Register 1 R/W 16 */
+/*__no_init */ extern volatile TMR0_CMPLD1_T _TMR0_CMPLD1 ; //@(MBAR_TMR0 + 0x10);       /* TMR Channel 0 Comparator Load Register 1 R/W 16 */
 #define TMR0_CMPLD1                     _TMR0_CMPLD1
 #define TMR0_CMPLD1_COMPARATOR_LOAD_1   _TMR0_CMPLD1
 
 
 typedef uint16 TMR0_CMPLD2_T;
-__no_init extern volatile TMR0_CMPLD2_T _TMR0_CMPLD2 @(MBAR_TMR0 + 0x12);       /* TMR Channel 0 Comparator Load Register 2 R/W 16 */
+/*__no_init */ extern volatile TMR0_CMPLD2_T _TMR0_CMPLD2 ; //@(MBAR_TMR0 + 0x12);       /* TMR Channel 0 Comparator Load Register 2 R/W 16 */
 #define TMR0_CMPLD2                     _TMR0_CMPLD2
 #define TMR0_CMPLD2_COMPARATOR_LOAD_2   _TMR0_CMPLD2
 
 
-__no_init extern volatile TMR_CSCTRL_T _TMR0_CSCTRL @(MBAR_TMR0 + 0x14);        /* TMR Channel 0 Comparator Status and Control Register R/W 16 */
+/*__no_init */ extern volatile TMR_CSCTRL_T _TMR0_CSCTRL ; //@(MBAR_TMR0 + 0x14);        /* TMR Channel 0 Comparator Status and Control Register R/W 16 */
 #define TMR0_CSCTRL                   _TMR0_CSCTRL.Reg
 #define TMR0_CSCTRL_CL1               _TMR0_CSCTRL.Bits.CL1                     /* BIT0 | BIT1 */
 #define TMR0_CSCTRL_CL2               _TMR0_CSCTRL.Bits.CL2                     /* BIT2 | BIT3 */
@@ -2477,7 +2477,7 @@ typedef union
   } GrpBits;
   uint16 Reg;
 } TMR0_ENBL_T;
-__no_init extern volatile TMR0_ENBL_T _TMR0_ENBL @(MBAR_TMR0 + 0x1E);           /* TMR Channel Enable Register R/W 16 */
+/*__no_init */ extern volatile TMR0_ENBL_T _TMR0_ENBL ; //@(MBAR_TMR0 + 0x1E);           /* TMR Channel Enable Register R/W 16 */
 #define TMR0_ENBL                 _TMR0_ENBL.Reg
 #define TMR0_ENBL_0               _TMR0_ENBL.Bits.ENBL0                         /* BIT0 */
 #define TMR0_ENBL_1               _TMR0_ENBL.Bits.ENBL1                         /* BIT1 */
@@ -2488,42 +2488,42 @@ __no_init extern volatile TMR0_ENBL_T _TMR0_ENBL @(MBAR_TMR0 + 0x1E);           
 
 /*    Base Adrress = MBAR_TMR1 = 0x80007020                                   */
 typedef uint16 TMR1_COMP1_T;
-__no_init extern volatile TMR1_COMP1_T _TMR1_COMP1 @(MBAR_TMR1 + 0x00);         /* TMR Channel 1 Compare Register #1 R/W 16 */
+/*__no_init */ extern volatile TMR1_COMP1_T _TMR1_COMP1 ; //@(MBAR_TMR1 + 0x00);         /* TMR Channel 1 Compare Register #1 R/W 16 */
 #define TMR1_COMP1                    _TMR1_COMP1
 #define TMR1_COMP1_COMPARISON_VALUE   _TMR1_COMP1
 
 
 typedef uint16 TMR1_COMP2_T;
-__no_init extern volatile TMR1_COMP2_T _TMR1_COMP2 @(MBAR_TMR1 + 0x02);         /* TMR Channel 1 Compare Register #2 R/W 16 */
+/*__no_init */ extern volatile TMR1_COMP2_T _TMR1_COMP2 ; //@(MBAR_TMR1 + 0x02);         /* TMR Channel 1 Compare Register #2 R/W 16 */
 #define TMR1_COMP2                    _TMR1_COMP2
 #define TMR1_COMP2_COMPARISON_VALUE   _TMR1_COMP2
 
 
 typedef uint16 TMR1_CAPT_T;
-__no_init extern volatile TMR1_CAPT_T _TMR1_CAPT @(MBAR_TMR1 + 0x04);           /* TMR Channel 1 Capture Register R/W 16 */
+/*__no_init */ extern volatile TMR1_CAPT_T _TMR1_CAPT ; //@(MBAR_TMR1 + 0x04);           /* TMR Channel 1 Capture Register R/W 16 */
 #define TMR1_CAPT                     _TMR1_CAPT
 #define TMR1_CAPT_CAPTURE_VALUE       _TMR1_CAPT
 
 
 typedef uint16 TMR1_LOAD_T;
-__no_init extern volatile TMR1_LOAD_T _TMR1_LOAD @(MBAR_TMR1 + 0x06);           /* TMR Channel 1 Load Register R/W 16 */
+/*__no_init */ extern volatile TMR1_LOAD_T _TMR1_LOAD ; //@(MBAR_TMR1 + 0x06);           /* TMR Channel 1 Load Register R/W 16 */
 #define TMR1_LOAD                     _TMR1_LOAD
 #define TMR1_LOAD_LOAD_VALUE          _TMR1_LOAD
 
 
 typedef uint16 TMR1_HOLD_T;
-__no_init extern volatile TMR1_HOLD_T _TMR1_HOLD @(MBAR_TMR1 + 0x08);           /* TMR Channel 1 Hold Register R/W 16 */
+/*__no_init */ extern volatile TMR1_HOLD_T _TMR1_HOLD ; //@(MBAR_TMR1 + 0x08);           /* TMR Channel 1 Hold Register R/W 16 */
 #define TMR1_HOLD                     _TMR1_HOLD
 #define TMR1_HOLD_HOLD_VALUE          _TMR1_HOLD
 
 
 typedef uint16 TMR1_CNTR_T;
-__no_init extern volatile TMR1_CNTR_T _TMR1_CNTR @(MBAR_TMR1 + 0x0A);           /* TMR Channel 1 Counter Register R/W 16 */
+/*__no_init */ extern volatile TMR1_CNTR_T _TMR1_CNTR ; //@(MBAR_TMR1 + 0x0A);           /* TMR Channel 1 Counter Register R/W 16 */
 #define TMR1_CNTR                     _TMR1_CNTR
 #define TMR1_CNTR_COUNTER_VALUE       _TMR1_CNTR
 
 
-__no_init extern volatile TMR_CTRL_T _TMR1_CTRL @(MBAR_TMR1 + 0x0C);           /* TMR Channel 1 Control Register R/W 16 */
+/*__no_init */ extern volatile TMR_CTRL_T _TMR1_CTRL ; //@(MBAR_TMR1 + 0x0C);           /* TMR Channel 1 Control Register R/W 16 */
 #define TMR1_CTRL                       _TMR1_CTRL.Reg
 #define TMR1_CTRL_OUTPUT_MODE           _TMR1_CTRL.Bits.OUTPUT_MODE             /* BIT0  | BIT1  | BIT2 */
 #define TMR1_CTRL_CO_INIT               _TMR1_CTRL.Bits.CO_INIT                 /* BIT3  */
@@ -2535,7 +2535,7 @@ __no_init extern volatile TMR_CTRL_T _TMR1_CTRL @(MBAR_TMR1 + 0x0C);           /
 #define TMR1_CTRL_COUNT_MODE            _TMR1_CTRL.Bits.COUNT_MODE              /* BIT13 | BIT14 | BIT15 */
 
 
-__no_init extern volatile TMR_SCTRL_T _TMR1_SCTRL @(MBAR_TMR1 + 0x0E);          /* TMR Channel 1 Status and Control Register R/W 16 */
+/*__no_init */ extern volatile TMR_SCTRL_T _TMR1_SCTRL ; //@(MBAR_TMR1 + 0x0E);          /* TMR Channel 1 Status and Control Register R/W 16 */
 #define TMR1_SCTRL                      _TMR1_SCTRL.Reg
 #define TMR1_SCTRL_OEN                  _TMR1_SCTRL.Bits.OEN                    /* BIT0 */
 #define TMR1_SCTRL_OPS                  _TMR1_SCTRL.Bits.OPS                    /* BIT1 */
@@ -2555,18 +2555,18 @@ __no_init extern volatile TMR_SCTRL_T _TMR1_SCTRL @(MBAR_TMR1 + 0x0E);          
 
 
 typedef uint16 TMR1_CMPLD1_T;
-__no_init extern volatile TMR1_CMPLD1_T _TMR1_CMPLD1 @(MBAR_TMR1 + 0x10);       /* TMR Channel 1 Comparator Load Register 1 R/W 16 */
+/*__no_init */ extern volatile TMR1_CMPLD1_T _TMR1_CMPLD1 ; //@(MBAR_TMR1 + 0x10);       /* TMR Channel 1 Comparator Load Register 1 R/W 16 */
 #define TMR1_CMPLD1                     _TMR1_CMPLD1
 #define TMR1_CMPLD1_COMPARATOR_LOAD_1   _TMR1_CMPLD1
 
 
 typedef uint16 TMR1_CMPLD2_T;
-__no_init extern volatile TMR1_CMPLD2_T _TMR1_CMPLD2 @(MBAR_TMR1 + 0x12);       /* TMR Channel 1 Comparator Load Register 2 R/W 16 */
+/*__no_init */ extern volatile TMR1_CMPLD2_T _TMR1_CMPLD2 ; //@(MBAR_TMR1 + 0x12);       /* TMR Channel 1 Comparator Load Register 2 R/W 16 */
 #define TMR1_CMPLD2                     _TMR1_CMPLD2
 #define TMR1_CMPLD2_COMPARATOR_LOAD_2   _TMR1_CMPLD2
 
 
-__no_init extern volatile TMR_CSCTRL_T _TMR1_CSCTRL @(MBAR_TMR1 + 0x14);        /* TMR Channel 1 Comparator Status and Control Register R/W 16 */
+/*__no_init */ extern volatile TMR_CSCTRL_T _TMR1_CSCTRL ; //@(MBAR_TMR1 + 0x14);        /* TMR Channel 1 Comparator Status and Control Register R/W 16 */
 #define TMR1_CSCTRL                   _TMR1_CSCTRL.Reg
 #define TMR1_CSCTRL_CL1               _TMR1_CSCTRL.Bits.CL1                     /* BIT0 | BIT1 */
 #define TMR1_CSCTRL_CL2               _TMR1_CSCTRL.Bits.CL2                     /* BIT2 | BIT3 */
@@ -2580,42 +2580,42 @@ __no_init extern volatile TMR_CSCTRL_T _TMR1_CSCTRL @(MBAR_TMR1 + 0x14);        
 
 /*    Base Adrress = MBAR_TMR2 = 0x80007040                                   */
 typedef uint16 TMR2_COMP1_T;
-__no_init extern volatile TMR2_COMP1_T _TMR2_COMP1 @(MBAR_TMR2 + 0x00);         /* TMR Channel 2 Compare Register #1 R/W 16 */
+/*__no_init */ extern volatile TMR2_COMP1_T _TMR2_COMP1 ; //@(MBAR_TMR2 + 0x00);         /* TMR Channel 2 Compare Register #1 R/W 16 */
 #define TMR2_COMP1                    _TMR2_COMP1
 #define TMR2_COMP1_COMPARISON_VALUE   _TMR2_COMP1
 
 
 typedef uint16 TMR2_COMP2_T;
-__no_init extern volatile TMR2_COMP2_T _TMR2_COMP2 @(MBAR_TMR2 + 0x02);         /* TMR Channel 2 Compare Register #2 R/W 16 */
+/*__no_init */ extern volatile TMR2_COMP2_T _TMR2_COMP2 ; //@(MBAR_TMR2 + 0x02);         /* TMR Channel 2 Compare Register #2 R/W 16 */
 #define TMR2_COMP2                    _TMR2_COMP2
 #define TMR2_COMP2_COMPARISON_VALUE   _TMR2_COMP2
 
 
 typedef uint16 TMR2_CAPT_T;
-__no_init extern volatile TMR2_CAPT_T _TMR2_CAPT @(MBAR_TMR2 + 0x04);           /* TMR Channel 2 Capture Register R/W 16 */
+/*__no_init */ extern volatile TMR2_CAPT_T _TMR2_CAPT ; //@(MBAR_TMR2 + 0x04);           /* TMR Channel 2 Capture Register R/W 16 */
 #define TMR2_CAPT                     _TMR2_CAPT
 #define TMR2_CAPT_CAPTURE_VALUE       _TMR2_CAPT
 
 
 typedef uint16 TMR2_LOAD_T;
-__no_init extern volatile TMR2_LOAD_T _TMR2_LOAD @(MBAR_TMR2 + 0x06);           /* TMR Channel 2 Load Register R/W 16 */
+/*__no_init */ extern volatile TMR2_LOAD_T _TMR2_LOAD ; //@(MBAR_TMR2 + 0x06);           /* TMR Channel 2 Load Register R/W 16 */
 #define TMR2_LOAD                     _TMR2_LOAD
 #define TMR2_LOAD_LOAD_VALUE          _TMR2_LOAD
 
 
 typedef uint16 TMR2_HOLD_T;
-__no_init extern volatile TMR2_HOLD_T _TMR2_HOLD @(MBAR_TMR2 + 0x08);           /* TMR Channel 2 Hold Register R/W 16 */
+/*__no_init */ extern volatile TMR2_HOLD_T _TMR2_HOLD ; //@(MBAR_TMR2 + 0x08);           /* TMR Channel 2 Hold Register R/W 16 */
 #define TMR2_HOLD                     _TMR2_HOLD
 #define TMR2_HOLD_HOLD_VALUE          _TMR2_HOLD
 
 
 typedef uint16 TMR2_CNTR_T;
-__no_init extern volatile TMR2_CNTR_T _TMR2_CNTR @(MBAR_TMR2 + 0x0A);           /* TMR Channel 2 Counter Register R/W 16 */
+/*__no_init */ extern volatile TMR2_CNTR_T _TMR2_CNTR ; //@(MBAR_TMR2 + 0x0A);           /* TMR Channel 2 Counter Register R/W 16 */
 #define TMR2_CNTR                     _TMR2_CNTR
 #define TMR2_CNTR_COUNTER_VALUE       _TMR2_CNTR
 
 
-__no_init extern volatile TMR_CTRL_T _TMR2_CTRL @(MBAR_TMR2 + 0x0C);           /* TMR Channel 2 Control Register R/W 16 */
+/*__no_init */ extern volatile TMR_CTRL_T _TMR2_CTRL ; //@(MBAR_TMR2 + 0x0C);           /* TMR Channel 2 Control Register R/W 16 */
 #define TMR2_CTRL                       _TMR2_CTRL.Reg
 #define TMR2_CTRL_OUTPUT_MODE           _TMR2_CTRL.Bits.OUTPUT_MODE             /* BIT0  | BIT1  | BIT2 */
 #define TMR2_CTRL_CO_INIT               _TMR2_CTRL.Bits.CO_INIT                 /* BIT3  */
@@ -2627,7 +2627,7 @@ __no_init extern volatile TMR_CTRL_T _TMR2_CTRL @(MBAR_TMR2 + 0x0C);           /
 #define TMR2_CTRL_COUNT_MODE            _TMR2_CTRL.Bits.COUNT_MODE              /* BIT13 | BIT14 | BIT15 */
 
 
-__no_init extern volatile TMR_SCTRL_T _TMR2_SCTRL @(MBAR_TMR2 + 0x0E);          /* TMR Channel 2 Status and Control Register R/W 16 */
+/*__no_init */ extern volatile TMR_SCTRL_T _TMR2_SCTRL ; //@(MBAR_TMR2 + 0x0E);          /* TMR Channel 2 Status and Control Register R/W 16 */
 #define TMR2_SCTRL                      _TMR2_SCTRL.Reg
 #define TMR2_SCTRL_OEN                  _TMR2_SCTRL.Bits.OEN                    /* BIT0 */
 #define TMR2_SCTRL_OPS                  _TMR2_SCTRL.Bits.OPS                    /* BIT1 */
@@ -2647,18 +2647,18 @@ __no_init extern volatile TMR_SCTRL_T _TMR2_SCTRL @(MBAR_TMR2 + 0x0E);          
 
 
 typedef uint16 TMR2_CMPLD1_T;
-__no_init extern volatile TMR2_CMPLD1_T _TMR2_CMPLD1 @(MBAR_TMR2 + 0x10);       /* TMR Channel 2 Comparator Load Register 1 R/W 16 */
+/*__no_init */ extern volatile TMR2_CMPLD1_T _TMR2_CMPLD1 ; //@(MBAR_TMR2 + 0x10);       /* TMR Channel 2 Comparator Load Register 1 R/W 16 */
 #define TMR2_CMPLD1                     _TMR2_CMPLD1
 #define TMR2_CMPLD1_COMPARATOR_LOAD_1   _TMR2_CMPLD1
 
 
 typedef uint16 TMR2_CMPLD2_T;
-__no_init extern volatile TMR2_CMPLD2_T _TMR2_CMPLD2 @(MBAR_TMR2 + 0x12);       /* TMR Channel 2 Comparator Load Register 2 R/W 16 */
+/*__no_init */ extern volatile TMR2_CMPLD2_T _TMR2_CMPLD2 ; //@(MBAR_TMR2 + 0x12);       /* TMR Channel 2 Comparator Load Register 2 R/W 16 */
 #define TMR2_CMPLD2                     _TMR2_CMPLD2
 #define TMR2_CMPLD2_COMPARATOR_LOAD_2   _TMR2_CMPLD2
 
 
-__no_init extern volatile TMR_CSCTRL_T _TMR2_CSCTRL @(MBAR_TMR2 + 0x14);        /* TMR Channel 2 Comparator Status and Control Register R/W 16 */
+/*__no_init */ extern volatile TMR_CSCTRL_T _TMR2_CSCTRL ; //@(MBAR_TMR2 + 0x14);        /* TMR Channel 2 Comparator Status and Control Register R/W 16 */
 #define TMR2_CSCTRL                   _TMR2_CSCTRL.Reg
 #define TMR2_CSCTRL_CL1               _TMR2_CSCTRL.Bits.CL1                     /* BIT0 | BIT1 */
 #define TMR2_CSCTRL_CL2               _TMR2_CSCTRL.Bits.CL2                     /* BIT2 | BIT3 */
@@ -2672,42 +2672,42 @@ __no_init extern volatile TMR_CSCTRL_T _TMR2_CSCTRL @(MBAR_TMR2 + 0x14);        
 
 /*    Base Adrress = MBAR_TMR3 = 0x80007060                                   */
 typedef uint16 TMR3_COMP1_T;
-__no_init extern volatile TMR3_COMP1_T _TMR3_COMP1 @(MBAR_TMR3 + 0x00);         /* TMR Channel 3 Compare Register #1 R/W 16 */
+/*__no_init */ extern volatile TMR3_COMP1_T _TMR3_COMP1 ; //@(MBAR_TMR3 + 0x00);         /* TMR Channel 3 Compare Register #1 R/W 16 */
 #define TMR3_COMP1                    _TMR3_COMP1
 #define TMR3_COMP1_COMPARISON_VALUE   _TMR3_COMP1
 
 
 typedef uint16 TMR3_COMP2_T;
-__no_init extern volatile TMR3_COMP2_T _TMR3_COMP2 @(MBAR_TMR3 + 0x02);         /* TMR Channel 3 Compare Register #2 R/W 16 */
+/*__no_init */ extern volatile TMR3_COMP2_T _TMR3_COMP2 ; //@(MBAR_TMR3 + 0x02);         /* TMR Channel 3 Compare Register #2 R/W 16 */
 #define TMR3_COMP2                    _TMR3_COMP2
 #define TMR3_COMP2_COMPARISON_VALUE   _TMR3_COMP2
 
 
 typedef uint16 TMR3_CAPT_T;
-__no_init extern volatile TMR3_CAPT_T _TMR3_CAPT @(MBAR_TMR3 + 0x04);           /* TMR Channel 3 Capture Register R/W 16 */
+/*__no_init */ extern volatile TMR3_CAPT_T _TMR3_CAPT ; //@(MBAR_TMR3 + 0x04);           /* TMR Channel 3 Capture Register R/W 16 */
 #define TMR3_CAPT                     _TMR3_CAPT
 #define TMR3_CAPT_CAPTURE_VALUE       _TMR3_CAPT
 
 
 typedef uint16 TMR3_LOAD_T;
-__no_init extern volatile TMR3_LOAD_T _TMR3_LOAD @(MBAR_TMR3 + 0x06);           /* TMR Channel 3 Load Register R/W 16 */
+/*__no_init */ extern volatile TMR3_LOAD_T _TMR3_LOAD ; //@(MBAR_TMR3 + 0x06);           /* TMR Channel 3 Load Register R/W 16 */
 #define TMR3_LOAD                     _TMR3_LOAD
 #define TMR3_LOAD_LOAD_VALUE          _TMR3_LOAD
 
 
 typedef uint16 TMR3_HOLD_T;
-__no_init extern volatile TMR3_HOLD_T _TMR3_HOLD @(MBAR_TMR3 + 0x08);           /* TMR Channel 3 Hold Register R/W 16 */
+/*__no_init */ extern volatile TMR3_HOLD_T _TMR3_HOLD ; //@(MBAR_TMR3 + 0x08);           /* TMR Channel 3 Hold Register R/W 16 */
 #define TMR3_HOLD                     _TMR3_HOLD
 #define TMR3_HOLD_HOLD_VALUE          _TMR3_HOLD
 
 
 typedef uint16 TMR3_CNTR_T;
-__no_init extern volatile TMR3_CNTR_T _TMR3_CNTR @(MBAR_TMR3 + 0x0A);           /* TMR Channel 3 Counter Register R/W 16 */
+/*__no_init */ extern volatile TMR3_CNTR_T _TMR3_CNTR ; //@(MBAR_TMR3 + 0x0A);           /* TMR Channel 3 Counter Register R/W 16 */
 #define TMR3_CNTR                     _TMR3_CNTR
 #define TMR3_CNTR_COUNTER_VALUE       _TMR3_CNTR
 
 
-__no_init extern volatile TMR_CTRL_T _TMR3_CTRL @(MBAR_TMR3 + 0x0C);           /* TMR Channel 3 Control Register R/W 16 */
+/*__no_init */ extern volatile TMR_CTRL_T _TMR3_CTRL ; //@(MBAR_TMR3 + 0x0C);           /* TMR Channel 3 Control Register R/W 16 */
 #define TMR3_CTRL                       _TMR3_CTRL.Reg
 #define TMR3_CTRL_OUTPUT_MODE           _TMR3_CTRL.Bits.OUTPUT_MODE             /* BIT0  | BIT1  | BIT2 */
 #define TMR3_CTRL_CO_INIT               _TMR3_CTRL.Bits.CO_INIT                 /* BIT3  */
@@ -2719,7 +2719,7 @@ __no_init extern volatile TMR_CTRL_T _TMR3_CTRL @(MBAR_TMR3 + 0x0C);           /
 #define TMR3_CTRL_COUNT_MODE            _TMR3_CTRL.Bits.COUNT_MODE              /* BIT13 | BIT14 | BIT15 */
 
 
-__no_init extern volatile TMR_SCTRL_T _TMR3_SCTRL @(MBAR_TMR3 + 0x0E);          /* TMR Channel 3 Status and Control Register R/W 16 */
+/*__no_init */ extern volatile TMR_SCTRL_T _TMR3_SCTRL ; //@(MBAR_TMR3 + 0x0E);          /* TMR Channel 3 Status and Control Register R/W 16 */
 #define TMR3_SCTRL                      _TMR3_SCTRL.Reg
 #define TMR3_SCTRL_OEN                  _TMR3_SCTRL.Bits.OEN                    /* BIT0 */
 #define TMR3_SCTRL_OPS                  _TMR3_SCTRL.Bits.OPS                    /* BIT1 */
@@ -2739,18 +2739,18 @@ __no_init extern volatile TMR_SCTRL_T _TMR3_SCTRL @(MBAR_TMR3 + 0x0E);          
 
 
 typedef uint16 TMR3_CMPLD1_T;
-__no_init extern volatile TMR3_CMPLD1_T _TMR3_CMPLD1 @(MBAR_TMR3 + 0x10);       /* TMR Channel 3 Comparator Load Register 1 R/W 16 */
+/*__no_init */ extern volatile TMR3_CMPLD1_T _TMR3_CMPLD1 ; //@(MBAR_TMR3 + 0x10);       /* TMR Channel 3 Comparator Load Register 1 R/W 16 */
 #define TMR3_CMPLD1                     _TMR3_CMPLD1
 #define TMR3_CMPLD1_COMPARATOR_LOAD_1   _TMR3_CMPLD1
 
 
 typedef uint16 TMR3_CMPLD2_T;
-__no_init extern volatile TMR3_CMPLD2_T _TMR3_CMPLD2 @(MBAR_TMR3 + 0x12);       /* TMR Channel 3 Comparator Load Register 2 R/W 16 */
+/*__no_init */ extern volatile TMR3_CMPLD2_T _TMR3_CMPLD2 ; //@(MBAR_TMR3 + 0x12);       /* TMR Channel 3 Comparator Load Register 2 R/W 16 */
 #define TMR3_CMPLD2                     _TMR3_CMPLD2
 #define TMR3_CMPLD2_COMPARATOR_LOAD_2   _TMR3_CMPLD2
 
 
-__no_init extern volatile TMR_CSCTRL_T _TMR3_CSCTRL @(MBAR_TMR3 + 0x14);        /* TMR Channel 3 Comparator Status and Control Register R/W 16 */
+/*__no_init */ extern volatile TMR_CSCTRL_T _TMR3_CSCTRL ; //@(MBAR_TMR3 + 0x14);        /* TMR Channel 3 Comparator Status and Control Register R/W 16 */
 #define TMR3_CSCTRL                   _TMR3_CSCTRL.Reg
 #define TMR3_CSCTRL_CL1               _TMR3_CSCTRL.Bits.CL1                     /* BIT0 | BIT1 */
 #define TMR3_CSCTRL_CL2               _TMR3_CSCTRL.Bits.CL2                     /* BIT2 | BIT3 */
@@ -2765,72 +2765,72 @@ __no_init extern volatile TMR_CSCTRL_T _TMR3_CSCTRL @(MBAR_TMR3 + 0x14);        
 /* -------------------- Advanced Security Module (ASM) ---------------------- */
 /*    Base Adrress = MBAR_ASM = 0x8000_8000                                   */
 typedef uint32 ASM_KEY_T;
-__no_init extern volatile ASM_KEY_T _ASM_KEY0 @(MBAR_ASM + 0x00);               /* 128-BIT ENCRYPTION KEY (1 of 4) R/W 32 */
+/*__no_init */ extern volatile ASM_KEY_T _ASM_KEY0 ; //@(MBAR_ASM + 0x00);               /* 128-BIT ENCRYPTION KEY (1 of 4) R/W 32 */
 #define ASM_KEY0                    _ASM_KEY0
 
-__no_init extern volatile ASM_KEY_T _ASM_KEY1 @(MBAR_ASM + 0x04);               /* 128-BIT ENCRYPTION KEY (2 of 4) R/W 32 */
+/*__no_init */ extern volatile ASM_KEY_T _ASM_KEY1 ; //@(MBAR_ASM + 0x04);               /* 128-BIT ENCRYPTION KEY (2 of 4) R/W 32 */
 #define ASM_KEY1                    _ASM_KEY1
 
-__no_init extern volatile ASM_KEY_T _ASM_KEY2 @(MBAR_ASM + 0x08);               /* 128-BIT ENCRYPTION KEY (3 of 4) R/W 32 */
+/*__no_init */ extern volatile ASM_KEY_T _ASM_KEY2 ; //@(MBAR_ASM + 0x08);               /* 128-BIT ENCRYPTION KEY (3 of 4) R/W 32 */
 #define ASM_KEY2                    _ASM_KEY2
 
-__no_init extern volatile ASM_KEY_T _ASM_KEY3 @(MBAR_ASM + 0x0C);               /* 128-BIT ENCRYPTION KEY (4 of 4) R/W 32 */
+/*__no_init */ extern volatile ASM_KEY_T _ASM_KEY3 ; //@(MBAR_ASM + 0x0C);               /* 128-BIT ENCRYPTION KEY (4 of 4) R/W 32 */
 #define ASM_KEY3                    _ASM_KEY3
 
 
 typedef uint32 ASM_DATA_T;
-__no_init extern volatile ASM_DATA_T _ASM_DATA0 @(MBAR_ASM + 0x10);             /* 128-BIT DATA Register (1 of 4) R/W 32 */
+/*__no_init */ extern volatile ASM_DATA_T _ASM_DATA0 ; //@(MBAR_ASM + 0x10);             /* 128-BIT DATA Register (1 of 4) R/W 32 */
 #define ASM_DATA0                    _ASM_DATA0
 
-__no_init extern volatile ASM_DATA_T _ASM_DATA1 @(MBAR_ASM + 0x14);             /* 128-BIT DATA Register (2 of 4) R/W 32 */
+/*__no_init */ extern volatile ASM_DATA_T _ASM_DATA1 ; //@(MBAR_ASM + 0x14);             /* 128-BIT DATA Register (2 of 4) R/W 32 */
 #define ASM_DATA1                    _ASM_DATA1
 
-__no_init extern volatile ASM_DATA_T _ASM_DATA2 @(MBAR_ASM + 0x18);             /* 128-BIT DATA Register (3 of 4) R/W 32 */
+/*__no_init */ extern volatile ASM_DATA_T _ASM_DATA2 ; //@(MBAR_ASM + 0x18);             /* 128-BIT DATA Register (3 of 4) R/W 32 */
 #define ASM_DATA2                    _ASM_DATA2
 
-__no_init extern volatile ASM_DATA_T _ASM_DATA3 @(MBAR_ASM + 0x1C);             /* 128-BIT DATA Register (4 of 4) R/W 32 */
+/*__no_init */ extern volatile ASM_DATA_T _ASM_DATA3 ; //@(MBAR_ASM + 0x1C);             /* 128-BIT DATA Register (4 of 4) R/W 32 */
 #define ASM_DATA3                    _ASM_DATA3
 
 
 typedef uint32 ASM_CTR_T;
-__no_init extern volatile ASM_CTR_T _ASM_CTR0 @(MBAR_ASM + 0x20);               /* 128-BIT COUNTER Register (1 of 4) R/W 32 */
+/*__no_init */ extern volatile ASM_CTR_T _ASM_CTR0 ; //@(MBAR_ASM + 0x20);               /* 128-BIT COUNTER Register (1 of 4) R/W 32 */
 #define ASM_CTR0                    _ASM_CTR0
 
-__no_init extern volatile ASM_CTR_T _ASM_CTR1 @(MBAR_ASM + 0x24);               /* 128-BIT COUNTER Register (2 of 4) R/W 32 */
+/*__no_init */ extern volatile ASM_CTR_T _ASM_CTR1 ; //@(MBAR_ASM + 0x24);               /* 128-BIT COUNTER Register (2 of 4) R/W 32 */
 #define ASM_CTR1                    _ASM_CTR1
 
-__no_init extern volatile ASM_CTR_T _ASM_CTR2 @(MBAR_ASM + 0x28);               /* 128-BIT COUNTER Register (3 of 4) R/W 32 */
+/*__no_init */ extern volatile ASM_CTR_T _ASM_CTR2 ; //@(MBAR_ASM + 0x28);               /* 128-BIT COUNTER Register (3 of 4) R/W 32 */
 #define ASM_CTR2                    _ASM_CTR2
 
-__no_init extern volatile ASM_CTR_T _ASM_CTR3 @(MBAR_ASM + 0x2C);               /* 128-BIT COUNTER Register (4 of 4) R/W 32 */
+/*__no_init */ extern volatile ASM_CTR_T _ASM_CTR3 ; //@(MBAR_ASM + 0x2C);               /* 128-BIT COUNTER Register (4 of 4) R/W 32 */
 #define ASM_CTR3                    _ASM_CTR3
 
 
 typedef uint32 ASM_CTR_RESULT_T;
-__no_init extern volatile ASM_CTR_RESULT_T _ASM_CTR_RESULT0 @(MBAR_ASM + 0x30); /* 128-BIT COUNTER RESULT Register (1 of 4) R 32 */
+/*__no_init */ extern volatile ASM_CTR_RESULT_T _ASM_CTR_RESULT0 ; //@(MBAR_ASM + 0x30); /* 128-BIT COUNTER RESULT Register (1 of 4) R 32 */
 #define ASM_CTR_RESULT0                    _ASM_CTR_RESULT0
 
-__no_init extern volatile ASM_CTR_RESULT_T _ASM_CTR_RESULT1 @(MBAR_ASM + 0x34); /* 128-BIT COUNTER RESULT Register (2 of 4) R 32 */
+/*__no_init */ extern volatile ASM_CTR_RESULT_T _ASM_CTR_RESULT1 ; //@(MBAR_ASM + 0x34); /* 128-BIT COUNTER RESULT Register (2 of 4) R 32 */
 #define ASM_CTR_RESULT1                    _ASM_CTR_RESULT1
 
-__no_init extern volatile ASM_CTR_RESULT_T _ASM_CTR_RESULT2 @(MBAR_ASM + 0x38); /* 128-BIT COUNTER RESULT Register (3 of 4) R 32 */
+/*__no_init */ extern volatile ASM_CTR_RESULT_T _ASM_CTR_RESULT2 ; //@(MBAR_ASM + 0x38); /* 128-BIT COUNTER RESULT Register (3 of 4) R 32 */
 #define ASM_CTR_RESULT2                    _ASM_CTR_RESULT2
 
-__no_init extern volatile ASM_CTR_RESULT_T _ASM_CTR_RESULT3 @(MBAR_ASM + 0x3C); /* 128-BIT COUNTER RESULT Register (4 of 4) R 32 */
+/*__no_init */ extern volatile ASM_CTR_RESULT_T _ASM_CTR_RESULT3 ; //@(MBAR_ASM + 0x3C); /* 128-BIT COUNTER RESULT Register (4 of 4) R 32 */
 #define ASM_CTR_RESULT3                    _ASM_CTR_RESULT3
 
 
 typedef uint32 ASM_CBC_RESULT_T;
-__no_init extern volatile ASM_CBC_RESULT_T _ASM_CBC_RESULT0 @(MBAR_ASM + 0x40); /* 128-BIT CBC MAC RESULT Register (1 of 4) R 32 */
+/*__no_init */ extern volatile ASM_CBC_RESULT_T _ASM_CBC_RESULT0 ; //@(MBAR_ASM + 0x40); /* 128-BIT CBC MAC RESULT Register (1 of 4) R 32 */
 #define ASM_CBC_RESULT0                    _ASM_CBC_RESULT0
 
-__no_init extern volatile ASM_CBC_RESULT_T _ASM_CBC_RESULT1 @(MBAR_ASM + 0x44); /* 128-BIT CBC MAC RESULT Register (2 of 4) R 32 */
+/*__no_init */ extern volatile ASM_CBC_RESULT_T _ASM_CBC_RESULT1 ; //@(MBAR_ASM + 0x44); /* 128-BIT CBC MAC RESULT Register (2 of 4) R 32 */
 #define ASM_CBC_RESULT1                    _ASM_CBC_RESULT1
 
-__no_init extern volatile ASM_CBC_RESULT_T _ASM_CBC_RESULT2 @(MBAR_ASM + 0x48); /* 128-BIT CBC MAC RESULT Register (3 of 4) R 32 */
+/*__no_init */ extern volatile ASM_CBC_RESULT_T _ASM_CBC_RESULT2 ; //@(MBAR_ASM + 0x48); /* 128-BIT CBC MAC RESULT Register (3 of 4) R 32 */
 #define ASM_CBC_RESULT2                    _ASM_CBC_RESULT2
 
-__no_init extern volatile ASM_CBC_RESULT_T _ASM_CBC_RESULT3 @(MBAR_ASM + 0x4C); /* 128-BIT CBC MAC RESULT Register (4 of 4) R 32 */
+/*__no_init */ extern volatile ASM_CBC_RESULT_T _ASM_CBC_RESULT3 ; //@(MBAR_ASM + 0x4C); /* 128-BIT CBC MAC RESULT Register (4 of 4) R 32 */
 #define ASM_CBC_RESULT3                    _ASM_CBC_RESULT3
 
 
@@ -2847,7 +2847,7 @@ typedef union
   } Bits;
   uint32 Reg;
 } ASM_CONTROL0_T;
-__no_init extern volatile ASM_CONTROL0_T _ASM_CONTROL0 @(MBAR_ASM + 0x50);      /* CONTROL 0 Register (Self Clearing) W 32 */
+/*__no_init */ extern volatile ASM_CONTROL0_T _ASM_CONTROL0 ; //@(MBAR_ASM + 0x50);      /* CONTROL 0 Register (Self Clearing) W 32 */
 #define ASM_CONTROL0                  _ASM_CONTROL0.Reg
 #define ASM_CONTROL0_START            _ASM_CONTROL0.Bits.START                  /* BIT24 */
 #define ASM_CONTROL0_CLEAR            _ASM_CONTROL0.Bits.CLEAR                  /* BIT25 */
@@ -2877,7 +2877,7 @@ typedef union
   } Crypt;
   uint32 Reg;
 } ASM_CONTROL1_T;
-__no_init extern volatile ASM_CONTROL1_T _ASM_CONTROL1 @(MBAR_ASM + 0x54);      /* CONTROL 1 Register R/W 32 */
+/*__no_init */ extern volatile ASM_CONTROL1_T _ASM_CONTROL1 ; //@(MBAR_ASM + 0x54);      /* CONTROL 1 Register R/W 32 */
 #define ASM_CONTROL1                  _ASM_CONTROL1.Reg
 #define ASM_CONTROL1_ON               _ASM_CONTROL1.Bits.ON                     /* BIT0 */
 #define ASM_CONTROL1_MODE             _ASM_CONTROL1.Bits.MODE                   /* BIT1 */
@@ -2899,23 +2899,23 @@ typedef union
   } Bits;
   uint32 Reg;
 } ASM_STATUS_T;
-__no_init extern volatile ASM_STATUS_T _ASM_STATUS @(MBAR_ASM + 0x58);          /* STATUS Register R 32 */
+/*__no_init */ extern volatile ASM_STATUS_T _ASM_STATUS ; //@(MBAR_ASM + 0x58);          /* STATUS Register R 32 */
 #define ASM_STATUS                    _ASM_STATUS.Reg
 #define ASM_STATUS_DONE               _ASM_STATUS.Bits.DONE                     /* BIT24 */
 #define ASM_STATUS_TESTPASS           _ASM_STATUS.Bits.TESTPASS                 /* BIT25 */
 
 
 typedef uint32 ASM_MAC_T;
-__no_init extern volatile ASM_MAC_T _ASM_MAC0 @(MBAR_ASM + 0x60);               /* 128-BIT CBC MAC Register (1 of 4) R/W 32 */
+/*__no_init */ extern volatile ASM_MAC_T _ASM_MAC0 ; //@(MBAR_ASM + 0x60);               /* 128-BIT CBC MAC Register (1 of 4) R/W 32 */
 #define ASM_MAC0                    _ASM_MAC0
 
-__no_init extern volatile ASM_MAC_T _ASM_MAC1 @(MBAR_ASM + 0x64);               /* 128-BIT CBC MAC Register (2 of 4) R/W 32 */
+/*__no_init */ extern volatile ASM_MAC_T _ASM_MAC1 ; //@(MBAR_ASM + 0x64);               /* 128-BIT CBC MAC Register (2 of 4) R/W 32 */
 #define ASM_MAC1                    _ASM_MAC1
 
-__no_init extern volatile ASM_MAC_T _ASM_MAC2 @(MBAR_ASM + 0x68);               /* 128-BIT CBC MAC Register (3 of 4) R/W 32 */
+/*__no_init */ extern volatile ASM_MAC_T _ASM_MAC2 ; //@(MBAR_ASM + 0x68);               /* 128-BIT CBC MAC Register (3 of 4) R/W 32 */
 #define ASM_MAC2                    _ASM_MAC2
 
-__no_init extern volatile ASM_MAC_T _ASM_MAC3 @(MBAR_ASM + 0x6C);               /* 128-BIT CBC MAC Register (4 of 4) R/W 32 */
+/*__no_init */ extern volatile ASM_MAC_T _ASM_MAC3 ; //@(MBAR_ASM + 0x6C);               /* 128-BIT CBC MAC Register (4 of 4) R/W 32 */
 #define ASM_MAC3                    _ASM_MAC3
 
 
@@ -2971,7 +2971,7 @@ typedef union
   } Bits;
   uint32 Reg;
 }PA_CTRL_T;
-__no_init extern volatile PA_CTRL_T _PA_CTRL @(MBAR_RF + 0x20);                 /* Transmit Power Amp Control W 32 */
+/*__no_init */ extern volatile PA_CTRL_T _PA_CTRL ; //@(MBAR_RF + 0x20);                 /* Transmit Power Amp Control W 32 */
 #define PA_CTRL                   _PA_CTRL.Reg
 #define PA_CTRL_PA_SWITCH         _PA_CTRL.Bits.PA_SWITCH
 
@@ -2986,7 +2986,7 @@ typedef union
   } Bits;
   uint32 Reg;
 }PA_ADJ_T;
-__no_init extern volatile PA_ADJ_T _PA_ADJ @(MBAR_RF + 0x54);                   /* Transmit Power Adjust W 32 */
+/*__no_init */ extern volatile PA_ADJ_T _PA_ADJ ; //@(MBAR_RF + 0x54);                   /* Transmit Power Adjust W 32 */
 #define PA_ADJ                   _PA_ADJ.Reg
 #define PA_ADJ_TARGET_PWR        _PA_ADJ.Bits.TARGET_PWR
 
@@ -2994,7 +2994,7 @@ __no_init extern volatile PA_ADJ_T _PA_ADJ @(MBAR_RF + 0x54);                   
 /* ------------------------- UART Module (UART2)   -------------------------- */
 /*    Base Adrress = MBAR_UART2 = 0x8000_B000                                 */
 
-__no_init extern volatile UARTx_UCON_T _UART2_UCON @(MBAR_UART2 + 0x00);        /* UART Control R/W 8 */
+/*__no_init */ extern volatile UARTx_UCON_T _UART2_UCON ; //@(MBAR_UART2 + 0x00);        /* UART Control R/W 8 */
 #define UART2_UCON		          _UART2_UCON.Reg
 #define UART2_UCON_TXE		          _UART2_UCON.Bits.TXE
 #define UART2_UCON_RXE		          _UART2_UCON.Bits.RXE
@@ -3012,7 +3012,7 @@ __no_init extern volatile UARTx_UCON_T _UART2_UCON @(MBAR_UART2 + 0x00);        
 #define UART2_UCON_MRXR		          _UART2_UCON.Bits.MRXR
 #define UART2_UCON_TST		          _UART2_UCON.Bits.TST
 
-__no_init extern volatile UARTx_USTAT_T _UART2_USTAT @(MBAR_UART2 + 0x04);      /* UART Status R 8 */
+/*__no_init */ extern volatile UARTx_USTAT_T _UART2_USTAT ; //@(MBAR_UART2 + 0x04);      /* UART Status R 8 */
 #define UART2_USTAT		          _UART2_USTAT.Reg
 #define UART2_USTAT_SE		          _UART2_USTAT.Bits.SE
 #define UART2_USTAT_PE		          _UART2_USTAT.Bits.PE
@@ -3023,19 +3023,19 @@ __no_init extern volatile UARTx_USTAT_T _UART2_USTAT @(MBAR_UART2 + 0x04);      
 #define UART2_USTAT_RXRDY	          _UART2_USTAT.Bits.RXRDY
 #define UART2_USTAT_TXRDY	          _UART2_USTAT.Bits.TXRDY
 
-__no_init extern volatile UARTx_UDATA_T _UART2_UDATA @(MBAR_UART2 + 0x08);      /* UART Data R/W 8 */
+/*__no_init */ extern volatile UARTx_UDATA_T _UART2_UDATA ; //@(MBAR_UART2 + 0x08);      /* UART Data R/W 8 */
 #define UART2_UDATA                     _UART2_UDATA
 
-__no_init extern volatile UARTx_URXCON_T _UART2_URXCON @(MBAR_UART2 + 0x0C);    /* UART RxBuffer Control R/W 8 */
+/*__no_init */ extern volatile UARTx_URXCON_T _UART2_URXCON ; //@(MBAR_UART2 + 0x0C);    /* UART RxBuffer Control R/W 8 */
 #define UART2_URXCON                   _UART2_URXCON
 
-__no_init extern volatile UARTx_UTXCON_T _UART2_UTXCON @(MBAR_UART2 + 0x10);    /* UART TxBuffer Control R/W 8 */
+/*__no_init */ extern volatile UARTx_UTXCON_T _UART2_UTXCON ; //@(MBAR_UART2 + 0x10);    /* UART TxBuffer Control R/W 8 */
 #define UART2_UTXCON                   _UART2_UTXCON
 
-__no_init extern volatile UARTx_UCTS_T _UART2_UCTS @(MBAR_UART2 + 0x14);        /* UART CTS Level Control R/W 8 */
+/*__no_init */ extern volatile UARTx_UCTS_T _UART2_UCTS ; //@(MBAR_UART2 + 0x14);        /* UART CTS Level Control R/W 8 */
 #define UART2_UCTS                     _UART2_UCTS
 
-__no_init extern volatile UARTx_UBRCNT_T _UART2_UBRCNT @(MBAR_UART2 + 0x18);    /* UBRINC — Fractional Divider/UBRMOD — Fractional Divider R/W 8 */
+/*__no_init */ extern volatile UARTx_UBRCNT_T _UART2_UBRCNT ; //@(MBAR_UART2 + 0x18);    /* UBRINC ï¿½ Fractional Divider/UBRMOD ï¿½ Fractional Divider R/W 8 */
 #define UART2_UBRCNT		        _UART2_UBRCNT.Reg
 #define UART2_UBRCNT_UBRMOD		    _UART2_UBRCNT.Bits.UBRMOD
 #define UART2_UBRCNT_UBRINC 	    _UART2_UBRCNT.Bits.UBRINC
@@ -3053,7 +3053,7 @@ typedef union
   } Bits;
   uint32 Reg;
 } SPIF_TX_DATA_T;
-__no_init extern volatile SPIF_TX_DATA_T _SPIF_TX_DATA @(MBAR_FLASH + 0x00);    /* SPIF Tx Data R/W 32 */
+/*__no_init */ extern volatile SPIF_TX_DATA_T _SPIF_TX_DATA ; //@(MBAR_FLASH + 0x00);    /* SPIF Tx Data R/W 32 */
 
 typedef union
 {
@@ -3063,7 +3063,7 @@ typedef union
   } Bits;
   uint32 Reg;
 } SPIF_RX_DATA_T;
-__no_init extern volatile SPIF_RX_DATA_T _SPIF_RX_DATA @(MBAR_FLASH + 0x04);    /* SPIF Rx Data R 32 */
+/*__no_init */ extern volatile SPIF_RX_DATA_T _SPIF_RX_DATA ; //@(MBAR_FLASH + 0x04);    /* SPIF Rx Data R 32 */
 
 typedef union
 {
@@ -3076,7 +3076,7 @@ typedef union
   } Bits;
   uint32 Reg;
 }SPIF_CLK_CTRL_T;
-__no_init extern volatile SPIF_CLK_CTRL_T _SPIF_CLK_CTRL @(MBAR_FLASH + 0x08);  /* SPIF Clock Control Register R/W 32 */
+/*__no_init */ extern volatile SPIF_CLK_CTRL_T _SPIF_CLK_CTRL ; //@(MBAR_FLASH + 0x08);  /* SPIF Clock Control Register R/W 32 */
 #define SPIF_CLK_CTRL                  _SPIF_CLK_CTRL.Reg
 #define SPIF_CLK_CTRL_SPI_DATA_LENGTH  _SPIF_CLK_CTRL.Bits.SPI_DATA_LENGTH      /* BIT0 | BIT1 | BIT2 | BIT3 | BIT4 | BIT5 | BIT6 */
 #define SPIF_CLK_CTRL_SPI_START        _SPIF_CLK_CTRL.Bits.SPI_START            /* BIT7 */
@@ -3102,7 +3102,7 @@ typedef union
   } Bits;
   uint32 Reg;
 }SPIF_SETUP_T;
-__no_init extern volatile SPIF_SETUP_T _SPIF_SETUP @(MBAR_FLASH + 0x0C);        /* SPIF Setup Register R/W 32 */
+/*__no_init */ extern volatile SPIF_SETUP_T _SPIF_SETUP ; //@(MBAR_FLASH + 0x0C);        /* SPIF Setup Register R/W 32 */
 #define SPIF_SETUP                      _SPIF_SETUP.Reg
 #define SPIF_SETUP_SPI_SS_SETUP         _SPIF_SETUP.Bits.SPI_SS_SETUP           /* BIT0 | BIT1 */
 #define SPIF_SETUP_SPI_SS_DELAY         _SPIF_SETUP.Bits.SPI_SS_DELAY           /* BIT2 | BIT3 */
@@ -3127,7 +3127,7 @@ typedef union
   } Bits;
   uint32 Reg;
 }SPIF_STATUS_T;
-__no_init extern volatile SPIF_STATUS_T _SPIF_STATUS @(MBAR_FLASH + 0x10);      /* SPIF Status Register R/W 32 */
+/*__no_init */ extern volatile SPIF_STATUS_T _SPIF_STATUS ; //@(MBAR_FLASH + 0x10);      /* SPIF Status Register R/W 32 */
 #define SPIF_STATUS                 _SPIF_STATUS.Reg
 #define SPIF_STATUS_SPI_INT         _SPIF_STATUS.Bits.SPI_INT                   /* BIT0 */
 #define SPIF_STATUS_SPI_OVERFLOW    _SPIF_STATUS.Bits.SPI_OVERFLOW              /* BIT4 */
@@ -3138,61 +3138,61 @@ __no_init extern volatile SPIF_STATUS_T _SPIF_STATUS @(MBAR_FLASH + 0x10);      
 
 /* ------------- Analog to Digital Converter Module (ADC)-------------------- */
 /*    Base Adrress = MBAR_ADC = 0x8000D000                                    */
-__no_init extern volatile ADC_COMP_T  _ADC_COMP_0 @(MBAR_ADC + 0x00);           /* Monitor GP-ADC Pins Threshold detection w/o MCU intervention to generate IRQ R/W 16 */
+/*__no_init */ extern volatile ADC_COMP_T  _ADC_COMP_0 ; //@(MBAR_ADC + 0x00);           /* Monitor GP-ADC Pins Threshold detection w/o MCU intervention to generate IRQ R/W 16 */
 #define ADC_COMP_0		          _ADC_COMP_0.Reg
 #define ADC_COMP_0_VALUE	          _ADC_COMP_0.Bits.VALUE
 #define ADC_COMP_0_CHANNEL	          _ADC_COMP_0.Bits.CHANNEL
 #define ADC_COMP_0_GL		          _ADC_COMP_0.Bits.GL
 
-__no_init extern volatile ADC_COMP_T  _ADC_COMP_1 @(MBAR_ADC + 0x02);           /* Monitor GP-ADC Pins Threshold R/W 16 */
+/*__no_init */ extern volatile ADC_COMP_T  _ADC_COMP_1 ; //@(MBAR_ADC + 0x02);           /* Monitor GP-ADC Pins Threshold R/W 16 */
 #define ADC_COMP_1		          _ADC_COMP_1.Reg
 #define ADC_COMP_1_VALUE	          _ADC_COMP_1.Bits.VALUE
 #define ADC_COMP_1_CHANNEL	          _ADC_COMP_1.Bits.CHANNEL
 #define ADC_COMP_1_GL		          _ADC_COMP_1.Bits.GL
 
-__no_init extern volatile ADC_COMP_T  _ADC_COMP_2 @(MBAR_ADC + 0x04);           /* Monitor GP-ADC Pins Threshold R/W 16 */
+/*__no_init */ extern volatile ADC_COMP_T  _ADC_COMP_2 ; //@(MBAR_ADC + 0x04);           /* Monitor GP-ADC Pins Threshold R/W 16 */
 #define ADC_COMP_2		          _ADC_COMP_2.Reg
 #define ADC_COMP_2_VALUE	          _ADC_COMP_2.Bits.VALUE
 #define ADC_COMP_2_CHANNEL	          _ADC_COMP_2.Bits.CHANNEL
 #define ADC_COMP_2_GL		          _ADC_COMP_2.Bits.GL
 
-__no_init extern volatile ADC_COMP_T  _ADC_COMP_3 @(MBAR_ADC + 0x06);           /* Monitor GP-ADC Pins Threshold R/W 16 */
+/*__no_init */ extern volatile ADC_COMP_T  _ADC_COMP_3 ; //@(MBAR_ADC + 0x06);           /* Monitor GP-ADC Pins Threshold R/W 16 */
 #define ADC_COMP_3		          _ADC_COMP_3.Reg
 #define ADC_COMP_3_VALUE	          _ADC_COMP_3.Bits.VALUE
 #define ADC_COMP_3_CHANNEL	          _ADC_COMP_3.Bits.CHANNEL
 #define ADC_COMP_3_GL		          _ADC_COMP_3.Bits.GL
 
-__no_init extern volatile ADC_COMP_T  _ADC_COMP_4 @(MBAR_ADC + 0x08);           /* Monitor GP-ADC Pins Threshold R/W 16 */
+/*__no_init */ extern volatile ADC_COMP_T  _ADC_COMP_4 ; //@(MBAR_ADC + 0x08);           /* Monitor GP-ADC Pins Threshold R/W 16 */
 #define ADC_COMP_4		          _ADC_COMP_4.Reg
 #define ADC_COMP_4_VALUE	          _ADC_COMP_4.Bits.VALUE
 #define ADC_COMP_4_CHANNEL	          _ADC_COMP_4.Bits.CHANNEL
 #define ADC_COMP_4_GL		          _ADC_COMP_4.Bits.GL
 
-__no_init extern volatile ADC_COMP_T  _ADC_COMP_5 @(MBAR_ADC + 0x0A);           /* Monitor GP-ADC Pins Threshold R/W 16 */
+/*__no_init */ extern volatile ADC_COMP_T  _ADC_COMP_5 ; //@(MBAR_ADC + 0x0A);           /* Monitor GP-ADC Pins Threshold R/W 16 */
 #define ADC_COMP_5		          _ADC_COMP_5.Reg
 #define ADC_COMP_5_VALUE	          _ADC_COMP_5.Bits.VALUE
 #define ADC_COMP_5_CHANNEL	          _ADC_COMP_5.Bits.CHANNEL
 #define ADC_COMP_5_GL		          _ADC_COMP_5.Bits.GL
 
-__no_init extern volatile ADC_COMP_T  _ADC_COMP_6 @(MBAR_ADC + 0x0C);           /* Monitor GP-ADC Pins Threshold R/W 16 */
+/*__no_init */ extern volatile ADC_COMP_T  _ADC_COMP_6 ; //@(MBAR_ADC + 0x0C);           /* Monitor GP-ADC Pins Threshold R/W 16 */
 #define ADC_COMP_6		          _ADC_COMP_6.Reg
 #define ADC_COMP_6_VALUE	          _ADC_COMP_6.Bits.VALUE
 #define ADC_COMP_6_CHANNEL	          _ADC_COMP_6.Bits.CHANNEL
 #define ADC_COMP_6_GL		          _ADC_COMP_6.Bits.GL
 
-__no_init extern volatile ADC_COMP_T  _ADC_COMP_7 @(MBAR_ADC + 0x0E);           /* Monitor GP-ADC Pins Threshold R/W 16 */
+/*__no_init */ extern volatile ADC_COMP_T  _ADC_COMP_7 ; //@(MBAR_ADC + 0x0E);           /* Monitor GP-ADC Pins Threshold R/W 16 */
 #define ADC_COMP_7		          _ADC_COMP_7.Reg
 #define ADC_COMP_7_VALUE	          _ADC_COMP_7.Bits.VALUE
 #define ADC_COMP_7_CHANNEL	          _ADC_COMP_7.Bits.CHANNEL
 #define ADC_COMP_7_GL		          _ADC_COMP_7.Bits.GL
 
 
-__no_init extern volatile ADC_BAT_COMP_T  _ADC_BAT_COMP_OVER @(MBAR_ADC + 0x10);/* Battery Voltage Upper Trip Point (ADC1 only) R/W 16 */
+/*__no_init */ extern volatile ADC_BAT_COMP_T  _ADC_BAT_COMP_OVER ; //@(MBAR_ADC + 0x10);/* Battery Voltage Upper Trip Point (ADC1 only) R/W 16 */
 #define ADC_BAT_COMP_OVER		  _ADC_BAT_COMP_OVER.Reg
 #define ADC_BAT_COMP_OVER_VALUE	          _ADC_BAT_COMP_OVER.Bits.VALUE
 
 
-__no_init extern volatile ADC_BAT_COMP_T  _ADC_BAT_COMP_UNDER @(MBAR_ADC + 0x12);/* Battery Voltage Lower Trip Point (ADC1 only) R/W 16 */
+/*__no_init */ extern volatile ADC_BAT_COMP_T  _ADC_BAT_COMP_UNDER ; //@(MBAR_ADC + 0x12);/* Battery Voltage Lower Trip Point (ADC1 only) R/W 16 */
 #define ADC_BAT_COMP_UNDER		  _ADC_BAT_COMP_UNDER.Reg
 #define ADC_BAT_COMP_UNDER_VALUE	  _ADC_BAT_COMP_UNDER.Bits.VALUE
 
@@ -3215,7 +3215,7 @@ typedef union
   } Bits;
   uint16 Reg;
 } ADC_SEQ_1_T;
-__no_init extern volatile ADC_SEQ_1_T   _ADC_SEQ_1 @(MBAR_ADC + 0x14);          /* Monitor GP-ADC Pins for ADC1 R/W 16 */
+/*__no_init */ extern volatile ADC_SEQ_1_T   _ADC_SEQ_1 ; //@(MBAR_ADC + 0x14);          /* Monitor GP-ADC Pins for ADC1 R/W 16 */
 #define ADC_SEQ_1		        _ADC_SEQ_1.Reg
 #define ADC_SEQ_1_CH0	                _ADC_SEQ_1.Bits.CH0
 #define ADC_SEQ_1_CH1	                _ADC_SEQ_1.Bits.CH1
@@ -3246,7 +3246,7 @@ typedef union
   } Bits;
   uint16 Reg;
 } ADC_SEQ_2_T;
-__no_init extern volatile ADC_SEQ_2_T   _ADC_SEQ_2 @(MBAR_ADC + 0x16);          /* Monitor GP-ADC Pins for ADC2 R/W 16 */
+/*__no_init */ extern volatile ADC_SEQ_2_T   _ADC_SEQ_2 ; //@(MBAR_ADC + 0x16);          /* Monitor GP-ADC Pins for ADC2 R/W 16 */
 #define ADC_SEQ_2		        _ADC_SEQ_2.Reg
 #define ADC_SEQ_2_CH0	                _ADC_SEQ_2.Bits.CH0
 #define ADC_SEQ_2_CH1	                _ADC_SEQ_2.Bits.CH1
@@ -3277,7 +3277,7 @@ typedef union
   } Bits;
   uint16 Reg;
 } ADC_CONTROL_T;
-__no_init extern volatile ADC_CONTROL_T   _ADC_CONTROL @(MBAR_ADC + 0x18);      /* Primary Module Control Register R/W 16 */
+/*__no_init */ extern volatile ADC_CONTROL_T   _ADC_CONTROL ; //@(MBAR_ADC + 0x18);      /* Primary Module Control Register R/W 16 */
 #define ADC_CONTROL		          _ADC_CONTROL.Reg
 #define ADC_CONTROL_ON	                  _ADC_CONTROL.Bits.ON
 #define ADC_CONTROL_TIMER1_ON	          _ADC_CONTROL.Bits.TIMER1_ON
@@ -3309,7 +3309,7 @@ typedef union
   } Bits;
   uint16 Reg;
 } ADC_TRIGGERS_T;
-__no_init extern volatile ADC_TRIGGERS_T   _ADC_TRIGGERS @(MBAR_ADC + 0x1A);    /* Triggered Channels Register R 16 */
+/*__no_init */ extern volatile ADC_TRIGGERS_T   _ADC_TRIGGERS ; //@(MBAR_ADC + 0x1A);    /* Triggered Channels Register R 16 */
 #define ADC_TRIGGERS		          _ADC_TRIGGERS.Reg
 #define ADC_TRIGGERS_CH0	          _ADC_TRIGGERS.Bits.CH0
 #define ADC_TRIGGERS_CH1	          _ADC_TRIGGERS.Bits.CH1
@@ -3332,7 +3332,7 @@ typedef union
   } Bits;
   uint16 Reg;
 } ADC_PRESCALE_T;
-__no_init extern volatile ADC_PRESCALE_T  _ADC_PRESCALE @(MBAR_ADC + 0x1C);     /* Bus Clock Divide Register (8-bit prescaler for use with 26MHz) R/W 16 ??? */
+/*__no_init */ extern volatile ADC_PRESCALE_T  _ADC_PRESCALE ; //@(MBAR_ADC + 0x1C);     /* Bus Clock Divide Register (8-bit prescaler for use with 26MHz) R/W 16 ??? */
 #define ADC_PRESCALE		          _ADC_PRESCALE.Reg
 #define ADC_PRESCALE_PRESCALE	          _ADC_PRESCALE.Bits.PRESCALE
 
@@ -3346,7 +3346,7 @@ typedef union
   } Bits;
   uint16 Reg;
 } ADC_FIFO_READ_T;
-__no_init extern volatile ADC_FIFO_READ_T  _ADC_FIFO_READ @(MBAR_ADC + 0x20);   /* ADC FIFO Read (8 deep FIFO) R 16 */
+/*__no_init */ extern volatile ADC_FIFO_READ_T  _ADC_FIFO_READ ; //@(MBAR_ADC + 0x20);   /* ADC FIFO Read (8 deep FIFO) R 16 */
 #define ADC_FIFO_READ		          _ADC_FIFO_READ.Reg
 #define ADC_FIFO_READ_VALUE	          _ADC_FIFO_READ.Bits.VALUE
 #define ADC_FIFO_READ_CHANNEL	          _ADC_FIFO_READ.Bits.CHANNEL
@@ -3361,7 +3361,7 @@ typedef union
   } Bits;
   uint16 Reg;
 } ADC_FIFO_CONTROL_T;
-__no_init extern volatile ADC_FIFO_CONTROL_T _ADC_FIFO_CONTROL @(MBAR_ADC + 0x22); /* ADC Interrupt Level Control R/W 16 */
+/*__no_init */ extern volatile ADC_FIFO_CONTROL_T _ADC_FIFO_CONTROL ; //@(MBAR_ADC + 0x22); /* ADC Interrupt Level Control R/W 16 */
 #define ADC_FIFO_CONTROL		    _ADC_FIFO_CONTROL.Reg
 #define ADC_FIFO_CONTROL_LEVEL	            _ADC_FIFO_CONTROL.Bits.LEVEL
 
@@ -3377,7 +3377,7 @@ typedef union
   } Bits;
   uint16 Reg;
 } ADC_FIFO_STATUS_T;
-__no_init extern volatile ADC_FIFO_STATUS_T _ADC_FIFO_STATUS @(MBAR_ADC + 0x24);/* ADC FIFO Status R 16 */
+/*__no_init */ extern volatile ADC_FIFO_STATUS_T _ADC_FIFO_STATUS ; //@(MBAR_ADC + 0x24);/* ADC FIFO Status R 16 */
 #define ADC_FIFO_STATUS		        _ADC_FIFO_STATUS.Reg
 #define ADC_FIFO_STATUS_LEVEL	        _ADC_FIFO_STATUS.Bits.LEVEL
 #define ADC_FIFO_STATUS_FULL	        _ADC_FIFO_STATUS.Bits.FULL
@@ -3385,31 +3385,31 @@ __no_init extern volatile ADC_FIFO_STATUS_T _ADC_FIFO_STATUS @(MBAR_ADC + 0x24);
 
 
 typedef uint16 ADC_1_SR_HIGH_T;
-__no_init extern volatile ADC_1_SR_HIGH_T _ADC_1_SR_HIGH @(MBAR_ADC + 0x30);    /* ADC 1 Sample Rate High R/W 16 */
+/*__no_init */ extern volatile ADC_1_SR_HIGH_T _ADC_1_SR_HIGH ; //@(MBAR_ADC + 0x30);    /* ADC 1 Sample Rate High R/W 16 */
 #define ADC_1_SR_HIGH                    _ADC_1_SR_HIGH
 
 
 typedef uint16 ADC_1_SR_LOW_T;
-__no_init extern volatile ADC_1_SR_LOW_T _ADC_1_SR_LOW @(MBAR_ADC + 0x32);      /* ADC 1 Sample Rate Low R/W 16 */
+/*__no_init */ extern volatile ADC_1_SR_LOW_T _ADC_1_SR_LOW ; //@(MBAR_ADC + 0x32);      /* ADC 1 Sample Rate Low R/W 16 */
 #define ADC_1_SR_LOW                    _ADC_1_SR_LOW
 
 typedef uint16 ADC_2_SR_HIGH_T;
-__no_init extern volatile ADC_2_SR_HIGH_T _ADC_2_SR_HIGH @(MBAR_ADC + 0x34);    /* ADC 2 Sample Rate High R/W 16 */
+/*__no_init */ extern volatile ADC_2_SR_HIGH_T _ADC_2_SR_HIGH ; //@(MBAR_ADC + 0x34);    /* ADC 2 Sample Rate High R/W 16 */
 #define ADC_2_SR_HIGH                    _ADC_2_SR_HIGH
 
 
 typedef uint16 ADC_2_SR_LOW_T;
-__no_init extern volatile ADC_2_SR_LOW_T _ADC_2_SR_LOW @(MBAR_ADC + 0x36);      /* ADC 2 Sample Rate Low R/W 16 */
+/*__no_init */ extern volatile ADC_2_SR_LOW_T _ADC_2_SR_LOW ; //@(MBAR_ADC + 0x36);      /* ADC 2 Sample Rate Low R/W 16 */
 #define ADC_2_SR_LOW                    _ADC_2_SR_LOW
 
 
 typedef uint16 ADC_ON_TIME_T;
-__no_init extern volatile ADC_ON_TIME_T _ADC_ON_TIME @(MBAR_ADC + 0x38);        /* ADC TurnOn Time R/W 16 */
+/*__no_init */ extern volatile ADC_ON_TIME_T _ADC_ON_TIME ; //@(MBAR_ADC + 0x38);        /* ADC TurnOn Time R/W 16 */
 #define ADC_ON_TIME                    _ADC_ON_TIME
 
 
 typedef uint16 ADC_CONVERT_TIME_T;
-__no_init extern volatile ADC_CONVERT_TIME_T _ADC_CONVERT_TIME @(MBAR_ADC + 0x3A); /* ADC Convert Time R/W 16 */
+/*__no_init */ extern volatile ADC_CONVERT_TIME_T _ADC_CONVERT_TIME ; //@(MBAR_ADC + 0x3A); /* ADC Convert Time R/W 16 */
 #define ADC_CONVERT_TIME                    _ADC_CONVERT_TIME
 
 
@@ -3422,7 +3422,7 @@ typedef union
   } Bits;
   uint16 Reg;
 } ADC_CLOCK_DIV_T;
-__no_init extern volatile ADC_CLOCK_DIV_T _ADC_CLOCK_DIV @(MBAR_ADC + 0x3C);    /* ADC Clock Divider R/W 16 */
+/*__no_init */ extern volatile ADC_CLOCK_DIV_T _ADC_CLOCK_DIV ; //@(MBAR_ADC + 0x3C);    /* ADC Clock Divider R/W 16 */
 #define ADC_CLOCK_DIV		        _ADC_CLOCK_DIV.Reg
 #define ADC_CLOCK_DIV_CLOCK_DIVIDER	_ADC_CLOCK_DIV.Bits.CLOCK_DIVIDER
 
@@ -3439,7 +3439,7 @@ typedef union
   } Bits;
   uint16 Reg;
 } ADC_OVERRIDE_T;
-__no_init extern volatile ADC_OVERRIDE_T _ADC_OVERRIDE @(MBAR_ADC + 0x40);      /* ADC Manual Control R/W 16 */
+/*__no_init */ extern volatile ADC_OVERRIDE_T _ADC_OVERRIDE ; //@(MBAR_ADC + 0x40);      /* ADC Manual Control R/W 16 */
 #define ADC_OVERRIDE		        _ADC_OVERRIDE.Reg
 #define ADC_OVERRIDE_MUX1	        _ADC_OVERRIDE.Bits.MUX1
 #define ADC_OVERRIDE_MUX2	        _ADC_OVERRIDE.Bits.MUX2
@@ -3459,7 +3459,7 @@ typedef union
   } Bits;
   uint16 Reg;
 } ADC_IRQ_T;
-__no_init extern volatile ADC_IRQ_T _ADC_IRQ @(MBAR_ADC + 0x42);                /* ADC Read/Clear Active Interrupts R/W 16 */
+/*__no_init */ extern volatile ADC_IRQ_T _ADC_IRQ ; //@(MBAR_ADC + 0x42);                /* ADC Read/Clear Active Interrupts R/W 16 */
 #define ADC_IRQ		        _ADC_IRQ.Reg
 #define ADC_IRQ_COMPARE	        _ADC_IRQ.Bits.COMPARE
 #define ADC_IRQ_SEQ1	        _ADC_IRQ.Bits.SEQ1
@@ -3476,7 +3476,7 @@ typedef union
   } Bits;
   uint16 Reg;
 } ADC_MODE_T;
-__no_init extern volatile ADC_MODE_T _ADC_MODE @(MBAR_ADC + 0x44);              /* ADC Mode R/W 16 */
+/*__no_init */ extern volatile ADC_MODE_T _ADC_MODE ; //@(MBAR_ADC + 0x44);              /* ADC Mode R/W 16 */
 #define ADC_MODE		  _ADC_MODE.Reg
 #define ADC_MODE_OVERRIDE	  _ADC_MODE.Bits.OVERRIDE
 
@@ -3490,7 +3490,7 @@ typedef union
   } Bits;
   uint16 Reg;
 } ADC_1_RESULT_T;
-__no_init extern volatile ADC_1_RESULT_T _ADC_1_RESULT @(MBAR_ADC + 0x46);      /* ADC 1 Result R 16 */
+/*__no_init */ extern volatile ADC_1_RESULT_T _ADC_1_RESULT ; //@(MBAR_ADC + 0x46);      /* ADC 1 Result R 16 */
 #define ADC_1_RESULT		  _ADC_1_RESULT.Reg
 #define ADC_1_RESULT_AD1_RESULT	  _ADC_1_RESULT.Bits.AD1_RESULT
 
@@ -3504,7 +3504,7 @@ typedef union
   } Bits;
   uint16 Reg;
 } ADC_2_RESULT_T;
-__no_init extern volatile ADC_2_RESULT_T _ADC_2_RESULT @(MBAR_ADC + 0x48);      /* ADC 2 Result R 16 */
+/*__no_init */ extern volatile ADC_2_RESULT_T _ADC_2_RESULT ; //@(MBAR_ADC + 0x48);      /* ADC 2 Result R 16 */
 #define ADC_2_RESULT		  _ADC_2_RESULT.Reg
 #define ADC_2_RESULT_AD2_RESULT	  _ADC_2_RESULT.Bits.AD2_RESULT
 
@@ -3524,7 +3524,7 @@ typedef union
   } Bits;
   uint32 Reg;
 } ITC_INTCNTL_T;
-__no_init extern volatile ITC_INTCNTL_T _ITC_INTCNTL @(MBAR_AITC + 0x00);       /* ITC Interrupt Controller R/W 32 */
+/*__no_init */ extern volatile ITC_INTCNTL_T _ITC_INTCNTL ; //@(MBAR_AITC + 0x00);       /* ITC Interrupt Controller R/W 32 */
 #define ITC_INTCNTL               _ITC_INTCNTL.Reg
 #define ITC_INTCNTL_FIAD          _ITC_INTCNTL.Bits.FIAD                        /* BIT19 */
 #define ITC_INTCNTL_NIAD          _ITC_INTCNTL.Bits.NIAD                        /* BIT20 */
@@ -3548,7 +3548,7 @@ typedef union
   } GrpBits;
   uint32 Reg;
 } ITC_NIMASK_T;
-__no_init extern volatile ITC_NIMASK_T _ITC_NIMASK @(MBAR_AITC + 0x04);         /* ITC Normal Interrupt Mask R/W 32 */
+/*__no_init */ extern volatile ITC_NIMASK_T _ITC_NIMASK ; //@(MBAR_AITC + 0x04);         /* ITC Normal Interrupt Mask R/W 32 */
 #define ITC_NIMASK                 _ITC_NIMASK.Reg
 #define ITC_NIMASK_0               _ITC_NIMASK.Bits.NIMASK0                     /* BIT0 */
 #define ITC_NIMASK_1               _ITC_NIMASK.Bits.NIMASK1                     /* BIT1 */
@@ -3575,7 +3575,7 @@ typedef union
   } GrpBits;
   uint32 Reg;
 } ITC_INTENNUM_T;
-__no_init extern volatile ITC_INTENNUM_T _ITC_INTENNUM @(MBAR_AITC + 0x08);     /* ITC Interrupt Enable Number W 32 */
+/*__no_init */ extern volatile ITC_INTENNUM_T _ITC_INTENNUM ; //@(MBAR_AITC + 0x08);     /* ITC Interrupt Enable Number W 32 */
 #define ITC_INTENNUM                _ITC_INTENNUM.Reg
 #define ITC_INTENNUM_0              _ITC_INTENNUM.Bits.ENNUM0                   /* BIT0 */
 #define ITC_INTENNUM_1              _ITC_INTENNUM.Bits.ENNUM1                   /* BIT1 */
@@ -3601,7 +3601,7 @@ typedef union
   } GrpBits;
   uint32 Reg;
 } ITC_INTDISNUM_T;
-__no_init extern volatile ITC_INTDISNUM_T _ITC_INTDISNUM @(MBAR_AITC + 0x0c);   /* ITC Interrupt Disable Number W 32 */
+/*__no_init */ extern volatile ITC_INTDISNUM_T _ITC_INTDISNUM ; //@(MBAR_AITC + 0x0c);   /* ITC Interrupt Disable Number W 32 */
 #define ITC_INTDISNUM                _ITC_INTDISNUM.Reg
 #define ITC_INTDISNUM_0              _ITC_INTDISNUM.Bits.DISNUM0                /* BIT0 */
 #define ITC_INTDISNUM_1              _ITC_INTDISNUM.Bits.DISNUM1                /* BIT1 */
@@ -3619,7 +3619,7 @@ typedef union
   } GrpBits;
   uint32 Reg;
 } ITC_INTENABLE_T;
-__no_init extern volatile ITC_INTENABLE_T _ITC_INTENABLE @(MBAR_AITC + 0x10);   /* ITC Interrupt Enable R/W 32 */
+/*__no_init */ extern volatile ITC_INTENABLE_T _ITC_INTENABLE ; //@(MBAR_AITC + 0x10);   /* ITC Interrupt Enable R/W 32 */
 #define ITC_INTENABLE                _ITC_INTENABLE.Reg
 #define ITC_INTENABLE_GRP            _ITC_INTENABLE.GrpBits.INTENABLE           /* BIT0 - BIT15 */
 
@@ -3633,7 +3633,7 @@ typedef union
   } GrpBits;
   uint32 Reg;
 } ITC_INTTYPE_T;
-__no_init extern volatile ITC_INTTYPE_T _ITC_INTTYPE @(MBAR_AITC + 0x14);       /* ITC Interrupt Type R/W 32 */
+/*__no_init */ extern volatile ITC_INTTYPE_T _ITC_INTTYPE ; //@(MBAR_AITC + 0x14);       /* ITC Interrupt Type R/W 32 */
 #define ITC_INTTYPE                _ITC_INTTYPE.Reg
 #define ITC_INTTYPE_GRP            _ITC_INTTYPE.GrpBits.INTTYPE                 /* BIT0 - BIT15 */
 
@@ -3646,7 +3646,7 @@ typedef union
   } GrpBits;
   uint32 Reg;
 } ITC_NIVECTOR_T;
-__no_init extern volatile ITC_NIVECTOR_T _ITC_NIVECTOR @(MBAR_AITC + 0x28);     /* ITC Normal Interrupt R 32 */
+/*__no_init */ extern volatile ITC_NIVECTOR_T _ITC_NIVECTOR ; //@(MBAR_AITC + 0x28);     /* ITC Normal Interrupt R 32 */
 #define ITC_NIVECTOR                _ITC_NIVECTOR.Reg
 #define ITC_NIVECTOR_GRP            _ITC_NIVECTOR.GrpBits.NIVECTOR              /* BIT0 - BIT31 */
 
@@ -3659,7 +3659,7 @@ typedef union
   } GrpBits;
   uint32 Reg;
 } ITC_FIVECTOR_T;
-__no_init extern volatile ITC_FIVECTOR_T _ITC_FIVECTOR @(MBAR_AITC + 0x2C);     /* ITC Fast Interrupt R 32 */
+/*__no_init */ extern volatile ITC_FIVECTOR_T _ITC_FIVECTOR ; //@(MBAR_AITC + 0x2C);     /* ITC Fast Interrupt R 32 */
 #define ITC_FIVECTOR                _ITC_FIVECTOR.Reg
 #define ITC_FIVECTOR_GRP            _ITC_FIVECTOR.GrpBits.FIVECTOR              /* BIT0 - BIT31 */
 
@@ -3673,7 +3673,7 @@ typedef union
   } GrpBits;
   uint32 Reg;
 } ITC_INTSRC_T;
-__no_init extern volatile ITC_INTSRC_T _ITC_INTSRC @(MBAR_AITC + 0x30);         /* ITC Interrupt Source R 32 */
+/*__no_init */ extern volatile ITC_INTSRC_T _ITC_INTSRC ; //@(MBAR_AITC + 0x30);         /* ITC Interrupt Source R 32 */
 #define ITC_INTSRC                _ITC_INTSRC.Reg
 #define ITC_INTSRC_GRP            _ITC_INTSRC.GrpBits.INTSRC                    /* BIT0 - BIT15 */
 
@@ -3687,7 +3687,7 @@ typedef union
   } GrpBits;
   uint32 Reg;
 } ITC_INTFRC_T;
-__no_init extern volatile ITC_INTFRC_T _ITC_INTFRC @(MBAR_AITC + 0x34);         /* ITC Interrupt Force R/W 32 */
+/*__no_init */ extern volatile ITC_INTFRC_T _ITC_INTFRC ; //@(MBAR_AITC + 0x34);         /* ITC Interrupt Force R/W 32 */
 #define ITC_INTFRC                _ITC_INTFRC.Reg
 #define ITC_INTFRC_GRP            _ITC_INTFRC.GrpBits.INTFRC                    /* BIT0 - BIT15 */
 
@@ -3701,7 +3701,7 @@ typedef union
   } GrpBits;
   uint32 Reg;
 } ITC_NIPEND_T;
-__no_init extern volatile ITC_NIPEND_T _ITC_NIPEND @(MBAR_AITC + 0x38);         /* ITC Normal Interrupt Pending R 32 */
+/*__no_init */ extern volatile ITC_NIPEND_T _ITC_NIPEND ; //@(MBAR_AITC + 0x38);         /* ITC Normal Interrupt Pending R 32 */
 #define ITC_NIPEND                _ITC_NIPEND.Reg
 #define ITC_NIPEND_GRP            _ITC_NIPEND.GrpBits.NIPEND                    /* BIT0 - BIT15 */
 
@@ -3715,7 +3715,7 @@ typedef union
   } GrpBits;
   uint32 Reg;
 } ITC_FIPEND_T;
-__no_init extern volatile ITC_FIPEND_T _ITC_FIPEND @(MBAR_AITC + 0x3C);         /* ITC Fast Interrupt Pending R 32 */
+/*__no_init */ extern volatile ITC_FIPEND_T _ITC_FIPEND ; //@(MBAR_AITC + 0x3C);         /* ITC Fast Interrupt Pending R 32 */
 #define ITC_FIPEND                _ITC_FIPEND.Reg
 #define ITC_FIPEND_GRP            _ITC_FIPEND.GrpBits.FIPEND                    /* BIT0 - BIT15 */
 
@@ -3739,7 +3739,7 @@ typedef union
   byte Reg;
 } I2CADDR_T;
 
-__no_init extern volatile I2CADDR_T _I2CADDR @(MBAR_I2C + 0x000);  /* I2C Address Register */
+/*__no_init */ extern volatile I2CADDR_T _I2CADDR ; //@(MBAR_I2C + 0x000);  /* I2C Address Register */
 
 #define I2CADDR          _I2C_ADDR.Reg
 #define I2CADDR_ADDR     _I2C_ADDR.Bits.ADDR   /* Contain the specific slave address that is used by the I2C interface */
@@ -3757,7 +3757,7 @@ typedef union
   byte Reg;
 } I2CFDR_T;
 
-__no_init extern volatile I2CFDR_T _I2CFDR @(MBAR_I2C + 0x004);  /* I2C Frequency Divider Register */
+/*__no_init */ extern volatile I2CFDR_T _I2CFDR ; //@(MBAR_I2C + 0x004);  /* I2C Frequency Divider Register */
 
 #define I2CFDR          _I2CFDR.Reg
 #define I2CFDR_FDR      _I2CFDR.Bits.FDR   /* Frequency divider ratio.Used to prescale the clock for bit rate selection */
@@ -3782,7 +3782,7 @@ typedef union
   byte Reg;
 }I2CCR_T;
 
-__no_init extern volatile I2CCR_T _I2CCR @(MBAR_I2C + 0x008); /* I2C Control Register */
+/*__no_init */ extern volatile I2CCR_T _I2CCR ; //@(MBAR_I2C + 0x008); /* I2C Control Register */
 
 #define I2CCR        _I2CCR.Reg
 #define I2CCR_BCST   _I2CCR.Bits.BCST    /* BIT0 */  
@@ -3813,7 +3813,7 @@ typedef union
   byte Reg;
 }I2CSR_T;
 
-__no_init extern volatile I2CSR_T _I2CSR @(MBAR_I2C + 0x00C); /* I2C Status Register */
+/*__no_init */ extern volatile I2CSR_T _I2CSR ; //@(MBAR_I2C + 0x00C); /* I2C Status Register */
 
 #define I2CSR         _I2CSR.Reg
 #define I2CSR_RXAK    _I2CSR.Bits.RXAK     /* BIT0 */  
@@ -3827,7 +3827,7 @@ __no_init extern volatile I2CSR_T _I2CSR @(MBAR_I2C + 0x00C); /* I2C Status Regi
 
 /* ---- I2C Data Register ---- */
 typedef byte I2CDR_T;
-__no_init extern volatile I2CDR_T _I2CDR @(MBAR_I2C + 0x010); /* I2C Data Register */
+/*__no_init */ extern volatile I2CDR_T _I2CDR ; //@(MBAR_I2C + 0x010); /* I2C Data Register */
 #define I2CDR  _I2CDR     /* BIT0 | BIT1 | BIT2 | BIT3 | BIT4 | BIT5 | BIT6 | BIT7 */
 
 
@@ -3843,7 +3843,7 @@ typedef union
   byte Reg;
 }I2CDFSRR_T;
 
-__no_init extern volatile I2CDFSRR_T _I2CDFSRR @(MBAR_I2C + 0x14); /* I2C Digital Filter Sampling Rate Register */
+/*__no_init */ extern volatile I2CDFSRR_T _I2CDFSRR ; //@(MBAR_I2C + 0x14); /* I2C Digital Filter Sampling Rate Register */
 #define I2CDFSRR         _I2CDFSRR.Reg
 #define I2CDFSRR_DFSR    _I2CDFSRR.Bits.DFSR  /* BIT0 | BIT1 | BIT2 | BIT3 | BIT4 | BIT5 */
 
@@ -3865,7 +3865,7 @@ typedef union
   byte Reg;
 }I2CCKER_T;
 
-__no_init extern volatile I2CCKER_T _I2CCKER @(MBAR_I2C + 0x018); /* I2C Clock Enable Register */
+/*__no_init */ extern volatile I2CCKER_T _I2CCKER ; //@(MBAR_I2C + 0x018); /* I2C Clock Enable Register */
 #define I2CCKER          _I2CCKER.Reg
 #define I2CCKER_CKEN     _I2CCKER.Bits.CKEN  /* BIT0 */
 

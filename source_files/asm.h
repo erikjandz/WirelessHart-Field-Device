@@ -42,7 +42,7 @@
 #define MAX_NONCE_LEN           13
 
 
-__arm uint32 rotate4Bytes( uint32 p_ulData );
+/* __arm */ uint32 rotate4Bytes( uint32 p_ulData );
 
 void ASM_Init(void);
 
@@ -65,7 +65,7 @@ void ASM_Init(void);
 // Obs:
 //      Access level: Interrupt level for p_ucInterruptFlag = 1 and user level for p_ucInterruptFlag = 0
 ///////////////////////////////////////////////////////////////////////////////////
-__arm uint8 AES_Crypt
+/* __arm */ uint8 AES_Crypt
                         ( const uint8 * p_pucKey,
                           const uint8 * p_pucNonce,
                           const uint8 * p_pucToAuthOnly,
@@ -103,7 +103,7 @@ __arm uint8 AES_Crypt
 // Obs:
 //      Access level: Interrupt level only
 ///////////////////////////////////////////////////////////////////////////////////
-__arm uint8 AES_Decrypt
+/* __arm */ uint8 AES_Decrypt
                         ( const uint8 * p_pucKey,
                           const uint8 * p_pucNonce,
                           const uint8 * p_pucToAuthOnly,

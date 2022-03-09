@@ -34,7 +34,7 @@
 
 #include "../typedef.h"
 #include "../global.h"
-#include "../MC1322x.h"
+//#include "../MC1322x.h"
 #include "../digitals.h"
 #include "../itc.h"
 #include "../maca.h"
@@ -157,8 +157,8 @@ void DLL_SendFictiveACK(void);
 #endif
 
 
-__arm uint32 PHY_GetLastRXuSecAge(void);
-__arm uint32 PHY_GetLastTXuSecAge(void);
+/* __arm */ uint32 PHY_GetLastRXuSecAge(void);
+/* __arm */ uint32 PHY_GetLastTXuSecAge(void);
 
 //#define PHY_RESET() PHY_MNG_Request( PHY_MNG_RESET, NULL )
 //.#define PHY_INIT()  PHY_MNG_Request( PHY_MNG_RESET, NULL )
