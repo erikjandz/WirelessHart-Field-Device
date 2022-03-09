@@ -82,10 +82,10 @@ typedef union
 #endif
 
 #if defined(IS_MACHINE_BIG_ENDIAN) && defined(IS_MACHINE_LITTLE_ENDIAN)
-#	error "Only one byte order(IS_MACHINE_BIG_ENDIAN or IS_MACHINE_LITTLE_ENDIAN) should be defined!"
+//#	error "Only one byte order(IS_MACHINE_BIG_ENDIAN or IS_MACHINE_LITTLE_ENDIAN) should be defined!"
 
 #elif !defined(IS_MACHINE_BIG_ENDIAN) && !defined(IS_MACHINE_LITTLE_ENDIAN)
-#	error "No byte order(IS_MACHINE_LITTLE_ENDIAN or IS_MACHINE_BIG_ENDIAN) specified!"
+//#	error "No byte order(IS_MACHINE_LITTLE_ENDIAN or IS_MACHINE_BIG_ENDIAN) specified!"
 
 #endif
 

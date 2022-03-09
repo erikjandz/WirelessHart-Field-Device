@@ -25,7 +25,7 @@
 
 #if ( WIHARTDEV_TYPE_ACCPOINT != WIHARTDEV_TYPE )
 
-    #include "..\typedef.h"
+    #include "../typedef.h"
     
     typedef enum 
     {

@@ -106,7 +106,9 @@
 #elif( WIHARTDEV_TYPE == WIHARTDEV_TYPE_ACCPOINT )
   #	include "CommandTables_AccessPoint.h"
 #else
-  #error "Unsupported WirelessHART device type"
+  //#error "Unsupported WirelessHART device type"
+  // ERIK NOTE: ADDED INCLUDE
+  #	include "CommandTables_All.h"
 ////just for testing purpose
 //#	include "CommandTables_All.h"
 #endif

@@ -87,7 +87,7 @@ extern DLL_PACKET_T      g_aDllQueue[DLL_MAX_PACKET_BUFFERS];
 extern uint8             g_ucDllCrtQueueSize;
 extern uint8             g_ucDllAllQueueSize;
 // Hash
-extern struct
+/*extern struct
 {
     uint32  g_ulDllAdvCntr;
     uint32  g_ulDllDiscoveryCntr;
@@ -100,7 +100,21 @@ extern struct
     DLL_HASH_LINKS_STRUCT_T   g_aDllHashLinks[DLL_MAX_LINKS]; // keep on this position
 //  DLL_HASH_GRAPHS_STRUCT_T  g_aDllHashGraphs[DLL_MAX_GRAPHS]; 
     DLL_HASH_GRAPHS_STRUCT_T  g_aDllHashGraphs[DLL_MAX_CONNECTIONS]; // keep on this position 
-};
+};*/
+
+// ERIK NOTE: REMOVED THIS STRUCT AND LET THE VARIABLE FREE
+extern    uint32  g_ulDllAdvCntr;
+extern    uint32  g_ulDllDiscoveryCntr;
+extern    uint32 g_ulDiscStartRTC;
+extern    uint32  g_ulDllQueueDiscCntr;
+
+extern    unsigned long long  g_ullDllSuspendTimeout;
+extern    unsigned long long  g_ullDllResumeTimeout;
+extern    uint32  g_ulTimeSourceTimer;
+extern    DLL_HASH_LINKS_STRUCT_T   g_aDllHashLinks[DLL_MAX_LINKS]; // keep on this position
+//  DLL_HASH_GRAPHS_STRUCT_T  g_aDllHashGraphs[DLL_MAX_GRAPHS]; 
+extern    DLL_HASH_GRAPHS_STRUCT_T  g_aDllHashGraphs[DLL_MAX_CONNECTIONS]; // keep on this position 
+
 
 extern uint8                     g_ucDllHashLinksSize;
 extern uint8                     g_ucDllHashGraphsSize;

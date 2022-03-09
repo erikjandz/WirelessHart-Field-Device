@@ -37,7 +37,7 @@
 #include "itc.h"
 #include "timers.h"
 #include "asm.h"
-#include "WirelessHART/uart_link.h"
+#include "WirelessH/uart_link.h"
 
   // BAUD RATES
   #define UART_BAUD_115200      767L

@@ -20,18 +20,18 @@
 *
 */
 
-#include "..\system.h"
+#include "../system.h"
 
 #if ( WIHARTDEV_TYPE_ACCPOINT != WIHARTDEV_TYPE )
 
 #include <string.h>
-#include "..\typedef.h"
+#include "../typedef.h"
 //#include "..\MC1322x.h"
-#include "..\uart_hart.h"
-#include "..\spi.h"
-#include "..\WirelessHart\tmr_util.h"
+#include "../uart_hart.h"
+#include "../spi.h"
+#include "../WirelessH/tmr_util.h"
 #include "DataLinkLayer.h"
-#include "..\WirelessHart\app_layer.h"
+#include "../WirelessH/app_layer.h"
 
 #if ( HART_MODE != NONE )
     #define TransmitOverCurrentLoop(X,Y) BeginTx(X)

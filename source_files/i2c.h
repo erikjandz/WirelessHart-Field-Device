@@ -37,7 +37,8 @@
 
 
 /* ---- I2C Address Register ---- */
-typedef union
+// ERIK NOTE: ALREADY DEFINED IN MC1322X.H
+/*typedef union
 {
   struct
   {
@@ -45,16 +46,17 @@ typedef union
     byte  ADDR    :7;
   } Bits;
   byte Reg;
-} I2CADDR_T;
+} I2CADDR_T;*/ 
 
-__no_init extern volatile I2CADDR_T _I2CADDR @(MBAR_I2C + 0x000);  /* I2C Address Register */
+/* __no_init */ extern volatile I2CADDR_T _I2CADDR ; // @(MBAR_I2C + 0x000);  /* I2C Address Register */
 
 #define I2CADDR          _I2C_ADDR.Reg
 #define I2CADDR_ADDR     _I2C_ADDR.Bits.ADDR   /* Contain the specific slave address that is used by the I2C interface */
                                                /* BIT1 | BIT2 | BIT3 | BIT4 | BIT5 | BIT6 | BIT7 */
 
 /* ---- I2C Frequency Divider Register ---- */
-typedef union
+// ERIK NOTE: ALREADY DEFINED IN MC1322X.H
+/*typedef union
 {
   struct
   {
@@ -63,9 +65,9 @@ typedef union
     byte        :1;
   } Bits;
   byte Reg;
-} I2CFDR_T;
+} I2CFDR_T;*/
 
-__no_init extern volatile I2CFDR_T _I2CFDR @(MBAR_I2C + 0x004);  /* I2C Frequency Divider Register */
+/* __no_init */ extern volatile I2CFDR_T _I2CFDR ; // @(MBAR_I2C + 0x004);  /* I2C Frequency Divider Register */
 
 #define I2CFDR          _I2CFDR.Reg
 #define I2CFDR_FDR      _I2CFDR.Bits.FDR   /* Frequency divider ratio.Used to prescale the clock for bit rate selection */
@@ -74,7 +76,8 @@ __no_init extern volatile I2CFDR_T _I2CFDR @(MBAR_I2C + 0x004);  /* I2C Frequenc
 
 
 /* ---- I2C Control Register ---- */
-typedef union
+// ERIK NOTE: ALREADY DEFINED IN MC1322X.H
+/*typedef union
 {
   struct
   {
@@ -88,9 +91,9 @@ typedef union
     byte MEN    :1;
   }Bits;
   byte Reg;
-}I2CCR_T;
+}I2CCR_T;*/
 
-__no_init extern volatile I2CCR_T _I2CCR @(MBAR_I2C + 0x008); /* I2C Control Register */
+/* __no_init */ extern volatile I2CCR_T _I2CCR ; // @(MBAR_I2C + 0x008); /* I2C Control Register */
 
 #define I2CCR        _I2CCR.Reg
 #define I2CCR_BCST   _I2CCR.Bits.BCST    /* BIT0 */  
@@ -105,7 +108,8 @@ __no_init extern volatile I2CCR_T _I2CCR @(MBAR_I2C + 0x008); /* I2C Control Reg
 
 
 /* ---- I2C Status Register ---- */
-typedef union
+// ERIK NOTE: ALREADY DEFINED IN MC1322X.H
+/*typedef union
 {
   struct
   {
@@ -119,9 +123,9 @@ typedef union
     byte MCF    :1;
   }Bits;
   byte Reg;
-}I2CSR_T;
+}I2CSR_T;*/
 
-__no_init extern volatile I2CSR_T _I2CSR @(MBAR_I2C + 0x00C); /* I2C Status Register */
+/* __no_init */ extern volatile I2CSR_T _I2CSR ; // @(MBAR_I2C + 0x00C); /* I2C Status Register */
 
 #define I2CSR         _I2CSR.Reg
 #define I2CSR_RXAK    _I2CSR.Bits.RXAK     /* BIT0 */  
@@ -135,12 +139,13 @@ __no_init extern volatile I2CSR_T _I2CSR @(MBAR_I2C + 0x00C); /* I2C Status Regi
 
 /* ---- I2C Data Register ---- */
 typedef byte I2CDR_T;
-__no_init extern volatile I2CDR_T _I2CDR @(MBAR_I2C + 0x010); /* I2C Data Register */
+/* __no_init */ extern volatile I2CDR_T _I2CDR ; // @(MBAR_I2C + 0x010); /* I2C Data Register */
 #define I2CDR  _I2CDR     /* BIT0 | BIT1 | BIT2 | BIT3 | BIT4 | BIT5 | BIT6 | BIT7 */
 
 
 /* ---- I2C Digital Filter Sampling Rate Register ---- */
-typedef union
+// ERIK NOTE: ALREADY DEFINED IN MC1322X.H
+/*typedef union
 {
   struct
   {
@@ -149,15 +154,16 @@ typedef union
     byte       :1;
   }Bits;
   byte Reg;
-}I2CDFSRR_T;
+}I2CDFSRR_T;*/
 
-__no_init extern volatile I2CDFSRR_T _I2CDFSRR @(MBAR_I2C + 0x14); /* I2C Digital Filter Sampling Rate Register */
+/* __no_init */ extern volatile I2CDFSRR_T _I2CDFSRR ; // @(MBAR_I2C + 0x14); /* I2C Digital Filter Sampling Rate Register */
 #define I2CDFSRR         _I2CDFSRR.Reg
 #define I2CDFSRR_DFSR    _I2CDFSRR.Bits.DFSR  /* BIT0 | BIT1 | BIT2 | BIT3 | BIT4 | BIT5 */
 
 
 /* ---- I2C Clock Enable Register ---- */
-typedef union
+// ERIK NOTE: ALREADY DEFINED IN MC1322X.H
+/*typedef union
 {
   struct
   {
@@ -171,9 +177,9 @@ typedef union
     byte        :1;
   }Bits;
   byte Reg;
-}I2CCKER_T;
+}I2CCKER_T;*/
 
-__no_init extern volatile I2CCKER_T _I2CCKER @(MBAR_I2C + 0x018); /* I2C Clock Enable Register */
+/* __no_init */ extern volatile I2CCKER_T _I2CCKER ; // @(MBAR_I2C + 0x018); /* I2C Clock Enable Register */
 #define I2CCKER          _I2CCKER.Reg
 #define I2CCKER_CKEN     _I2CCKER.Bits.CKEN  /* BIT0 */
 

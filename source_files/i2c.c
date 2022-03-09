@@ -167,18 +167,19 @@ uint8 I2C_ReadMem(uint16 p_unAddress, uint8 *p_pcDest, uint16 p_nDestLen)  // NO
   
   return (ucResult);
 }
+// ERIK NOTE: EVERYTHING IS COMMENTED OUT DUE TO THERE BERING NO NVM.h
 
 // [dorin.muica] ---Write persistent data to 4 sectors from internal flash NVM
-#include "../NVM.h"
-#include "../spif_interface.h"
+//#include "../NVM.h"
+#include "spif_interface.h"
 
 
-NvmErr_t BLANK_CHECK(uint32 addr, uint32 numBytes);
+//NvmErr_t BLANK_CHECK(uint32 addr, uint32 numBytes);
 
-NvmErr_t BLANK_CHECK(uint32 addr, uint32 numBytes)
+/*NvmErr_t BLANK_CHECK(uint32 addr, uint32 numBytes)
 {
   return NvmBlankCheck(gNvmInternalInterface_c, gNvmType_SST_c, addr, numBytes );
-}
+}*/
 
 #define SECTOR_SIZE (4*1024)
 
@@ -215,6 +216,7 @@ uint8 g_ucPersistDataIdx = 0;
 uint32 g_ulDeletionMark = 0;
 void SavePersistentData( uint8 *p_pucSourceData, uint16 p_unLength )
 {
+  /*
   switch(g_ucPersistDataIdx)
   {
   case (0*PERSISTENT_BLOCKS_SECTOR):
@@ -239,6 +241,7 @@ void SavePersistentData( uint8 *p_pucSourceData, uint16 p_unLength )
   {
     g_ucPersistDataIdx = 0;
   }
+  */
 }
 
 ///////////////////////////////////////////////////////////////////////////////////
@@ -253,6 +256,7 @@ void SavePersistentData( uint8 *p_pucSourceData, uint16 p_unLength )
 
 uint8 ReadLastPersistentData(void )
 { 
+  /*
   if(gNvmErrNoError_c == BLANK_CHECK(PERSISTENT_START_ADDR , SECTOR_SIZE))// first sector blank
   {
     if(gNvmErrNoError_c == BLANK_CHECK(PERSISTENT_START_ADDR + (NVM_PERSISTENT_SECTORS - 1) * SECTOR_SIZE, SECTOR_SIZE)) // 4th sector blank
@@ -290,15 +294,18 @@ uint8 ReadLastPersistentData(void )
     } 
     --g_ucPersistDataIdx;
   }
+  */
   return 0;
 }
 
 
 void DeleteNextSector(void)
 {
+  /*
   if(g_ulDeletionMark)
   {
     ERASE_FLASH(g_ulDeletionMark);
     g_ulDeletionMark = 0;
   }
+  */
 }

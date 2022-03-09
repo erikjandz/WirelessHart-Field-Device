@@ -31,7 +31,7 @@
 ****************************************************************************************************/
 #include "maca.h"
 #include "crm.h"
-#include "WirelessHART/datalink_layer_dm.h"
+#include "WirelessH/datalink_layer_dm.h"
 
 const uint8 gaRFSynVCODivI_c[16] ={
           0x2f, 0x2f, 0x2f, 0x2f, 0x2f, 0x2f, 0x2f, 0x2f,0x2f, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30

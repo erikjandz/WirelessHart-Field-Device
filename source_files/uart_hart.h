@@ -32,7 +32,7 @@
 #ifndef _NIVIS_UART_HART_H_
 #define _NIVIS_UART_HART_H_
 
-#include ".\WiredHart\options.h"
+#include "WiredHart/options.h"
 
 
     #if (HART_MODE == NONE)

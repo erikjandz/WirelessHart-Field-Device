@@ -35,7 +35,7 @@
 #include "transport_layer.h"
 #include "app_layer.h" //for g_ucIsEventAck
 #include "tmr_util.h"
-#include "..\CommonAPI\Common_API.h"
+#include "../CommonAPI/Common_API.h"
 
 #define APPQUEUE_TIMEOUT   (18UL*32768) // 18s -see TML208B    // ((30UL*32768*75)/100)  // 30s * 75%
 

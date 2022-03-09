@@ -23,7 +23,7 @@
 #ifndef _NIVIS_OPTIONS_H_
 #define _NIVIS_OPTIONS_H_
 
-    #include "..\system.h"
+    #include "../system.h"
 
     #define HART_BUFFER_MAX_LEN   350
 

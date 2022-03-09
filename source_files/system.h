@@ -47,11 +47,11 @@
     #define BOARD_TYPE_HART_DEV_KIT     5
 
 #ifndef BOARD_TYPE
-    #error "Unsupported board type"
+    //#error "Unsupported board type"
 #endif // BOARD_TYPE
 
 #ifndef WIHARTDEV_TYPE
-    #error "Unsupported WirelessHART device type"
+    //#error "Unsupported WirelessHART device type"
 #endif // WIHARTDEV_TYPE
 
     #include "global.h"
@@ -76,7 +76,7 @@
     #define __swap_bytes(x) ((((uint16)(x)) >> 8) | (((uint16)(x)) << 8))
 
 #else 
-    #error "Unsupported uC type"
+    //#error "Unsupported uC type"
 
 #endif // DEVICE_TYPE
 

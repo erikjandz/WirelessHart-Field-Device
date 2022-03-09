@@ -38,7 +38,7 @@
 #include "global.h"
 #include "string.h"
 #include "digitals.h"
-#include "WirelessHart/tmr_util.h"
+#include "WirelessH/tmr_util.h"
 
 
 #define SPI_MAX_NO       500

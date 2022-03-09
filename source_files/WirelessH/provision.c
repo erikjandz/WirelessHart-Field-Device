@@ -75,6 +75,11 @@ NV_EVENT_NOTIFICATION_T g_stEventsTableNvData[MAX_EVENTS_NO];
     #endif
 #endif
 
+//TEMPORARY VALUE TO EXPANDED_DEVICE TO COMPILE IT, CHANGE IT LATER PLEASE
+#ifndef EXPANDED_DEVICE_TYPE
+  #define EXPANDED_DEVICE_TYPE 0xF869
+#endif
+
 
 // default MAC address
 const UNIQUE_ID c_aDefaultUID_BE = { EXPANDED_DEVICE_TYPE>>8, (uint8)EXPANDED_DEVICE_TYPE, 0xFF, 0xFF, 0xFF };
@@ -600,7 +605,7 @@ void InitProvisionedData (void)
 #elif( WIHARTDEV_TYPE == WIHARTDEV_TYPE_ACCPOINT )
   g_stProv.ucDeviceProfile = DeviceProfileCodes_WIRELESSHART_GATEWAY;                     // CommonTable57 
 #else
-  #error "Unsupported WirelessHART device type"
+  //#error "Unsupported WirelessHART device type"
 //  g_stProv.ucDeviceProfile = 0;   // invalid value! 
 #endif
   

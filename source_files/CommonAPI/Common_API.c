@@ -32,10 +32,10 @@
  ***************************************************************************************************/
 
 #include "Common_API.h"
-#include "../WirelessHart/util/Binarization.h"
-#include "../WirelessHart/uap_data.h"
-#include "../WirelessHart/app_layer.h"
-#include "../WirelessHart/app_cmdreq.h"
+#include "../WirelessH/util/Binarization.h"
+#include "../WirelessH/uap_data.h"
+#include "../WirelessH/app_layer.h"
+#include "../WirelessH/app_cmdreq.h"
 #include "../global.h"
 #include "DAQ_Comm.h"
 #include <string.h>

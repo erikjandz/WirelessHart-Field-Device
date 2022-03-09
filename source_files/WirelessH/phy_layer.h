@@ -34,7 +34,7 @@
 
 #include "../typedef.h"
 #include "../global.h"
-//#include "../MC1322x.h"
+#include "../MC1322x.h"
 #include "../digitals.h"
 #include "../itc.h"
 #include "../maca.h"

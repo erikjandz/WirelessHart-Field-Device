@@ -29,7 +29,7 @@
 * Changes:
 * Revisions:
 ****************************************************************************************************/
-#include ".\WiredHart\options.h"
+#include "WiredHart/options.h"
 
 #if ( HART_MODE != NONE )
 
@@ -37,7 +37,7 @@
 #include "typedef.h"
 #include "global.h"
 #include "itc.h"
-#include "WirelessHART/tmr_util.h"
+#include "WirelessH/tmr_util.h"
 #include "WiredHart/DataLinkLayer.h"
 
 

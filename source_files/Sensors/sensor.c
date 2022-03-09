@@ -22,7 +22,7 @@
 
 #include "sensor.h"
 #include "SHT1x.h"
-#include "../WirelessHart/app_layer.h"
+#include "../WirelessH/app_layer.h"
 
 uint8 g_ucShtReadRequest;
 

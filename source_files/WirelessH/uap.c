@@ -31,7 +31,7 @@
 #include "uap.h"
 #include "../Sensors/SHT1x.h"
 #include "util/Binarization.h"
-#include "../COmmonAPI/Common_API.h"
+#include "../CommonAPI/Common_API.h"
 #include "app_layer.h"
 
 

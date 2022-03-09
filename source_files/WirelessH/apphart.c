@@ -28,7 +28,7 @@
 * Changes:
 * Revisions:
 ****************************************************************************************************/
-#include "..\system.h"
+#include "../system.h"
 #include "tmr_util.h"
 
 #if ( WIHARTDEV_TYPE_ACCPOINT != WIHARTDEV_TYPE )

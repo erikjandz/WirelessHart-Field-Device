@@ -36,8 +36,8 @@
 
 #include "../typedef.h"
 #include "provision.h"
-#include "..\WiredHart\DataLinkLayer.h"
-#include "..\WiredHart\options.h"
+#include "../WiredHart/DataLinkLayer.h"
+#include "../WiredHart/options.h"
 
 /*
 #include "../global.h"

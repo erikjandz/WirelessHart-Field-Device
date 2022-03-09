@@ -115,7 +115,7 @@ uint32  g_ulDllMaxRecCntr;
 
 // unnamed struct in order to keep alignment
 // Timeouts
-struct
+/*struct
 {
     uint32  g_ulDllAdvCntr;
     uint32  g_ulDllDiscoveryCntr;
@@ -128,7 +128,23 @@ struct
     DLL_HASH_LINKS_STRUCT_T   g_aDllHashLinks[DLL_MAX_LINKS]; // keep on this position
 //  DLL_HASH_GRAPHS_STRUCT_T  g_aDllHashGraphs[DLL_MAX_GRAPHS]; 
     DLL_HASH_GRAPHS_STRUCT_T  g_aDllHashGraphs[DLL_MAX_CONNECTIONS]; // keep on this position 
-};
+};*/
+
+// ERIK NOTE: REMOVED THIS STRUCT AND LET THE VARIABLE FREE
+    uint32  g_ulDllAdvCntr;
+    uint32  g_ulDllDiscoveryCntr;
+    uint32 g_ulDiscStartRTC;
+    uint32  g_ulDllQueueDiscCntr;
+    
+    unsigned long long  g_ullDllSuspendTimeout;
+    unsigned long long  g_ullDllResumeTimeout;
+    uint32  g_ulTimeSourceTimer;
+    DLL_HASH_LINKS_STRUCT_T   g_aDllHashLinks[DLL_MAX_LINKS]; // keep on this position
+//  DLL_HASH_GRAPHS_STRUCT_T  g_aDllHashGraphs[DLL_MAX_GRAPHS]; 
+    DLL_HASH_GRAPHS_STRUCT_T  g_aDllHashGraphs[DLL_MAX_CONNECTIONS]; // keep on this position 
+
+
+    
 //
 DLL_BUFFER_PARSED_T     g_sDllBufferParsed;
 uint8                   g_ucDllAdvertiseTX;

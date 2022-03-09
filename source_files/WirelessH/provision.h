@@ -40,9 +40,6 @@
   #include "ApplicationLayer/Model/CommonPracticeCommands.h"
 #endif
 
-
-#if( DEVICE_TYPE == DEV_TYPE_MC13225 )
-
   #include "../spif_interface.h"    
 
   typedef uint32 PROV_ADDR_TYPE;
@@ -114,6 +111,8 @@
 
   #define NVM_AREA1_NO                        (NVM_LOW_SECTOR_NO | NVM_MIDDLE_LOW_SECTOR_NO)
   #define NVM_AREA2_NO                        (NVM_MIDDLE_HIGH_SECTOR_NO | NVM_HIGH_SECTOR_NO)   
+
+#if( DEVICE_TYPE == DEV_TYPE_MC13225 )
 
 #endif
 

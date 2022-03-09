@@ -31,12 +31,12 @@
 #include "timers.h"
 #include "crm.h"
 #include "itc.h"
-#include "WirelessHART/tmr_util.h"
-#include "WirelessHART/phy_layer.h"
-#include "WirelessHART/datalink_layer.h"
-#include "WirelessHART/datalink_layer_dm.h"
-#include "WirelessHART/network_layer.h"
-#include "WirelessHART/network_layer_dm.h"
+#include "WirelessH/tmr_util.h"
+#include "WirelessH/phy_layer.h"
+#include "WirelessH/datalink_layer.h"
+#include "WirelessH/datalink_layer_dm.h"
+#include "WirelessH/network_layer.h"
+#include "WirelessH/network_layer_dm.h"
 
 int16 g_nCrtClkCorrection;
 
