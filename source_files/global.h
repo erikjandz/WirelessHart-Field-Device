@@ -77,7 +77,7 @@ void DelayLoop(uint32 p_ulCount);
 
 extern uint8 g_ucResetReason;
 extern uint8 g_ucDllDisconnect;
-inline void PrepareForReset(p_ucResetReason) { if(!g_ucDllDisconnect) g_ucResetReason = p_ucResetReason; }
+static inline void PrepareForReset(p_ucResetReason) { if(!g_ucDllDisconnect) g_ucResetReason = p_ucResetReason; }
 
   #define  Energy_AddConsumption( ... )
 

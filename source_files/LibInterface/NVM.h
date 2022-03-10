@@ -154,7 +154,7 @@ extern nvmErr_t NVM_Read(nvmInterface_t nvmInterface , nvmType_t nvmType , void 
 *   030106     TOJ      Created
 * 07.11.2007   MD
 ************************************************************************************/
-extern nvmErr_t NVM_Erase(nvmInterface_t nvmInterface, nvmType_t nvmType ,uint32_t sectorBitfield);
+extern nvmErr_t NVM_Erase(nvmInterface_t nvmInterface, nvmType_t nvmType ,uint32_t sectorBitfield){return gNvmErrMaxError_c;};
 /************************************************************************************
 * Writes numBytes of data from the memory location referred to by pSrc to the address location in flash.
 *
@@ -221,7 +221,7 @@ extern nvmErr_t NVM_Verify(nvmInterface_t nvmInterface, nvmType_t nvmType ,void 
 * 07.11.2007   MD
 * 
 ************************************************************************************/
-extern nvmErr_t NVM_BlankCheck(nvmInterface_t nvmInterface, nvmType_t nvmType , uint32_t address, uint32_t numBytes);
+extern nvmErr_t NVM_BlankCheck(nvmInterface_t nvmInterface, nvmType_t nvmType , uint32_t address, uint32_t numBytes){return gNvmErrMaxError_c;};
 
 
 

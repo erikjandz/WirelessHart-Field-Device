@@ -165,7 +165,7 @@ typedef struct{
    26.06.2007                       B04839                             Created
 */
 /*===============================================================================================*/
-extern GpioErr_t Gpio_InitPort(GpioPort_t gpioPort, GpioPortInit_t* gpioPortInit);
+extern GpioErr_t Gpio_InitPort(GpioPort_t gpioPort, GpioPortInit_t* gpioPortInit){return gGpioErrInvalidParameter_c;}
 
 /*================================================================================================*/
 /*===== Gpio_WrPortSetting =====*/
@@ -195,7 +195,7 @@ extern GpioErr_t Gpio_InitPort(GpioPort_t gpioPort, GpioPortInit_t* gpioPortInit
    26.06.2007                       B04839                             Created
 */
 /*===============================================================================================*/
-extern GpioErr_t Gpio_WrPortSetting(GpioPort_t gpioPort, GpioPortAttr_t portAttr, uint32_t portAttrValue, uint32_t mask);
+extern GpioErr_t Gpio_WrPortSetting(GpioPort_t gpioPort, GpioPortAttr_t portAttr, uint32_t portAttrValue, uint32_t mask){return gGpioErrInvalidParameter_c;}
 
 /*================================================================================================*/
 /*===== Gpio_RdPortSetting =====*/
@@ -222,7 +222,7 @@ extern GpioErr_t Gpio_WrPortSetting(GpioPort_t gpioPort, GpioPortAttr_t portAttr
    26.06.2007                       B04839                             Created
 */
 /*===============================================================================================*/
-extern GpioErr_t Gpio_RdPortSetting(GpioPort_t gpioPort, GpioPortAttr_t portAttr, uint32_t* portAttrValue);
+extern GpioErr_t Gpio_RdPortSetting(GpioPort_t gpioPort, GpioPortAttr_t portAttr, uint32_t* portAttrValue){return gGpioErrInvalidParameter_c;}
 
 /*DIRECTION*/
 
@@ -252,7 +252,7 @@ extern GpioErr_t Gpio_RdPortSetting(GpioPort_t gpioPort, GpioPortAttr_t portAttr
    26.06.2007                       B04839                             Created
 */
 /*===============================================================================================*/
-extern GpioErr_t Gpio_SetPortDir(GpioPort_t gpioPort, uint32_t portDir, uint32_t mask);
+extern GpioErr_t Gpio_SetPortDir(GpioPort_t gpioPort, uint32_t portDir, uint32_t mask){return gGpioErrInvalidParameter_c;}
 
 /*================================================================================================*/
 /*===== Gpio_GetPortDir =====*/
@@ -277,7 +277,7 @@ extern GpioErr_t Gpio_SetPortDir(GpioPort_t gpioPort, uint32_t portDir, uint32_t
    26.06.2007                       B04839                             Created
 */
 /*===============================================================================================*/
-extern GpioErr_t Gpio_GetPortDir(GpioPort_t gpioPort, uint32_t* portDir);
+extern GpioErr_t Gpio_GetPortDir(GpioPort_t gpioPort, uint32_t* portDir){return gGpioErrInvalidParameter_c;}
 
 /*================================================================================================*/
 /*===== Gpio_SetPinDir =====*/
@@ -301,7 +301,7 @@ extern GpioErr_t Gpio_GetPortDir(GpioPort_t gpioPort, uint32_t* portDir);
    26.06.2007                       B04839                             Created
 */
 /*===============================================================================================*/
-extern GpioErr_t Gpio_SetPinDir(GpioPin_t gpioPin, GpioDirection_t gpioPinDir);
+extern GpioErr_t Gpio_SetPinDir(GpioPin_t gpioPin, GpioDirection_t gpioPinDir){return gGpioErrInvalidParameter_c;}
 
 /*================================================================================================*/
 /*===== Gpio_GetPinDir =====*/
@@ -325,7 +325,7 @@ extern GpioErr_t Gpio_SetPinDir(GpioPin_t gpioPin, GpioDirection_t gpioPinDir);
    26.06.2007                       B04839                             Created
 */
 /*===============================================================================================*/
-extern GpioErr_t Gpio_GetPinDir(GpioPin_t gpioPin, GpioDirection_t* gpioPinDir);
+extern GpioErr_t Gpio_GetPinDir(GpioPin_t gpioPin, GpioDirection_t* gpioPinDir){return gGpioErrInvalidParameter_c;}
 
 /*DATA*/
 
@@ -355,7 +355,7 @@ extern GpioErr_t Gpio_GetPinDir(GpioPin_t gpioPin, GpioDirection_t* gpioPinDir);
    26.06.2007                       B04839                             Created
 */
 /*===============================================================================================*/
-extern GpioErr_t Gpio_SetPortData(GpioPort_t gpioPort, uint32_t portData, uint32_t mask);
+extern GpioErr_t Gpio_SetPortData(GpioPort_t gpioPort, uint32_t portData, uint32_t mask){return gGpioErrInvalidParameter_c;}
 
 /*================================================================================================*/
 /*===== Gpio_GetPortData =====*/
@@ -380,7 +380,7 @@ extern GpioErr_t Gpio_SetPortData(GpioPort_t gpioPort, uint32_t portData, uint32
    26.06.2007                       B04839                             Created
 */
 /*===============================================================================================*/
-extern GpioErr_t Gpio_GetPortData(GpioPort_t gpioPort, uint32_t* portData);
+extern GpioErr_t Gpio_GetPortData(GpioPort_t gpioPort, uint32_t* portData){return gGpioErrInvalidParameter_c;}
 
 /*================================================================================================*/
 /*===== Gpio_SetPinData =====*/
@@ -404,7 +404,7 @@ extern GpioErr_t Gpio_GetPortData(GpioPort_t gpioPort, uint32_t* portData);
    26.06.2007                       B04839                             Created
 */
 /*===============================================================================================*/
-extern GpioErr_t Gpio_SetPinData(GpioPin_t gpioPin, GpioPinState_t gpioPinState);
+extern GpioErr_t Gpio_SetPinData(GpioPin_t gpioPin, GpioPinState_t gpioPinState){return gGpioErrInvalidParameter_c;}
 
 
 /*================================================================================================*/
@@ -429,7 +429,7 @@ extern GpioErr_t Gpio_SetPinData(GpioPin_t gpioPin, GpioPinState_t gpioPinState)
    26.06.2007                       B04839                             Created
 */
 /*===============================================================================================*/
-extern GpioErr_t Gpio_GetPinData(GpioPin_t gpioPin, GpioPinState_t* gpioPinState);
+extern GpioErr_t Gpio_GetPinData(GpioPin_t gpioPin, GpioPinState_t* gpioPinState){return gGpioErrInvalidParameter_c;}
 
 /*================================================================================================*/
 /*===== Gpio_TogglePin =====*/
@@ -450,7 +450,7 @@ extern GpioErr_t Gpio_GetPinData(GpioPin_t gpioPin, GpioPinState_t* gpioPinState
    26.06.2007                       B04839                             Created
 */
 /*===============================================================================================*/
-extern GpioErr_t Gpio_TogglePin(GpioPin_t gpioPin);
+extern GpioErr_t Gpio_TogglePin(GpioPin_t gpioPin){return gGpioErrInvalidParameter_c;}
 
 /*READ CONTROL*/
 
@@ -478,7 +478,7 @@ extern GpioErr_t Gpio_TogglePin(GpioPin_t gpioPin);
    26.06.2007                       B04839                             Created
 */
 /*===============================================================================================*/
-extern GpioErr_t Gpio_SetPinReadSource(GpioPin_t gpioPin, GpioPinReadSel_t gpioReadSource);
+extern GpioErr_t Gpio_SetPinReadSource(GpioPin_t gpioPin, GpioPinReadSel_t gpioReadSource){return gGpioErrInvalidParameter_c;}
 
 /*================================================================================================*/
 /*===== Gpio_GetPinReadSource =====*/
@@ -503,7 +503,7 @@ extern GpioErr_t Gpio_SetPinReadSource(GpioPin_t gpioPin, GpioPinReadSel_t gpioR
    26.06.2007                       B04839                             Created
 */
 /*===============================================================================================*/
-extern GpioErr_t Gpio_GetPinReadSource(GpioPin_t gpioPin, GpioPinReadSel_t* gpioReadSource);
+extern GpioErr_t Gpio_GetPinReadSource(GpioPin_t gpioPin, GpioPinReadSel_t* gpioReadSource){return gGpioErrInvalidParameter_c;}
 
 /*PULLUP ENABLE*/
 
@@ -530,7 +530,7 @@ extern GpioErr_t Gpio_GetPinReadSource(GpioPin_t gpioPin, GpioPinReadSel_t* gpio
    26.06.2007                       B04839                             Created
 */
 /*===============================================================================================*/
-extern GpioErr_t Gpio_EnPinPullup(GpioPin_t gpioPin, bool_t gpioEnPinPu);
+extern GpioErr_t Gpio_EnPinPullup(GpioPin_t gpioPin, bool_t gpioEnPinPu){return gGpioErrInvalidParameter_c;}
 
 /*================================================================================================*/
 /*===== Gpio_IsPinPullupEn =====*/
@@ -556,7 +556,7 @@ extern GpioErr_t Gpio_EnPinPullup(GpioPin_t gpioPin, bool_t gpioEnPinPu);
    26.06.2007                       B04839                             Created
 */
 /*===============================================================================================*/
-extern GpioErr_t Gpio_IsPinPullupEn(GpioPin_t gpioPin, bool_t* gpioEnPinPu);
+extern GpioErr_t Gpio_IsPinPullupEn(GpioPin_t gpioPin, bool_t* gpioEnPinPu){return gGpioErrInvalidParameter_c;}
 
 /*PULLUP SELECT*/
 
@@ -583,7 +583,7 @@ extern GpioErr_t Gpio_IsPinPullupEn(GpioPin_t gpioPin, bool_t* gpioEnPinPu);
    26.06.2007                       B04839                             Created
 */
 /*===============================================================================================*/
-extern GpioErr_t Gpio_SelectPinPullup(GpioPin_t gpioPin, GpioPinPullupSel_t gpioPinPuSel);
+extern GpioErr_t Gpio_SelectPinPullup(GpioPin_t gpioPin, GpioPinPullupSel_t gpioPinPuSel){return gGpioErrInvalidParameter_c;}
 
 /*================================================================================================*/
 /*===== Gpio_GetPinPullupSel =====*/
@@ -609,7 +609,7 @@ extern GpioErr_t Gpio_SelectPinPullup(GpioPin_t gpioPin, GpioPinPullupSel_t gpio
    26.06.2007                       B04839                             Created
 */
 /*===============================================================================================*/
-extern GpioErr_t Gpio_GetPinPullupSel(GpioPin_t gpioPin, GpioPinPullupSel_t* gpioPinPuSel);
+extern GpioErr_t Gpio_GetPinPullupSel(GpioPin_t gpioPin, GpioPinPullupSel_t* gpioPinPuSel){return gGpioErrInvalidParameter_c;}
 
 /*PULLUP KEEPER*/
 
@@ -635,7 +635,7 @@ extern GpioErr_t Gpio_GetPinPullupSel(GpioPin_t gpioPin, GpioPinPullupSel_t* gpi
    26.06.2007                       B04839                             Created
 */
 /*===============================================================================================*/
-extern GpioErr_t Gpio_EnPinPuKeeper(GpioPin_t gpioPin, bool_t gpioEnPinPuKeep);
+extern GpioErr_t Gpio_EnPinPuKeeper(GpioPin_t gpioPin, bool_t gpioEnPinPuKeep){return gGpioErrInvalidParameter_c;}
 
 /*================================================================================================*/
 /*===== Gpio_IsPinPuKeeperEn =====*/
@@ -661,7 +661,7 @@ extern GpioErr_t Gpio_EnPinPuKeeper(GpioPin_t gpioPin, bool_t gpioEnPinPuKeep);
    26.06.2007                       B04839                             Created
 */
 /*===============================================================================================*/
-extern GpioErr_t Gpio_IsPinPuKeeperEn(GpioPin_t gpioPin, bool_t* gpioEnPinPuKeep);
+extern GpioErr_t Gpio_IsPinPuKeeperEn(GpioPin_t gpioPin, bool_t* gpioEnPinPuKeep){return gGpioErrInvalidParameter_c;}
 
 /*HYSTERESIS*/
 
@@ -687,7 +687,7 @@ extern GpioErr_t Gpio_IsPinPuKeeperEn(GpioPin_t gpioPin, bool_t* gpioEnPinPuKeep
    26.06.2007                       B04839                             Created
 */
 /*===============================================================================================*/
-extern GpioErr_t Gpio_EnPinHyst(GpioPin_t gpioPin, bool_t gpioEnPinHyst);
+extern GpioErr_t Gpio_EnPinHyst(GpioPin_t gpioPin, bool_t gpioEnPinHyst){return gGpioErrInvalidParameter_c;}
 
 /*================================================================================================*/
 /*===== Gpio_IsPinHystEn =====*/
@@ -713,7 +713,7 @@ extern GpioErr_t Gpio_EnPinHyst(GpioPin_t gpioPin, bool_t gpioEnPinHyst);
    26.06.2007                       B04839                             Created
 */
 /*===============================================================================================*/
-extern GpioErr_t Gpio_IsPinHystEn(GpioPin_t gpioPin, bool_t* gpioEnPinHyst);
+extern GpioErr_t Gpio_IsPinHystEn(GpioPin_t gpioPin, bool_t* gpioEnPinHyst){return gGpioErrInvalidParameter_c;}
 
 /*FUCTION MODE*/
 
@@ -743,7 +743,7 @@ extern GpioErr_t Gpio_IsPinHystEn(GpioPin_t gpioPin, bool_t* gpioEnPinHyst);
    26.06.2007                       B04839                             Created
 */
 /*===============================================================================================*/
-extern GpioErr_t Gpio_SetPortFunction(GpioPort_t gpioPort, GpioFunctionMode_t gpioPortFunction, uint32_t mask);
+extern GpioErr_t Gpio_SetPortFunction(GpioPort_t gpioPort, GpioFunctionMode_t gpioPortFunction, uint32_t mask){return gGpioErrInvalidParameter_c;}
 
 /*================================================================================================*/
 /*===== Gpio_SetPinFunction =====*/
@@ -767,7 +767,7 @@ extern GpioErr_t Gpio_SetPortFunction(GpioPort_t gpioPort, GpioFunctionMode_t gp
    26.06.2007                       B04839                             Created
 */
 /*===============================================================================================*/
-extern GpioErr_t Gpio_SetPinFunction(GpioPin_t gpioPin, GpioFunctionMode_t gpioPinFunction);
+extern GpioErr_t Gpio_SetPinFunction(GpioPin_t gpioPin, GpioFunctionMode_t gpioPinFunction){return gGpioErrInvalidParameter_c;}
 
 /*================================================================================================*/
 /*===== Gpio_GetPinFunction =====*/
@@ -792,6 +792,6 @@ extern GpioErr_t Gpio_SetPinFunction(GpioPin_t gpioPin, GpioFunctionMode_t gpioP
    26.06.2007                       B04839                             Created
 */
 /*===============================================================================================*/
-extern GpioErr_t Gpio_GetPinFunction(GpioPin_t gpioPin, GpioFunctionMode_t* gpioPinFunction);
+extern GpioErr_t Gpio_GetPinFunction(GpioPin_t gpioPin, GpioFunctionMode_t* gpioPinFunction){return gGpioErrInvalidParameter_c;}
 
 #endif /* _GPIO_INTERFACE_H_ */

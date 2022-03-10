@@ -21,7 +21,7 @@
 */
 
 #include "C779_ReportDeviceHealth.h"
-#include "..\..\..\provision.h"       // for g_stProv.unDllTxTimeouts and g_stProv.unDllRxTimeouts
+#include "../../../provision.h"       // for g_stProv.unDllTxTimeouts and g_stProv.unDllRxTimeouts
 
 //extern unsigned short g_unDllTxTimeouts;        
 

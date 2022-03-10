@@ -58,7 +58,7 @@ extern volatile unsigned char g_uc250msFlag;
 
 extern int16 g_nCrtClkCorrection;
 
-inline void RtcTmr_Set250msCorrection(int16 p_nCorrection)
+static inline void RtcTmr_Set250msCorrection(int16 p_nCorrection)
 {      
     if( p_nCorrection <= -1 )  
     {      

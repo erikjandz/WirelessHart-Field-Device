@@ -75,7 +75,7 @@ NV_EVENT_NOTIFICATION_T g_stEventsTableNvData[MAX_EVENTS_NO];
     #endif
 #endif
 
-//TEMPORARY VALUE TO EXPANDED_DEVICE TO COMPILE IT, CHANGE IT LATER PLEASE
+//ERIK NOTE: TEMPORARY VALUE TO EXPANDED_DEVICE TO COMPILE IT, CHANGE IT LATER PLEASE
 #ifndef EXPANDED_DEVICE_TYPE
   #define EXPANDED_DEVICE_TYPE 0xF869
 #endif
@@ -659,9 +659,7 @@ void NVM_WritePersistentData( uint8 *p_pucSrc, PROV_ADDR_TYPE p_uAddr, uint16 p_
 #endif  
 }
   
-
-#if( DEVICE_TYPE == DEV_TYPE_MC13225 )
-
+// ERIK NOTE: PUT FUNCTION OUT OT IF
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // Name: NVM_EraseSector
 // Author: NIVIS LLC    
@@ -678,6 +676,8 @@ void NVM_EraseSector( uint32 p_ulSectorNmb )
   if( NVM_FlashBlankCheck(ulAddr, SECTOR_SIZE) == gNvmErrBlankCheckError_c ) 
     NVM_FlashErase(p_ulSectorNmb);  
 }
+
+#if( DEVICE_TYPE == DEV_TYPE_MC13225 )
 
 #endif
 

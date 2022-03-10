@@ -126,7 +126,7 @@ typedef uint8_t assertCode_t;
 
 void BeeAppAssert(assertCode_t code);
 
-
+void BeeAppAssert(assertCode_t code){}
 
 #define gAssertCode_NoTasks_c   0x01  /* not enough tasks. Increase gTsMaxTasks_c */
 #define gAssertCode_NoTimers_c  0x02  /* not enough timers. Increase gTmrApplicationTimers_c */

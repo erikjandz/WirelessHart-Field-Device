@@ -130,6 +130,7 @@ Revision history:
 /*=================================================================================*/
 Asm_Err_t Asm_Init(void);
 
+Asm_Err_t Asm_Init(void){return gAsmErrMax_c;}
 /*=================================================================================*/
 /*===== Asm_CtrEncryptDecrypt =====*/
 /*
@@ -160,6 +161,11 @@ Asm_Err_t Asm_CtrEncryptDecrypt( uint32_t* maKey,
                                  uint32_t* maCounter, 
                                  uint32_t* maTextIn,
                                  uint32_t* maTextOut); 
+
+Asm_Err_t Asm_CtrEncryptDecrypt( uint32_t* maKey, 
+                                 uint32_t* maCounter, 
+                                 uint32_t* maTextIn,
+                                 uint32_t* maTextOut){return gAsmErrMax_c;}
 
 /*=================================================================================*/
 /*===== Asm_CbcMacEncryptDecrypt =====*/
@@ -192,6 +198,11 @@ Asm_Err_t Asm_CbcMacEncryptDecrypt( uint32_t* maKey,
                                     uint32_t* maMacAccPreloadVal, 
                                     uint32_t* maText, 
                                     uint32_t* maCbcMacVal);
+
+Asm_Err_t Asm_CbcMacEncryptDecrypt( uint32_t* maKey, 
+                                    uint32_t* maMacAccPreloadVal, 
+                                    uint32_t* maText, 
+                                    uint32_t* maCbcMacVal){return gAsmErrMax_c;}
 
 /*=================================================================================*/
 /*===== Asm_CcmEncryptDecrypt =====*/
@@ -229,5 +240,12 @@ Asm_Err_t Asm_CcmEncryptDecrypt( uint32_t* maKey,
                                  uint32_t* maTextIn, 
                                  uint32_t* maCbcMacVal,
                                  uint32_t* maTextOut);
+
+Asm_Err_t Asm_CcmEncryptDecrypt( uint32_t* maKey,
+                                 uint32_t* maCounter,
+                                 uint32_t* maMacAccPreloadVal, 
+                                 uint32_t* maTextIn, 
+                                 uint32_t* maCbcMacVal,
+                                 uint32_t* maTextOut){return gAsmErrMax_c;}                                 
 
 #endif

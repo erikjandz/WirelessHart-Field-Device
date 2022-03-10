@@ -31,7 +31,8 @@
 #define _NIVIS_UAP_H_
 
 #include "../typedef.h"
-#include "../digitals.h"
+// ERIK NOTE: TO STOP THE CYCLIC INCLUDES
+//#include "../digitals.h"
 #include "uap_data.h"
 
 

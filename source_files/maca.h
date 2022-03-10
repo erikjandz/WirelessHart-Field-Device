@@ -148,7 +148,7 @@ extern uint8  g_unPllLockWachDog;
 
 void MACA_WatchDog(void);
 
-inline void MACA_ResetWatchDog(void) {g_unWatchDogRTC = 0;}
+static inline void MACA_ResetWatchDog(void) {g_unWatchDogRTC = 0;}
 
 
 // extern functions and definitions from Freescale = from library
@@ -195,7 +195,7 @@ extern void SetEdCcaThreshold(uint8_t u8CcaThreshold);
 extern uint8 PhyPlmeGetLQI(void);
 
 extern void RadioInit(uint32 u32ClockFreq, uint8 u8PN, uint32 u32LoopDiv); //extern void RadioInit(void);
-extern void SetChannel(uint8 channel,  uint8 RFSynVCODivI, uint32 RFSynVCODivF);
+extern void SetChannel(uint8 channel,  uint8 RFSynVCODivI, uint32 RFSynVCODivF){};
 
 #define GET_LAST_RSSI() (int16)(((((uint16)g_ucLastLQI) * 85) >> 8) - 100 )
 extern uint8 g_ucLastLQI;

@@ -57,8 +57,8 @@
     #include "global.h"
     #include "itc.h"
 
-#if( DEVICE_TYPE == DEV_TYPE_MC13225 ) 
-     
+// ERIK NOTE: PUT CODE OUT OF IF
+  
 //    #define MONITOR_ENTER()  unsigned int ulIrqStatus = IntDisableAll()
 //    #define MONITOR_EXIT()   IntRestoreAll(ulIrqStatus)
 
@@ -75,6 +75,8 @@
 
     #define __swap_bytes(x) ((((uint16)(x)) >> 8) | (((uint16)(x)) << 8))
 
+#if( DEVICE_TYPE == DEV_TYPE_MC13225 ) 
+   
 #else 
     //#error "Unsupported uC type"
 

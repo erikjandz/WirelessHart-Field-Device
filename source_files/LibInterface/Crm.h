@@ -509,6 +509,9 @@ typedef struct
 ************************************************************************************/
 extern void CRM_GoToSleep(crmSleepCtrl_t* pSleepCtrl);
 
+void CRM_GoToSleep(crmSleepCtrl_t* pSleepCtrl){}
+
+
 /************************************************************************************
 * Interface assumptions:
 *   None
@@ -521,6 +524,7 @@ extern void CRM_GoToSleep(crmSleepCtrl_t* pSleepCtrl);
 ************************************************************************************/
 extern crmErr_t CRM_WuCntl(crmWuCtrl_t* pWuCtrl);
 
+crmErr_t  CRM_WuCntl(crmWuCtrl_t* pWuCtrl){return gCrmErrBuckNotEnabledNorBypassed_c;}
 /************************************************************************************
 * Interface assumptions:
 *   None
@@ -533,6 +537,7 @@ extern crmErr_t CRM_WuCntl(crmWuCtrl_t* pWuCtrl);
 ************************************************************************************/
 extern crmModuleEnableStatus_t CRM_ModuleEnStatus(void);
 
+crmModuleEnableStatus_t CRM_ModuleEnStatus(void){return (crmModuleEnableStatus_t)((uint32_t) 69);}
 /************************************************************************************
 * Interface assumptions:
 *   None
@@ -545,6 +550,7 @@ extern crmModuleEnableStatus_t CRM_ModuleEnStatus(void);
 ************************************************************************************/
 extern crmErr_t CRM_CopCntl(crmCopCntl_t copCntl);
 
+crmErr_t CRM_CopCntl(crmCopCntl_t copCntl){return gCrmErrBuckNotEnabledNorBypassed_c;}
 /************************************************************************************
 * Interface assumptions:
 *   None
@@ -557,6 +563,7 @@ extern crmErr_t CRM_CopCntl(crmCopCntl_t copCntl);
 ************************************************************************************/
 extern crmErr_t CRM_ForceCopTimeout(void);
 
+crmErr_t CRM_ForceCopTimeout(void){return gCrmErrBuckNotEnabledNorBypassed_c;}
 /************************************************************************************
 * Interface assumptions:
 *   None
@@ -569,6 +576,7 @@ extern crmErr_t CRM_ForceCopTimeout(void);
 ************************************************************************************/
 extern void CRM_Wait4Irq(void);
 
+void CRM_Wait4Irq(void){}
 /************************************************************************************
 * Interface assumptions:
 *   None
@@ -581,6 +589,7 @@ extern void CRM_Wait4Irq(void);
 ************************************************************************************/
 extern crmErr_t CRM_BusStealingCntl(crmBSCntl_t bsCntl,bool_t armClkGate,uint8_t cyclesToSteal);
 
+crmErr_t CRM_BusStealingCntl(crmBSCntl_t bsCntl,bool_t armClkGate,uint8_t cyclesToSteal){return gCrmErrBuckNotEnabledNorBypassed_c;}
 /************************************************************************************
 * Interface assumptions:
 *   None
@@ -593,6 +602,7 @@ extern crmErr_t CRM_BusStealingCntl(crmBSCntl_t bsCntl,bool_t armClkGate,uint8_t
 ************************************************************************************/
 extern crmErr_t CRM_RefXtalControl(crmRefXtalCntl_t xtalCntl);
 
+crmErr_t CRM_RefXtalControl(crmRefXtalCntl_t xtalCntl){return gCrmErrBuckNotEnabledNorBypassed_c;}
 /************************************************************************************
 * Interface assumptions:
 *   None
@@ -605,6 +615,7 @@ extern crmErr_t CRM_RefXtalControl(crmRefXtalCntl_t xtalCntl);
 ************************************************************************************/
 extern crmErr_t CRM_2kToXtal32Switch(bool_t armHalted, pfCallback_t pfToCallback);
 
+crmErr_t CRM_2kToXtal32Switch(bool_t armHalted, pfCallback_t pfToCallback){return gCrmErrBuckNotEnabledNorBypassed_c;}
 /************************************************************************************
 * Interface assumptions:
 *   None
@@ -617,6 +628,7 @@ extern crmErr_t CRM_2kToXtal32Switch(bool_t armHalted, pfCallback_t pfToCallback
 ************************************************************************************/
 extern crmErr_t CRM_RingOscCal(uint16_t calLength,bool_t haltMcu, void * pTR);
 
+crmErr_t CRM_RingOscCal(uint16_t calLength,bool_t haltMcu, void * pTR){return gCrmErrBuckNotEnabledNorBypassed_c;}
 /************************************************************************************
 * Interface assumptions:
 *   None
@@ -629,6 +641,7 @@ extern crmErr_t CRM_RingOscCal(uint16_t calLength,bool_t haltMcu, void * pTR);
 ************************************************************************************/
 extern crmErr_t CRM_RingOscAbortCal(void);
 
+extern crmErr_t CRM_RingOscAbortCal(void){return gCrmErrBuckNotEnabledNorBypassed_c;}
 /************************************************************************************
 * Interface assumptions:
 *   None
@@ -641,6 +654,7 @@ extern crmErr_t CRM_RingOscAbortCal(void);
 ************************************************************************************/
 extern crmErr_t CRM_SetPowerSource(crmPowerSource_t pwSource);
 
+crmErr_t CRM_SetPowerSource(crmPowerSource_t pwSource){return gCrmErrBuckNotEnabledNorBypassed_c;}
 /************************************************************************************
 * Interface assumptions:
 *   None
@@ -653,6 +667,7 @@ extern crmErr_t CRM_SetPowerSource(crmPowerSource_t pwSource);
 ************************************************************************************/
 extern crmErr_t CRM_VRegCntl(crmVRegCntl_t* pVRegCntl);
 
+crmErr_t CRM_VRegCntl(crmVRegCntl_t* pVRegCntl){return gCrmErrBuckNotEnabledNorBypassed_c;}
 /************************************************************************************
 * Interface assumptions:
 *   None
@@ -665,6 +680,7 @@ extern crmErr_t CRM_VRegCntl(crmVRegCntl_t* pVRegCntl);
 ************************************************************************************/
 extern crmErr_t CRM_VRegTrimm(crmTrimmedDevice_t trimmedDevice,uint8_t trimmValue);
 
+crmErr_t CRM_VRegTrimm(crmTrimmedDevice_t trimmedDevice,uint8_t trimmValue){return gCrmErrBuckNotEnabledNorBypassed_c;}
 /************************************************************************************
 * Interface assumptions:
 *   None
@@ -677,6 +693,7 @@ extern crmErr_t CRM_VRegTrimm(crmTrimmedDevice_t trimmedDevice,uint8_t trimmValu
 ************************************************************************************/
 extern crmErr_t CRM_SetDigOutDriveStrength(crmPadsDriveStrength_t padsDriveStrength);
 
+crmErr_t CRM_SetDigOutDriveStrength(crmPadsDriveStrength_t padsDriveStrength){return gCrmErrBuckNotEnabledNorBypassed_c;}
 /************************************************************************************
 * Interface assumptions:
 *   None
@@ -689,6 +706,7 @@ extern crmErr_t CRM_SetDigOutDriveStrength(crmPadsDriveStrength_t padsDriveStren
 ************************************************************************************/
 extern crmErr_t CRM_SetSPIFDriveStrength(crmPadsDriveStrength_t spiFDriveStrength);
 
+crmErr_t CRM_SetSPIFDriveStrength(crmPadsDriveStrength_t spiFDriveStrength){return gCrmErrBuckNotEnabledNorBypassed_c;}
 /************************************************************************************
 * Interface assumptions:
 *   None
@@ -701,6 +719,7 @@ extern crmErr_t CRM_SetSPIFDriveStrength(crmPadsDriveStrength_t spiFDriveStrengt
 ************************************************************************************/
 extern crmErr_t CRM_RegisterISR(crmInterruptSource_t crmIS, pfCallback_t pfISR);
 
+crmErr_t CRM_RegisterISR(crmInterruptSource_t crmIS, pfCallback_t pfISR){return gCrmErrBuckNotEnabledNorBypassed_c;}
 /************************************************************************************
 * Interface assumptions:
 *   None
@@ -712,4 +731,6 @@ extern crmErr_t CRM_RegisterISR(crmInterruptSource_t crmIS, pfCallback_t pfISR);
 *  07.11.2007  MD
 ************************************************************************************/
 extern void CRM_Isr(void);
+
+void CRM_Isr(void){}
 #endif /* _CRM_H_ */

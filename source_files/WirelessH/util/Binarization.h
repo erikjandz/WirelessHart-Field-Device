@@ -54,7 +54,7 @@ typedef struct
 #endif
 } BinaryStream;
 
-inline
+static inline
 int32_t STREAM_GetRemainingSize(BinaryStream * pStream)
 {
     return (pStream->endByte - pStream->nextByte);
@@ -159,7 +159,7 @@ typedef union
 		memcpy((void*)(bytes), (stream)->nextByte, (length));\
 		STREAM_SKIP(stream, length);\
 	}
-inline
+static inline
 void STREAM_WRITE_UINT8(BinaryStream * toStream, uint8_t value)
 {
     *toStream->nextByte++ = value;
@@ -169,13 +169,13 @@ void STREAM_WRITE_UINT8(BinaryStream * toStream, uint8_t value)
 
 #define STREAM_READ_UINT8(fromStream, value) *(value) = *(fromStream)->nextByte++
 
-inline 
+static inline 
 void STREAM_READ_INT8(BinaryStream * fromStream, int8_t * value)
 {
     STREAM_READ_UINT8( fromStream, (uint8_t *) value );
 }
 
-inline
+static inline
 void STREAM_WRITE_UINT16(BinaryStream * toStream, uint16_t value)
 {
     toStream->nextByte[0] = (uint8_t)(value >> 8);
@@ -185,20 +185,20 @@ void STREAM_WRITE_UINT16(BinaryStream * toStream, uint16_t value)
 
 #define STREAM_WRITE_INT16(stream, value) STREAM_WRITE_UINT16(stream, (uint16_t)value)
 
-inline
+static inline
 void STREAM_READ_UINT16(BinaryStream * fromStream, uint16_t * value)
 {
     *value = ((uint16_t)(fromStream->nextByte)[0] << 8) | fromStream->nextByte[1];
     STREAM_SKIP(fromStream, 2);
 }
 
-inline
+static inline
 void STREAM_READ_INT16(BinaryStream * fromStream, int16_t * value)
 {
     STREAM_READ_UINT16( fromStream, (uint16_t *) value );
 }
 
-inline
+static inline
 void STREAM_WRITE_UINT24(BinaryStream * toStream, uint32_t value)
 {
     toStream->nextByte[0]= (uint8_t)(value >> 16);
@@ -208,7 +208,7 @@ void STREAM_WRITE_UINT24(BinaryStream * toStream, uint32_t value)
 }
 #define STREAM_WRITE_INT24(stream, value) STREAM_WRITE_UINT24(stream, (uint32_t)value)
 
-inline
+static inline
 void STREAM_READ_UINT24(BinaryStream * fromStream, uint32_t * value)
 {
   *value =  ((uint32_t)(fromStream->nextByte[0]) << 16) 
@@ -216,13 +216,13 @@ void STREAM_READ_UINT24(BinaryStream * fromStream, uint32_t * value)
             | ((uint32_t)(fromStream->nextByte[2])); 
   STREAM_SKIP(fromStream, 3);
 }
-inline
+static inline
 void STREAM_READ_INT24(BinaryStream * fromStream, int32_t * value)
 {
   STREAM_READ_UINT24(fromStream, (uint32_t *) value);
 }
 
-inline
+static inline
 void STREAM_WRITE_UINT32(BinaryStream * toStream, uint32_t value)
 {
     toStream->nextByte[ 0 ] = (uint8_t)(value >> 24);
@@ -234,7 +234,7 @@ void STREAM_WRITE_UINT32(BinaryStream * toStream, uint32_t value)
 
 #define STREAM_WRITE_INT32(stream, value) STREAM_WRITE_UINT32(stream, (uint32_t)value)
 
-inline
+static inline
 void STREAM_READ_UINT32(BinaryStream * fromStream, uint32_t * value)
 {
     *value =  ((uint32_t)(fromStream->nextByte[0]) << 24) 
@@ -244,7 +244,7 @@ void STREAM_READ_UINT32(BinaryStream * fromStream, uint32_t * value)
     STREAM_SKIP(fromStream, 4);
 }
 
-inline
+static inline
 void STREAM_READ_INT32(BinaryStream * fromStream, int32_t * value)
 {
     STREAM_READ_UINT32(fromStream, (uint32_t *) value);
@@ -301,13 +301,13 @@ void WriteUint32(void * p_pValue, const uint8_t * p_pBuf, uint8_t p_ucSize);
 //FLOAT binarization
 #include <float.h>
 
-inline
+static inline
 void  STREAM_WRITE_FLOAT(BinaryStream * toStream, float  value) 
 {
     STREAM_WRITE_UINT32( toStream, *(uint32_t*)&value);
 }
 
-inline
+static inline
 void  STREAM_READ_FLOAT(BinaryStream * fromStream, float * value)
 {
     STREAM_READ_UINT32( fromStream, (uint32_t*)value);

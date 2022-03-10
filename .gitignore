@@ -1,1 +1,4 @@
 *.gch
+CMakeFiles/
+*CMakeLists.txt
+*CMakeCache.txt

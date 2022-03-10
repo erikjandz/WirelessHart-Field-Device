@@ -223,7 +223,7 @@ typedef void (*TmrCallbackFunction_t)(TmrNumber_t tmrNumber);
    03.07.2006                       B04839                            Created
 */  
 /*===============================================================================================*/
-extern void TmrInit(void);
+extern void TmrInit(void){};
 
 /*================================================================================================*/
 /*===== TmrEnable =====*/
@@ -244,7 +244,7 @@ extern void TmrInit(void);
    03.07.2006                       B04839                            Created
 */  
 /*===============================================================================================*/
-extern TmrErr_t TmrEnable(TmrNumber_t tmrNumber);
+extern TmrErr_t TmrEnable(TmrNumber_t tmrNumber){return gTmrErrMax_c;};
 
 /*================================================================================================*/
 /*===== TmrDisable =====*/

@@ -184,6 +184,8 @@ typedef  void (*AdcEvCallback_t)(void);
 */
 extern void Adc_Init(void);
 
+void Adc_Init(void){}
+
 /*================================================================================================*/
 /*===== Adc_Reset =====*/
 /**
@@ -199,6 +201,8 @@ extern void Adc_Init(void);
    31.07.2007                       B04839                             Created
 */
 extern void Adc_Reset(void);
+
+void Adc_Reset(void){}
 
 /*================================================================================================*/
 /*===== Adc_SetConfig =====*/
@@ -221,6 +225,8 @@ extern void Adc_Reset(void);
    31.07.2007                       B04839                             Created
 */
 extern AdcErr_t Adc_SetConfig(const AdcConfig_t *adcConfig);
+
+AdcErr_t Adc_SetConfig(const AdcConfig_t *adcConfig){return gAdcErrMax_c;}
 
 /*================================================================================================*/
 /*===== Adc_SetConvCtrl =====*/
@@ -246,6 +252,7 @@ extern AdcErr_t Adc_SetConfig(const AdcConfig_t *adcConfig);
 */
 extern AdcErr_t Adc_SetConvCtrl(AdcModule_t adcModule, const AdcConvCtrl_t *adcConvCtrl);
 
+AdcErr_t Adc_SetConvCtrl(AdcModule_t adcModule, const AdcConvCtrl_t *adcConvCtrl){return gAdcErrMax_c;}
 /*================================================================================================*/
 /*===== Adc_SetCompCtrl =====*/
 /**
@@ -266,6 +273,8 @@ extern AdcErr_t Adc_SetConvCtrl(AdcModule_t adcModule, const AdcConvCtrl_t *adcC
 */
 extern AdcErr_t Adc_SetCompCtrl(const AdcCompCtrl_t *adcCompCtrl);
 
+AdcErr_t Adc_SetCompCtrl(const AdcCompCtrl_t *adcCompCtrl){return gAdcErrMax_c;}
+
 /*================================================================================================*/
 /*===== Adc_SetFifoCtrl =====*/
 /**
@@ -285,6 +294,7 @@ extern AdcErr_t Adc_SetCompCtrl(const AdcCompCtrl_t *adcCompCtrl);
 */
 extern AdcErr_t Adc_SetFifoCtrl(uint8_t adcFifoThreshold);
 
+AdcErr_t Adc_SetFifoCtrl(uint8_t adcFifoThreshold){return gAdcErrMax_c;}
 /*================================================================================================*/
 /*===== Adc_GetFifoStatus =====*/
 /**
@@ -307,6 +317,7 @@ extern AdcErr_t Adc_SetFifoCtrl(uint8_t adcFifoThreshold);
 */
 extern AdcErr_t Adc_GetFifoStatus(AdcFifoStatus_t *fifoStatus, uint8_t *adcFifoLevel);
 
+AdcErr_t Adc_GetFifoStatus(AdcFifoStatus_t *fifoStatus, uint8_t *adcFifoLevel){return gAdcErrMax_c;}
 /*================================================================================================*/
 /*===== Adc_ReadFifoData =====*/
 /**
@@ -327,6 +338,7 @@ extern AdcErr_t Adc_GetFifoStatus(AdcFifoStatus_t *fifoStatus, uint8_t *adcFifoL
 */
 extern AdcErr_t Adc_ReadFifoData(AdcFifoData_t *adcFifoData);
 
+AdcErr_t Adc_ReadFifoData(AdcFifoData_t *adcFifoData){return gAdcErrMax_c;}
 /*================================================================================================*/
 /*===== Adc_StartManualConv =====*/
 /**
@@ -352,6 +364,7 @@ extern AdcErr_t Adc_ReadFifoData(AdcFifoData_t *adcFifoData);
 */
 extern AdcErr_t Adc_StartManualConv(AdcModule_t adcModule, AdcChannel_t adcChannel);
 
+AdcErr_t Adc_StartManualConv(AdcModule_t adcModule, AdcChannel_t adcChannel){return gAdcErrMax_c;}
 /*================================================================================================*/
 /*===== Adc_ManualRead =====*/
 /**
@@ -379,6 +392,7 @@ extern AdcErr_t Adc_StartManualConv(AdcModule_t adcModule, AdcChannel_t adcChann
 */
 extern AdcErr_t Adc_ManualRead(AdcModule_t adcModule, uint16_t *adcConvResult);
 
+AdcErr_t Adc_ManualRead(AdcModule_t adcModule, uint16_t *adcConvResult){return gAdcErrMax_c;}
 /*================================================================================================*/
 /*===== Adc_SetCallback =====*/
 /**
@@ -402,6 +416,7 @@ extern AdcErr_t Adc_ManualRead(AdcModule_t adcModule, uint16_t *adcConvResult);
 */
 extern AdcErr_t Adc_SetCallback(AdcEvent_t adcEvent, AdcEvCallback_t pCallbackFunction);
 
+AdcErr_t Adc_SetCallback(AdcEvent_t adcEvent, AdcEvCallback_t pCallbackFunction){return gAdcErrMax_c;}
 /*================================================================================================*/
 /*===== Adc_Isr =====*/
 /**
@@ -418,5 +433,7 @@ extern AdcErr_t Adc_SetCallback(AdcEvent_t adcEvent, AdcEvCallback_t pCallbackFu
 */   
 /*================================================================================================*/
 extern void Adc_Isr(void);
+
+void Adc_Isr(void){}
 
 #endif /* _ADC_INTERFACE_H_  */

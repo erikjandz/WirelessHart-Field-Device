@@ -17,13 +17,13 @@
 #define IntEnableIRQ()         IntRestoreIRQ(0)
 #define IntEnableAll()         IntRestoreAll(0)
 
-extern void InterruptInit(void);
-extern void IntRestoreFIQ(unsigned int);  // 1 - int disabled, 0 - int enabled
-extern void IntRestoreIRQ(unsigned int);  // 1 - int disabled, 0 - int enabled
-extern void IntRestoreAll(unsigned int);  // 0 - all enabled, 1 - FIQ disabled/ IRQ enabled, 2 - FIQ enabled/ IRQ disabled, 3 - all disabled
-extern unsigned int IntDisableIRQ(void);  // 1 - int disabled, 0 - int enabled
-extern unsigned int IntDisableFIQ(void);  // 1 - int disabled, 0 - int enabled
-extern unsigned int IntDisableAll(void);  // 0 - all enabled, 1 - FIQ disabled/ IRQ enabled, 2 - FIQ enabled/ IRQ disabled, 3 - all disabled
+extern void InterruptInit(void){};
+extern void IntRestoreFIQ(unsigned int){};  // 1 - int disabled, 0 - int enabled
+extern void IntRestoreIRQ(unsigned int){};  // 1 - int disabled, 0 - int enabled
+extern void IntRestoreAll(unsigned int){};  // 0 - all enabled, 1 - FIQ disabled/ IRQ enabled, 2 - FIQ enabled/ IRQ disabled, 3 - all disabled
+extern unsigned int IntDisableIRQ(void){return 69;};  // 1 - int disabled, 0 - int enabled
+extern unsigned int IntDisableFIQ(void){return 69;};  // 1 - int disabled, 0 - int enabled
+extern unsigned int IntDisableAll(void){return 69;};  // 0 - all enabled, 1 - FIQ disabled/ IRQ enabled, 2 - FIQ enabled/ IRQ disabled, 3 - all disabled
 
 #endif /* _INTERRUPT_H_ */
 

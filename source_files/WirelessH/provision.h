@@ -472,8 +472,10 @@ void NVM_ReadPersistentData( uint8 *p_pucDst, PROV_ADDR_TYPE p_uAddr, uint16 p_u
 
 void NVM_WritePersistentData( uint8 *p_pucSrc, PROV_ADDR_TYPE p_uAddr, uint16 p_unSize );
 
-#if( DEVICE_TYPE == DEV_TYPE_MC13225 )
+//ERIK NOTE: PUT OUT OF IF
   void NVM_EraseSector( uint32 p_ulSectorNmb );
+#if( DEVICE_TYPE == DEV_TYPE_MC13225 )
+
 #endif  
 
 void NVM_SaveBeforeRestart(uint8 ucReason);
